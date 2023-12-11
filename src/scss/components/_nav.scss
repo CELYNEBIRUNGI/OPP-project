@@ -1,0 +1,55 @@
+@use "../reset/variables" as var;
+@use "../reset/mixins" as mx;
+
+nav {
+  display: flex;
+  flex-direction: column;
+  height: 90px;
+  background-color: var.$primary-100;
+
+  .nav-header {
+    @include mx.flex;
+    max-width: 1080px;
+    margin: 0 auto;
+    height: 60%;
+    gap: 32px;
+
+    div {
+      @include mx.flex;
+
+      img {
+        width: 3em;
+        margin-right: 12px;
+      }
+    }
+  }
+
+  .nav-list-container {
+    background-color: var.$primary-200;
+    width: 100%;
+    height: 40%;
+  }
+  .nav-list {
+    @include mx.flex($justify: flex-end);
+    padding-right: 48px;
+    gap: 48px;
+    height: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+
+    li {
+      a {
+        @include mx.flex;
+        text-decoration: none;
+        color: #000;
+        font-weight: var.$fw-text;
+        font-size: var.$fs-text;
+        text-transform: capitalize;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
