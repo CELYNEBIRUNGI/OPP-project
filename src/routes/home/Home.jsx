@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import CardOne from "../../components/cards/CardOne";
 import Report from "../../components/cards/Report";
+import Map from "./Map";
 import { statusLists, reportsList } from "../../lib/lists";
 import banner from "../../assets/home.png";
 import about from "../../assets/home-about.png";
@@ -48,7 +49,7 @@ const Home = () => {
       </section>
 
       <section className="map">
-        <h2>Map goes here</h2>
+        <Map />
       </section>
 
       <section className="reports">
