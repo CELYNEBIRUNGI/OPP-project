@@ -27,27 +27,27 @@ export const reportsList = [
   {
     id: 1,
     icon: icon,
-    text: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+    text: "Uganda-2000001484-Nopp-supervision-report- January-2023",
   },
   {
     id: 2,
     icon: icon,
-    text: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+    text: "Uganda-2000001484-Nopp-supervision-report- January-2023",
   },
   {
     id: 3,
     icon: icon,
-    text: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+    text: "Uganda-2000001484-Nopp-supervision-report- January-2023",
   },
   {
     id: 4,
     icon: icon,
-    text: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+    text: "Uganda-2000001484-Nopp-supervision-report- January-2023",
   },
   {
     id: 5,
     icon: icon,
-    text: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+    text: "Uganda-2000001484-Nopp-supervision-report- January-2023",
   },
 ];
 

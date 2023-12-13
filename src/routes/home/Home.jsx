@@ -1,17 +1,42 @@
 import { Link } from "react-router-dom";
 import CardOne from "../../components/cards/CardOne";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
 import Report from "../../components/cards/Report";
 import Map from "./Map";
 import { statusLists, reportsList } from "../../lib/lists";
 import banner from "../../assets/home.png";
+import rec from "../../assets/rec.png";
 import about from "../../assets/home-about.png";
 import impl from "../../assets/imp.png";
+import "@splidejs/react-splide/css";
 
 const Home = () => {
   return (
     <div className="home">
       <section className="banner">
-        <img src={banner} alt="home banner image" />
+        <Splide
+          options={{
+            rewind: true,
+            type: "fade",
+            autoplay: true,
+            interval: 7000,
+            perPage: 1,
+            arrows: false,
+            pagination: false,
+            pauseOnHover: true,
+            resetProgress: false,
+          }}
+        >
+          <SplideSlide>
+            <img src={banner} alt="home banner image" />
+          </SplideSlide>
+          <SplideSlide>
+            <img src={impl} alt="home banner image" />
+          </SplideSlide>
+          <SplideSlide>
+            <img src={rec} alt="home banner image" />
+          </SplideSlide>
+        </Splide>
         <div>
           <h1>National Oil Palm Project</h1>
         </div>

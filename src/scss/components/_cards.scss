@@ -22,8 +22,8 @@
 }
 
 .report-card {
-  @include mx.flex($justify: space-between);
-  flex-basis: 40%;
+  @include mx.flex($justify: space-around);
+  flex-basis: 48%;
   margin-bottom: 64px;
 
   img {

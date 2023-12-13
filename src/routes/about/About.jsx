@@ -2,27 +2,29 @@ import pic from "../../assets/rec.png";
 import photo from "../../assets/imp.png";
 const About = () => {
   return (
-    <div>
+    <div className="about">
       <div className="about-banner">
         <img src={pic} alt="About banner" />
       </div>
 
       <div className="first-paragraph">
+        <div className="">
+          <p>
+            Uganda has made enormous progress in reducing poverty, yet one in
+            three rural people still live below the poverty line. This factsheet
+            outlines IFAD’s strategy to reduce poverty in Uganda while improving
+            their food security and reducing their vulnerability. It also
+            outlines ongoing operations in the country.
+          </p>
+          <p>
+            Uganda has made enormous progress in reducing poverty, yet one in
+            three rural people still live below the poverty line. This factsheet
+            outlines IFAD’s strategy to reduce poverty in Uganda while improving
+            their food security and reducing their vulnerability. It also
+            outlines ongoing operations in the country.
+          </p>
+        </div>
         <img src={photo} alt="Desc" />
-        <p>
-          Uganda has made enormous progress in reducing poverty, yet one in
-          three rural people still live below the poverty line. This factsheet
-          outlines IFAD’s strategy to reduce poverty in Uganda while improving
-          their food security and reducing their vulnerability. It also outlines
-          ongoing operations in the country.
-        </p>
-        <p>
-          Uganda has made enormous progress in reducing poverty, yet one in
-          three rural people still live below the poverty line. This factsheet
-          outlines IFAD’s strategy to reduce poverty in Uganda while improving
-          their food security and reducing their vulnerability. It also outlines
-          ongoing operations in the country.
-        </p>
       </div>
 
       <div className="second-paragraph">
@@ -48,6 +50,7 @@ const About = () => {
           ongoing operations in the country.
         </p>
       </div>
+
       <div className="third-paragraph">
         <p>
           Livestock contribute to the farming operations of more than 800
