@@ -2,7 +2,7 @@ import { projectHubList } from "../../lib/lists";
 import { Link } from "react-router-dom";
 const ProjectHub = () => {
   return (
-    <div>
+    <div className="project-hub">
       <div className="banner">
         <img src="" alt="" />
       </div>
@@ -10,7 +10,7 @@ const ProjectHub = () => {
         {projectHubList.map((project) => (
           <div className="site" key={project.id}>
             <div className="">
-              <img src="" alt="" />
+              <img src={project.img} alt="" />
               <Link to={`/project/${project.id}`}>{project.title}</Link>
             </div>
             <p>{project.text}</p>
