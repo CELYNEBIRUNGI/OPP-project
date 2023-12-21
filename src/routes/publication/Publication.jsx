@@ -5,25 +5,27 @@ import { publicationsList } from "../../lib/lists";
 
 const Publication = () => {
   return (
-    <div>
+    <div className="publication">
       <div className="banner">
         <Carrousel images={[publ]} />
       </div>
 
       <div className="pub">
         <h2>Publications</h2>
-        {publicationsList.map((publication) => (
-          <div className="publication" key={publication.id}>
-            <img src={publication.img} alt="" />
-            <h3>{publication.title}</h3>
-            <p>{publication.text}</p>
-            <button>Read more</button>
-          </div>
-        ))}
+        <ul>
+          {publicationsList.map((publication) => (
+            <li className="publication" key={publication.id}>
+              <img src={publication.img} alt="" />
+              <h3>{publication.title}</h3>
+              <p>{publication.text}</p>
+              <button>Read more</button>
+            </li>
+          ))}
+        </ul>
       </div>
 
       <div className="slider">
-        <Carrousel images={[publication]} />
+        <Carrousel images={[publication]} pagination={true} />
       </div>
 
       <div className="news">

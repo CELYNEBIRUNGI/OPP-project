@@ -1,7 +1,7 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 
-const Carrousel = ({ images, interval, type }) => {
+const Carrousel = ({ images, interval, type, pagination }) => {
   return (
     <>
       <Splide
@@ -12,7 +12,7 @@ const Carrousel = ({ images, interval, type }) => {
           interval: interval ? interval : 7000,
           perPage: 1,
           arrows: false,
-          pagination: false,
+          pagination: pagination ? pagination : false,
           pauseOnHover: true,
           resetProgress: false,
         }}
