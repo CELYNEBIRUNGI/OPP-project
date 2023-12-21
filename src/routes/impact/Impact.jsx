@@ -1,21 +1,23 @@
 import Carrousel from "../../components/Carrousel";
 import { impactArticlesList } from "../../lib/lists";
+import impact from "../../assets/impact.png";
 const Impact = () => {
-  const length = impactArticlesList.length;
   const topArticles = [...impactArticlesList?.slice(-2)];
   return (
-    <div>
+    <div className="impact">
       <div className="banner">
-        <Carrousel />
-        <h1>Changing lives of Ugandans</h1>
+        <Carrousel images={[impact]} />
+        <h2>Changing lives of Ugandans</h2>
       </div>
       <div className="articles">
         {topArticles.map((article) => (
           <div className="article" key={article.id}>
+            <div className="detail">
+              <h2>{article.title}</h2>
+              <p>{article.text}</p>
+              <button>Read more</button>
+            </div>
             <img src={article.img} alt="" />
-            <h2>{article.title}</h2>
-            <p>{article.text}</p>
-            <button>Read more</button>
           </div>
         ))}
       </div>
