@@ -1,5 +1,5 @@
-import { Suspense, lazy } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Suspense, lazy, useEffect } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./routes/home/Home";
 import NotFound from "./components/NotFound";
@@ -12,6 +12,11 @@ const Impact = lazy(() => import("./routes/impact/Impact"));
 const Information = lazy(() => import("./routes/siteInformation/Information"));
 
 function App() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, [pathname]);
   return (
     <>
       <Suspense fallback={<div>Loading...</div>}>

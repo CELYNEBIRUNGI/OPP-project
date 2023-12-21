@@ -62,7 +62,7 @@ const Footer = () => {
               onChange={handleInputChange}
             />
           </label>
-          <button type="submit">Subscribe</button>
+          <button type="submit">Subscribe to Newsletter</button>
         </form>
       </div>
       <div className="foot"></div>

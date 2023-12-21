@@ -1,10 +1,18 @@
 import { projectHubList } from "../../lib/lists";
 import { Link } from "react-router-dom";
+import Carrousel from "../../components/Carrousel";
+
 const ProjectHub = () => {
+  const images = [];
+  projectHubList.map((project) => images.push(project.img));
   return (
     <div className="project-hub">
       <div className="banner">
-        <img src="" alt="" />
+        <Carrousel images={images} />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquam
+          justo et nibh venenatis aliquet.Donec quis felis{" "}
+        </p>
       </div>
       <div className="sites">
         {projectHubList.map((project) => (

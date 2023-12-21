@@ -1,26 +1,30 @@
-import React from "react";
+import Carrousel from "../../components/Carrousel";
+import publ from "../../assets/publ.png";
+import publication from "../../assets/publication.png";
+import { publicationsList } from "../../lib/lists";
 
 const Publication = () => {
-  const publications = [];
   return (
     <div>
       <div className="banner">
-        <img src="" alt="" />
+        <Carrousel images={[publ]} />
       </div>
 
       <div className="pub">
         <h2>Publications</h2>
-        {publications.map((publication) => (
-          <div className="publication">
-            <img src="" alt="" />
+        {publicationsList.map((publication) => (
+          <div className="publication" key={publication.id}>
+            <img src={publication.img} alt="" />
             <h3>{publication.title}</h3>
-            <p>{publication.description}</p>
+            <p>{publication.text}</p>
             <button>Read more</button>
           </div>
         ))}
       </div>
 
-      <div className="slider"></div>
+      <div className="slider">
+        <Carrousel images={[publication]} />
+      </div>
 
       <div className="news">
         <h3>Better information, better health</h3>
