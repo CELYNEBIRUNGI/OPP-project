@@ -1,12 +1,13 @@
 import { projectHubList } from "../../lib/lists";
 import { Link } from "react-router-dom";
 import Carrousel from "../../components/Carrousel";
+import PageTransition from "../../components/transitions/PageTransition";
 
 const ProjectHub = () => {
   const images = [];
   projectHubList.map((project) => images.push(project.img));
   return (
-    <div className="project-hub">
+    <PageTransition myClass={"project-hub"}>
       <div className="banner">
         <Carrousel images={images} />
         <p>
@@ -25,7 +26,7 @@ const ProjectHub = () => {
           </div>
         ))}
       </div>
-    </div>
+    </PageTransition>
   );
 };
 

@@ -1,8 +1,9 @@
 import pic from "../../assets/rec.png";
 import photo from "../../assets/imp.png";
+import PageTransition from "../../components/transitions/PageTransition";
 const About = () => {
   return (
-    <div className="about">
+    <PageTransition myClass={"about"}>
       <div className="about-banner">
         <img src={pic} alt="About banner" />
       </div>
@@ -119,7 +120,7 @@ const About = () => {
           </p>
         </div>
       </div>
-    </div>
+    </PageTransition>
   );
 };
 

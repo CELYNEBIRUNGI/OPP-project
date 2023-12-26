@@ -1,10 +1,14 @@
 import Carrousel from "../../components/Carrousel";
+import Slider from "../../components/Slider";
+import PageTransition from "../../components/transitions/PageTransition";
 import { impactArticlesList } from "../../lib/lists";
+import { sliderList } from "../../lib/lists";
 import impact from "../../assets/impact.png";
+
 const Impact = () => {
   const topArticles = [...impactArticlesList?.slice(-2)];
   return (
-    <div className="impact">
+    <PageTransition myClass={"impact"}>
       <div className="banner">
         <Carrousel images={[impact]} />
         <h2>Changing lives of Ugandans</h2>
@@ -41,10 +45,9 @@ const Impact = () => {
           We operate in rapidly evolving sectors, shaping natural and built
           environments
         </p>
-
-        <h2>Slider goes here</h2>
+        <Slider images={sliderList} />
       </div>
-    </div>
+    </PageTransition>
   );
 };
 

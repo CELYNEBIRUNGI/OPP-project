@@ -1,5 +1,7 @@
 import icon from "../assets/icon.png";
 import icon1 from "../assets/imp.png";
+import slider1 from "../assets/slider-1.png";
+import slider2 from "../assets/slider-2.png";
 
 export const statusLists = [
   {
@@ -164,3 +166,5 @@ export const publicationsList = [
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing Quisque placerat Convallis felis vitae tortor augue. Velit nascetur massa in.",
   },
 ];
+
+export const sliderList = [slider1, slider2, slider1, slider2];

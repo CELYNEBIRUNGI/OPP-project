@@ -94,10 +94,21 @@
     @include mx.flex($dir: column, $justify: space-around);
     max-width: 1080px;
     margin: 0 auto;
-    padding: 64px;
 
     h2 {
       text-align: center;
+      margin: 3rem 0;
+    }
+  }
+
+  .slider-images {
+    @include mx.flex($justify: space-between);
+    max-width: 1080px;
+    margin: 3rem auto;
+
+    div {
+      flex-basis: 23%;
+      height: 300px;
     }
   }
 }

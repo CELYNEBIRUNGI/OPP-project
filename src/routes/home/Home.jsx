@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PageTransition from "../../components/transitions/PageTransition";
 import CardOne from "../../components/cards/CardOne";
 import Carrousel from "../../components/Carrousel";
 import Report from "../../components/cards/Report";
@@ -11,7 +12,7 @@ import impl from "../../assets/imp.png";
 
 const Home = () => {
   return (
-    <div className="home">
+    <PageTransition myClass={"home"}>
       <section className="banner">
         <Carrousel images={[banner, rec, impl]} />
         <div>
@@ -64,7 +65,7 @@ const Home = () => {
           ))}
         </div>
       </section>
-    </div>
+    </PageTransition>
   );
 };
 

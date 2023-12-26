@@ -1,5 +1,6 @@
 import { Suspense, lazy, useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 import Layout from "./components/Layout";
 import Home from "./routes/home/Home";
 import NotFound from "./components/NotFound";
@@ -20,18 +21,20 @@ function App() {
   return (
     <>
       <Suspense fallback={<div>Loading...</div>}>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/project" element={<ProjectHub />} />
-            <Route path="/project/:id" element={<Information />} />
-            <Route path="/gallery" element={<Gallery />} />
-            <Route path="/publication" element={<Publication />} />
-            <Route path="/impact" element={<Impact />} />
-            <Route path="*" element={<NotFound />} />
-          </Route>
-        </Routes>
+        <AnimatePresence initial={false}>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/project" element={<ProjectHub />} />
+              <Route path="/project/:id" element={<Information />} />
+              <Route path="/gallery" element={<Gallery />} />
+              <Route path="/publication" element={<Publication />} />
+              <Route path="/impact" element={<Impact />} />
+              <Route path="*" element={<NotFound />} />
+            </Route>
+          </Routes>
+        </AnimatePresence>
       </Suspense>
     </>
   );

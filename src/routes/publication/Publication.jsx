@@ -2,10 +2,11 @@ import Carrousel from "../../components/Carrousel";
 import publ from "../../assets/publ.png";
 import publication from "../../assets/publication.png";
 import { publicationsList } from "../../lib/lists";
+import PageTransition from "../../components/transitions/PageTransition";
 
 const Publication = () => {
   return (
-    <div className="publication">
+    <PageTransition myClass={"publication"}>
       <div className="banner">
         <Carrousel images={[publ]} />
       </div>
@@ -32,7 +33,7 @@ const Publication = () => {
         <h3>Better information, better health</h3>
         <h2>News</h2>
       </div>
-    </div>
+    </PageTransition>
   );
 };
 
