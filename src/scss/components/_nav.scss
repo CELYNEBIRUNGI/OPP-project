@@ -54,6 +54,10 @@ nav {
         }
       }
     }
+
+    .close {
+      display: none;
+    }
   }
 
   @include mx.mobile {
@@ -81,6 +85,12 @@ nav {
     .nav-list-container {
       display: none;
 
+      .nav-list {
+        .close {
+          display: block;
+          cursor: pointer;
+        }
+      }
       &.reveal {
         display: block;
       }
