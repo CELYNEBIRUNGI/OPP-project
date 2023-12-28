@@ -1,7 +1,13 @@
 import icon from "../assets/icon.png";
 import icon1 from "../assets/imp.png";
+//slider
 import slider1 from "../assets/slider-1.png";
 import slider2 from "../assets/slider-2.png";
+//articles
+import article1 from "../assets/article-1.png";
+import article2 from "../assets/article-2.png";
+import article3 from "../assets/article-3.png";
+import article4 from "../assets/article-4.png";
 
 export const statusLists = [
   {
@@ -168,3 +174,34 @@ export const publicationsList = [
 ];
 
 export const sliderList = [slider1, slider2, slider1, slider2];
+
+export const articlesList = [
+  {
+    id: 1,
+    img: article1,
+    title: "This Article’s Title goes Here, but not too long.",
+    date: "Monday 05, September 2021",
+    author: "By Author",
+  },
+  {
+    id: 2,
+    img: article2,
+    title: "This Article’s Title goes Here, but not too long.",
+    date: "Monday 05, September 2021",
+    author: "By Author",
+  },
+  {
+    id: 3,
+    img: article3,
+    title: "This Article’s Title goes Here, but not too long.",
+    date: "Monday 05, September 2021",
+    author: "By Author",
+  },
+  {
+    id: 4,
+    img: article4,
+    title: "This Article’s Title goes Here, but not too long.",
+    date: "Monday 05, September 2021",
+    author: "By Author",
+  },
+];

@@ -7,6 +7,9 @@ nav {
   // height: 90px;
   background-color: var.$primary-100;
 
+  .burger {
+    display: none;
+  }
   .nav-header {
     @include mx.flex;
     max-width: 1080px;
@@ -49,6 +52,37 @@ nav {
         &:hover {
           text-decoration: underline;
         }
+      }
+    }
+  }
+
+  @include mx.mobile {
+    // .headroom-wrapper {
+    //   height: 0;
+    // }
+    .burger {
+      display: block;
+      padding: 1rem;
+      cursor: pointer;
+
+      svg {
+        width: 2em;
+        height: 2em;
+      }
+
+      &.toggle {
+        display: none;
+      }
+    }
+    .nav-header {
+      display: none;
+    }
+
+    .nav-list-container {
+      display: none;
+
+      &.reveal {
+        display: block;
       }
     }
   }

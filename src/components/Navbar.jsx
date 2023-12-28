@@ -1,11 +1,15 @@
-import React from "react";
+import { useEffect, useState, useRef } from "react";
 import { Link, useLocation, useParams } from "react-router-dom";
 import { projectHubList } from "../lib/lists";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IoClose } from "react-icons/io5";
 import palm from "../assets/palm.png";
 import logo from "../assets/logo.png";
 import Headroom from "react-headroom";
 
 const Navbar = () => {
+  const [showMenu, setShowMenu] = useState(false);
+  const navRef = useRef(null);
   let location = useLocation();
   let { id } = useParams();
   const verifiedLocation = location.pathname === `/project/${id}`;
@@ -18,6 +22,17 @@ const Navbar = () => {
     { name: "Gallery", path: "/gallery" },
     { name: "Contact US", path: "/contact" },
   ];
+
+  useEffect(() => {
+    const revealMenu = () => {
+      const navListContainer = document.querySelector(".nav-list-container");
+      const burger = document.querySelector(".burger");
+      navListContainer?.classList.toggle("reveal");
+      burger?.classList.toggle("toggle");
+    };
+
+    revealMenu();
+  }, [showMenu, location]);
   return (
     <>
       <Headroom>
@@ -42,6 +57,14 @@ const Navbar = () => {
                     <Link to={link.path}>{link.name}</Link>
                   </li>
                 ))}
+                <li>
+                  <button
+                    className="close"
+                    onClick={() => setShowMenu(!showMenu)}
+                  >
+                    <IoClose />
+                  </button>
+                </li>
               </ul>
             ) : (
               <ul className="nav-list">
@@ -55,6 +78,9 @@ const Navbar = () => {
                 ))}
               </ul>
             )}
+          </div>
+          <div className="burger" onClick={() => setShowMenu(!showMenu)}>
+            <GiHamburgerMenu />
           </div>
         </nav>
       </Headroom>

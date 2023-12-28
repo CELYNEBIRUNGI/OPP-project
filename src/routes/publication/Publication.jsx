@@ -26,7 +26,7 @@ const Publication = () => {
       </div>
 
       <div className="slider">
-        <Carrousel images={[publication]} pagination={true} />
+        <Carrousel images={[publication, publication]} pagination={true} />
       </div>
 
       <div className="news">
