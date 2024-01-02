@@ -1,0 +1,88 @@
+@use "../reset/variables" as var;
+@use "../reset/mixins" as mx;
+
+.project-hub {
+  width: 100%;
+  .banner {
+    // max-width: 1080px;
+    margin: 0 auto;
+
+    p {
+      margin: 2rem 0;
+      text-align: center;
+      font-size: var.$fs-text;
+    }
+
+    img {
+      width: 100%;
+      height: 400px;
+      display: block;
+      object-fit: cover;
+    }
+  }
+  .sites {
+    max-width: 1080px;
+    margin: 3rem auto;
+    @include mx.flex($justify: space-around);
+
+    .site {
+      flex-basis: 40%;
+      margin-bottom: 1rem;
+
+      div {
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 240px;
+          display: block;
+          object-fit: cover;
+        }
+
+        a {
+          display: block;
+          width: 90%;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          z-index: 1;
+          color: #fff;
+          background-color: var.$primary-200;
+          padding: 1rem;
+        }
+      }
+
+      p {
+        margin: 2rem 0;
+        font-size: var.$fs-text;
+      }
+    }
+  }
+
+  @include mx.mobile {
+    .banner {
+      p {
+        font-size: var.$fs-text;
+      }
+
+      img {
+        height: 40vh;
+      }
+    }
+
+    .sites {
+      @include mx.flex($dir: column, $justify: space-around);
+
+      .site {
+        flex-basis: 100%;
+        margin-bottom: 1rem;
+
+        div {
+          img {
+            height: 40vh;
+          }
+        }
+      }
+    }
+  }
+}

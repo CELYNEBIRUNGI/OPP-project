@@ -1,0 +1,86 @@
+@use "../reset/variables" as var;
+@use "../reset/mixins" as mx;
+
+.publication {
+  .banner {
+    width: 100%;
+    padding: 2rem;
+    height: 60vh;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 60vh;
+      object-fit: cover;
+    }
+  }
+
+  .pub {
+    @include mx.flex($dir: column);
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 64px;
+
+    ul {
+      @include mx.flex($justify: space-between);
+
+      li {
+        @include mx.flex($justify: flex-start);
+        flex-basis: 28%;
+        font-size: var.$fs-text;
+        margin-top: 64px;
+        height: 400px;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 60%;
+        }
+
+        button {
+          margin-top: 8px;
+          height: 40px;
+          border: none;
+          background: none;
+          color: var.$primary-200;
+          font-size: var.$fs-text;
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .slider {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+
+  .news {
+    @include mx.flex($dir: column);
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 64px;
+  }
+
+  @include mx.mobile {
+    .banner {
+      height: 40vh;
+
+      p {
+        font-size: var.$fs-text;
+      }
+
+      img {
+        height: 40vh;
+      }
+    }
+
+    .pub {
+      ul {
+        @include mx.flex($dir: column, $justify: space-around);
+        gap: 2rem;
+      }
+    }
+  }
+}

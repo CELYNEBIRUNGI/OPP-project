@@ -1,0 +1,123 @@
+@use "../reset/variables" as var;
+@use "../reset/mixins" as mx;
+
+nav {
+  display: flex;
+  flex-direction: column;
+  // height: 90px;
+  background-color: var.$primary-100;
+
+  .burger {
+    display: none;
+  }
+  .nav-header {
+    @include mx.flex;
+    max-width: 1080px;
+    margin: 0 auto;
+    height: 60%;
+    gap: 32px;
+
+    div {
+      @include mx.flex;
+
+      img {
+        width: 3em;
+        margin-right: 12px;
+      }
+    }
+  }
+
+  .nav-list-container {
+    background-color: var.$primary-200;
+    width: 100%;
+    height: 40%;
+  }
+  .nav-list {
+    @include mx.flex($justify: flex-end);
+    padding: 6px 48px 6px 0;
+    gap: 48px;
+    height: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+
+    li {
+      a {
+        @include mx.flex;
+        text-decoration: none;
+        color: #000;
+        font-weight: var.$fw-text;
+        font-size: var.$fs-text;
+        text-transform: capitalize;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .close {
+      display: none;
+    }
+  }
+
+  @include mx.mobile {
+    .headroom-wrapper {
+      height: fit-content;
+    }
+    .burger {
+      display: block;
+      padding: 1rem;
+      cursor: pointer;
+
+      svg {
+        width: 2em;
+        height: 2em;
+      }
+
+      &.toggle {
+        display: none;
+      }
+    }
+    .nav-header {
+      display: none;
+    }
+
+    .nav-list-container {
+      display: none;
+
+      .nav-list {
+        .close {
+          display: block;
+          cursor: pointer;
+        }
+      }
+      &.reveal {
+        display: block;
+
+        .nav-list {
+          @include mx.flex($dir: column);
+          gap: 24px;
+          padding: 24px 0 0 0;
+          height: 70vh;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: var.$primary-100;
+          z-index: 1;
+          transition: all 0.6s ease-in-out;
+
+          li {
+            a {
+              transition: all 0.3s ease-in-out;
+
+              &:hover {
+                color: var.$primary-200;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

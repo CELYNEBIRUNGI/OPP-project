@@ -1,0 +1,34 @@
+@use "../reset/variables" as var;
+@use "../reset/mixins" as mx;
+.card-one,
+.report-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  text-align: center;
+
+  p {
+    padding: 8px;
+  }
+}
+.card-one {
+  flex-basis: 22.5%;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+  }
+}
+
+.report-card {
+  @include mx.flex($justify: space-around);
+  flex-basis: 48%;
+  margin-bottom: 64px;
+
+  img {
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+  }
+}

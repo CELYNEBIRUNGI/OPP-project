@@ -1,0 +1,22 @@
+@use "../reset/variables" as var;
+@use "../reset/mixins" as mx;
+
+.site-info {
+  max-width: 1080px;
+  margin: 3rem auto;
+  h2 {
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  .carrousel {
+    margin: 3rem 0;
+  }
+
+  p {
+    margin: 2rem 0;
+    padding: 0 2.5rem;
+    text-align: start;
+    font-size: var.$fs-text;
+  }
+}
