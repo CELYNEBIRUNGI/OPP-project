@@ -72,4 +72,81 @@ footer {
       height: 50%;
     }
   }
+
+  @include mx.mobile {
+    .footer {
+      @include mx.flex($dir: column, $align: flex-start, $justify: flex-start);
+      padding: 30px 20px;
+
+      .image {
+        flex-basis: 100%;
+        @include mx.flex;
+        margin-bottom: 16px;
+        height: 40px;
+
+        img {
+          height: 40px;
+        }
+      }
+
+      div {
+        @include mx.flex(
+          $dir: column,
+          $align: flex-start,
+          $justify: flex-start
+        );
+        gap: 16px;
+        flex-basis: 100%;
+        height: 220px;
+
+        .mission-p {
+          width: 90%;
+          word-wrap: break-word;
+        }
+      }
+
+      form {
+        flex-basis: 100%;
+        height: 220px;
+        gap: 16px;
+        @include mx.flex(
+          $dir: column,
+          $justify: flex-start,
+          $align: flex-start
+        );
+
+        label {
+          width: 100%;
+        }
+
+        input {
+          width: 100%;
+          border-radius: 8px;
+          padding: 4px 8px;
+        }
+
+        button {
+          width: 100%;
+          border-radius: 8px;
+          border: none;
+          padding: 8px;
+          background-color: var.$primary-200;
+          color: #fff;
+          font-weight: bold;
+        }
+      }
+    }
+    .foot {
+      margin-top: 32px;
+      background-color: var.$primary-200;
+      height: 35px;
+
+      &::after {
+        content: "";
+        display: block;
+        background-color: var.$primary-100;
+        height: 50%;
+      }
+    }
+  }
 }
