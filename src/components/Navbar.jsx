@@ -10,6 +10,7 @@ import Headroom from "react-headroom";
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const navRef = useRef(null);
+  const burgerRef = useRef(null);
   let location = useLocation();
   let { id } = useParams();
   const verifiedLocation = location.pathname === `/project/${id}`;

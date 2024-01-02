@@ -16,7 +16,8 @@
 
     img {
       width: 100%;
-      object-fit: contain;
+      height: 100%;
+      object-fit: cover;
     }
 
     div {
@@ -31,6 +32,7 @@
 
       h1 {
         font-size: var.$fs-h2;
+        text-align: center;
       }
     }
   }
@@ -109,6 +111,61 @@
     .reports-body {
       @include mx.flex($justify: space-around);
       margin-top: 16px;
+    }
+  }
+
+  @include mx.mobile {
+    .banner {
+      height: 40vh;
+
+      div {
+        h1 {
+          font-size: var.$fs-h3;
+        }
+      }
+    }
+
+    .about {
+      padding: 32px;
+      .about-body {
+        @include mx.flex($dir: column);
+        height: fit-content;
+        margin-top: 32px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+
+        div {
+          margin-top: 32px;
+          p {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .implementation {
+      padding: 32px;
+      .implementation-body {
+        @include mx.flex($dir: column);
+        padding-top: 32px;
+      }
+    }
+
+    .map {
+      padding: 64px 32px;
+      width: 100vw;
+      overflow: hidden;
+    }
+
+    .reports {
+      padding: 32px;
+      .reports-body {
+        @include mx.flex($dir: column);
+        margin-top: 32px;
+      }
     }
   }
 }

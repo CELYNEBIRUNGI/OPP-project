@@ -61,9 +61,9 @@ nav {
   }
 
   @include mx.mobile {
-    // .headroom-wrapper {
-    //   height: 0;
-    // }
+    .headroom-wrapper {
+      height: fit-content;
+    }
     .burger {
       display: block;
       padding: 1rem;
@@ -93,6 +93,30 @@ nav {
       }
       &.reveal {
         display: block;
+
+        .nav-list {
+          @include mx.flex($dir: column);
+          gap: 24px;
+          padding: 24px 0 0 0;
+          height: 70vh;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: var.$primary-100;
+          z-index: 1;
+          transition: all 0.6s ease-in-out;
+
+          li {
+            a {
+              transition: all 0.3s ease-in-out;
+
+              &:hover {
+                color: var.$primary-200;
+              }
+            }
+          }
+        }
       }
     }
   }
