@@ -15,7 +15,6 @@ const Navbar = () => {
   let { id } = useParams();
   const verifiedLocation = location.pathname === `/project/${id}`;
   const links = [
-    { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Project Hubs", path: "/project" },
     { name: "Impact", path: "/impact" },
@@ -51,34 +50,30 @@ const Navbar = () => {
             </div>
           )}
           <div className="nav-list-container">
-            {!verifiedLocation ? (
-              <ul className="nav-list">
-                {links.map((link) => (
-                  <li key={link.name}>
-                    <Link to={link.path}>{link.name}</Link>
-                  </li>
-                ))}
-                <li>
-                  <button
-                    className="close"
-                    onClick={() => setShowMenu(!showMenu)}
-                  >
-                    <IoClose />
-                  </button>
-                </li>
-              </ul>
-            ) : (
-              <ul className="nav-list">
-                <li>
-                  <Link to="/">Home</Link>
-                </li>
-                {projectHubList.map((link) => (
-                  <li key={link.id}>
-                    <Link to={`/project/${link.id}`}>{link.title}</Link>
-                  </li>
-                ))}
-              </ul>
-            )}
+            <ul className="nav-list">
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              {!verifiedLocation
+                ? links.map((link) => (
+                    <li key={link.name}>
+                      <Link to={link.path}>{link.name}</Link>
+                    </li>
+                  ))
+                : projectHubList.map((link) => (
+                    <li key={link.id}>
+                      <Link to={`/project/${link.id}`}>{link.title}</Link>
+                    </li>
+                  ))}
+              <li>
+                <button
+                  className="close"
+                  onClick={() => setShowMenu(!showMenu)}
+                >
+                  <IoClose />
+                </button>
+              </li>
+            </ul>
           </div>
           <div className="burger" onClick={() => setShowMenu(!showMenu)}>
             <GiHamburgerMenu />

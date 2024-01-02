@@ -58,4 +58,31 @@
       }
     }
   }
+
+  @include mx.mobile {
+    .banner {
+      p {
+        font-size: var.$fs-text;
+      }
+
+      img {
+        height: 40vh;
+      }
+    }
+
+    .sites {
+      @include mx.flex($dir: column, $justify: space-around);
+
+      .site {
+        flex-basis: 100%;
+        margin-bottom: 1rem;
+
+        div {
+          img {
+            height: 40vh;
+          }
+        }
+      }
+    }
+  }
 }
