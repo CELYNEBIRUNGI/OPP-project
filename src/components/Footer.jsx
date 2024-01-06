@@ -36,7 +36,7 @@ const Footer = () => {
             at all levels”.
           </p>
         </div>
-        <div>
+        <div id="contact">
           <h2>CONTACT US TODAY</h2>
           <p>
             CALL CENTER TOLL FREE 0800-100-066 Address: Plot 6, Lourdel Road,

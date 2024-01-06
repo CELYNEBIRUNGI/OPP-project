@@ -179,7 +179,7 @@ export const articlesList = [
   {
     id: 1,
     img: article1,
-    title: "This Article’s Title goes Here, but not too long.",
+    title: "This Article’s Title goes Here",
     date: "Monday 05, September 2021",
     author: "By Author",
   },
@@ -203,5 +203,143 @@ export const articlesList = [
     title: "This Article’s Title goes Here, but not too long.",
     date: "Monday 05, September 2021",
     author: "By Author",
+  },
+];
+
+export const galleryList = [
+  {
+    id: 1,
+    img: article1,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+  {
+    id: 2,
+    img: article1,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+  {
+    id: 3,
+    img: article1,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+  {
+    id: 4,
+    img: article1,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+  {
+    id: 5,
+    img: article1,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+  {
+    id: 6,
+    img: article1,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+  {
+    id: 7,
+    img: article1,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+  {
+    id: 8,
+    img: article1,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+  {
+    id: 9,
+    img: article1,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+  {
+    id: 10,
+    img: article1,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+  {
+    id: 11,
+    img: article1,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+  {
+    id: 12,
+    img: article1,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+  {
+    id: 13,
+    img: article1,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+  {
+    id: 14,
+    img: article1,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+  {
+    id: 15,
+    img: article1,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
   },
 ];
