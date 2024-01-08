@@ -13,7 +13,7 @@ const animation = {
 };
 const PageTransition = ({ children, myClass }) => {
   return (
-    <motion.div
+    <motion.main
       className={`${myClass ? myClass : ""} motion-div`}
       variants={animation}
       initial="initial"
@@ -21,7 +21,7 @@ const PageTransition = ({ children, myClass }) => {
       exit="exit"
     >
       {children}
-    </motion.div>
+    </motion.main>
   );
 };
 

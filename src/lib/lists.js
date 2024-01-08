@@ -9,6 +9,23 @@ import article2 from "../assets/article-2.png";
 import article3 from "../assets/article-3.png";
 import article4 from "../assets/article-4.png";
 
+//gallery
+import gallery1 from "../assets/rec.png";
+import gallery2 from "../assets/rec.png";
+import gallery3 from "../assets/rec.png";
+import gallery4 from "../assets/rec.png";
+import gallery5 from "../assets/rec.png";
+import gallery6 from "../assets/rec.png";
+import gallery7 from "../assets/rec.png";
+import gallery8 from "../assets/rec.png";
+import gallery9 from "../assets/rec.png";
+import gallery10 from "../assets/rec.png";
+import gallery11 from "../assets/rec.png";
+import gallery12 from "../assets/rec.png";
+import gallery13 from "../assets/rec.png";
+import gallery14 from "../assets/rec.png";
+import gallery15 from "../assets/rec.png";
+
 export const statusLists = [
   {
     id: 1,
@@ -209,7 +226,7 @@ export const articlesList = [
 export const galleryList = [
   {
     id: 1,
-    img: article1,
+    img: gallery1,
     title: "This Article’s Title goes Here",
     date: "05, September 2021",
     category: "By Author",
@@ -218,7 +235,7 @@ export const galleryList = [
   },
   {
     id: 2,
-    img: article1,
+    img: gallery2,
     title: "This Article’s Title goes Here",
     date: "05, September 2021",
     category: "By Author",
@@ -227,7 +244,7 @@ export const galleryList = [
   },
   {
     id: 3,
-    img: article1,
+    img: gallery3,
     title: "This Article’s Title goes Here",
     date: "05, September 2021",
     category: "By Author",
@@ -236,7 +253,7 @@ export const galleryList = [
   },
   {
     id: 4,
-    img: article1,
+    img: gallery4,
     title: "This Article’s Title goes Here",
     date: "05, September 2021",
     category: "By Author",
@@ -245,7 +262,7 @@ export const galleryList = [
   },
   {
     id: 5,
-    img: article1,
+    img: gallery5,
     title: "This Article’s Title goes Here",
     date: "05, September 2021",
     category: "By Author",
@@ -254,7 +271,7 @@ export const galleryList = [
   },
   {
     id: 6,
-    img: article1,
+    img: gallery6,
     title: "This Article’s Title goes Here",
     date: "05, September 2021",
     category: "By Author",
@@ -263,7 +280,7 @@ export const galleryList = [
   },
   {
     id: 7,
-    img: article1,
+    img: gallery7,
     title: "This Article’s Title goes Here",
     date: "05, September 2021",
     category: "By Author",
@@ -272,7 +289,7 @@ export const galleryList = [
   },
   {
     id: 8,
-    img: article1,
+    img: gallery8,
     title: "This Article’s Title goes Here",
     date: "05, September 2021",
     category: "By Author",
@@ -281,7 +298,7 @@ export const galleryList = [
   },
   {
     id: 9,
-    img: article1,
+    img: gallery9,
     title: "This Article’s Title goes Here",
     date: "05, September 2021",
     category: "By Author",
@@ -290,7 +307,7 @@ export const galleryList = [
   },
   {
     id: 10,
-    img: article1,
+    img: gallery10,
     title: "This Article’s Title goes Here",
     date: "05, September 2021",
     category: "By Author",
@@ -299,7 +316,7 @@ export const galleryList = [
   },
   {
     id: 11,
-    img: article1,
+    img: gallery11,
     title: "This Article’s Title goes Here",
     date: "05, September 2021",
     category: "By Author",
@@ -308,7 +325,7 @@ export const galleryList = [
   },
   {
     id: 12,
-    img: article1,
+    img: gallery12,
     title: "This Article’s Title goes Here",
     date: "05, September 2021",
     category: "By Author",
@@ -317,7 +334,7 @@ export const galleryList = [
   },
   {
     id: 13,
-    img: article1,
+    img: gallery13,
     title: "This Article’s Title goes Here",
     date: "05, September 2021",
     category: "By Author",
@@ -326,7 +343,7 @@ export const galleryList = [
   },
   {
     id: 14,
-    img: article1,
+    img: gallery14,
     title: "This Article’s Title goes Here",
     date: "05, September 2021",
     category: "By Author",
@@ -335,7 +352,7 @@ export const galleryList = [
   },
   {
     id: 15,
-    img: article1,
+    img: gallery15,
     title: "This Article’s Title goes Here",
     date: "05, September 2021",
     category: "By Author",

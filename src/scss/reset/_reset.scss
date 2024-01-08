@@ -5,6 +5,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -52,7 +53,7 @@ a:not([class]) {
 img,
 picture,
 svg {
-  max-width: 100%;
+  width: 100%;
   display: block;
 }
 

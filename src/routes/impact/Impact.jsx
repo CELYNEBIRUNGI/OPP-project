@@ -11,8 +11,11 @@ const Impact = () => {
     <PageTransition myClass={"impact"}>
       <div className="banner">
         <Carrousel images={[impact]} />
-        <h2>Changing lives of Ugandans</h2>
+        <div>
+          <h2>Changing lives of Ugandans</h2>
+        </div>
       </div>
+
       <div className="articles">
         {topArticles.map((article) => (
           <div className="article" key={article.id}>
