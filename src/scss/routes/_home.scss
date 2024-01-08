@@ -2,8 +2,6 @@
 @use "../reset/mixins" as mx;
 
 .home {
-  height: 100%;
-  width: 100%;
   h2 {
     margin: 3.5rem 0 1.5rem;
   }
@@ -115,16 +113,6 @@
   }
 
   @include mx.mobile {
-    .banner {
-      height: 40vh;
-
-      div {
-        h1 {
-          font-size: var.$fs-h3;
-        }
-      }
-    }
-
     .about {
       padding: 32px;
       .about-body {

@@ -10,11 +10,11 @@ const ProjectHub = () => {
     <PageTransition myClass={"project-hub"}>
       <div className="banner">
         <Carrousel images={images} />
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquam
-          justo et nibh venenatis aliquet.Donec quis felis{" "}
-        </p>
       </div>
+      <p className="head-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquam
+        justo et nibh venenatis aliquet.Donec quis felis{" "}
+      </p>
       <div className="sites">
         {projectHubList.map((project) => (
           <div className="site" key={project.id}>

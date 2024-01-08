@@ -1,0 +1,85 @@
+@use "../reset/variables" as var;
+@use "../reset/mixins" as mx;
+
+.gallery {
+  .page-container {
+    max-width: 1080px;
+    height: fit-content;
+    margin: 3rem auto;
+    padding: 3rem 0;
+    @include mx.flex($justify: space-around);
+    gap: 2rem;
+
+    .list {
+      @include mx.flex($justify: space-between);
+      gap: 1rem;
+
+      .gallery-card {
+        flex-basis: 28%;
+        height: 400px;
+
+        .gallery-image {
+          width: 100%;
+          height: 60%;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .card-body {
+          padding: 1rem;
+          font-size: var.$fs-text;
+          h3 {
+            font-size: var.$fs-text;
+            text-align: center;
+          }
+
+          .props {
+            @include mx.flex();
+            gap: 0.5rem;
+            padding: 0.5rem;
+
+            p:first-child {
+              padding-right: 0.6rem;
+              border-right: 2px solid #fff;
+            }
+          }
+
+          p {
+            overflow: hidden;
+            text-align: center;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            max-height: 3em;
+          }
+        }
+      }
+    }
+
+    .page-numbers {
+      @include mx.flex($justify: center);
+      gap: 0.4rem;
+    }
+
+    button {
+      border: none;
+      border-radius: 5px;
+      background: transparent;
+      padding: 0.3rem 0.4rem;
+      cursor: pointer;
+      font-size: var.$fs-text;
+      transition: all 0.3s ease-in-out;
+
+      &.active,
+      &:hover {
+        background-color: var.$primary-200;
+        color: #fff;
+      }
+    }
+  }
+}

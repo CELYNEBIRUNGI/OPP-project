@@ -20,7 +20,6 @@ const Navbar = () => {
     { name: "Impact", path: "/impact" },
     { name: "Publication", path: "/publication" },
     { name: "Gallery", path: "/gallery" },
-    { name: "Contact US", path: "/contact" },
   ];
 
   useEffect(() => {
@@ -65,6 +64,9 @@ const Navbar = () => {
                       <Link to={`/project/${link.id}`}>{link.title}</Link>
                     </li>
                   ))}
+              <li>
+                <a href="#contact">Contact Us</a>
+              </li>
               <li>
                 <button
                   className="close"

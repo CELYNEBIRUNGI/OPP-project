@@ -4,7 +4,7 @@ import PageTransition from "../../components/transitions/PageTransition";
 const About = () => {
   return (
     <PageTransition myClass={"about"}>
-      <div className="about-banner">
+      <div className="banner">
         <img src={pic} alt="About banner" />
       </div>
 

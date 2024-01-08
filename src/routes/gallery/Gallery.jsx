@@ -1,23 +1,14 @@
-import React from "react";
-
+import Paginated from "../../components/Paginated";
+import { galleryList } from "../../lib/lists";
+import Carrousel from "../../components/Carrousel";
 const Gallery = () => {
-  const gallery = [];
   return (
     <div>
       <div className="banner">
-        <img src="" alt="" />
+        <Carrousel images={[galleryList[0].img]} />
       </div>
       <div className="gallery">
-        {gallery.map((item) => (
-          <div className="gallery-item">
-            <img src="" alt="" />
-            <div className="gallery-item-info">
-              <div>{item.date}</div>
-              <div className="gallery-item-title">{item.title}</div>
-              <div className="gallery-item-description">{item.description}</div>
-            </div>
-          </div>
-        ))}
+        <Paginated items={galleryList} itemsPerPage={9} />
       </div>
     </div>
   );
