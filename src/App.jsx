@@ -28,7 +28,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/project" element={<ProjectHub />} />
               <Route path="/project/:id" element={<Information />} />
-              <Route path="/gallery" element={<Gallery />} />
+              <Route path="/gallery/:section" element={<Gallery />} />
               <Route path="/publication" element={<Publication />} />
               <Route path="/impact" element={<Impact />} />
               <Route path="*" element={<NotFound />} />
