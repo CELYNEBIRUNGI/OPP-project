@@ -1,7 +1,9 @@
 import { useLocation, useParams } from "react-router-dom";
 import {
   generalList,
+  generalListImgs,
   galleryProjectHub,
+  galleryProjectHubImgs,
   communityActivityList,
   conferencesList,
 } from "../../lib/galleryLists";
@@ -19,10 +21,19 @@ const Gallery = () => {
       ? conferencesList
       : galleryProjectHub;
 
+  const carrouselImages =
+    location.pathname === "/gallery/general"
+      ? generalListImgs
+      : location.pathname === "/gallery/community-activity"
+      ? [galleryList[0].img]
+      : location.pathname === "/gallery/conferences"
+      ? [galleryList[0].img]
+      : galleryProjectHubImgs;
+
   return (
     <div>
       <div className="banner">
-        <Carrousel images={[galleryList[0].img]} />
+        <Carrousel images={carrouselImages} />
       </div>
       <div className="gallery">
         <Paginated items={renderedList} itemsPerPage={9} />
