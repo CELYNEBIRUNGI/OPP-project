@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import GalleryCard from "./cards/GalleryCard";
 
 const Paginated = ({ items, itemsPerPage }) => {
+  const location = useLocation();
   const totalPages = Math.ceil(items?.length / itemsPerPage);
   const [currentPage, setCurrentPage] = useState(() => 1);
   const startIndex = (currentPage - 1) * itemsPerPage;
@@ -10,6 +12,10 @@ const Paginated = ({ items, itemsPerPage }) => {
   const goToPage = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
+
+  useEffect(() => {
+    goToPage(1);
+  }, [location.pathname]);
 
   return (
     <div className="page-container">
