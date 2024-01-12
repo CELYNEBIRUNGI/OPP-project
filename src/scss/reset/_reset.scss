@@ -6,6 +6,8 @@
 *::after {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  min-width: 0;
+  min-height: 0;
 }
 
 * {

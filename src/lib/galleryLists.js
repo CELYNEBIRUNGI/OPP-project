@@ -42,6 +42,50 @@ import pro18 from "../assets/projectHub/pic18.webp";
 import pro19 from "../assets/projectHub/pic19.webp";
 import pro20 from "../assets/projectHub/pic20.webp";
 
+//Conferences Gallery List
+import conf1 from "../assets/Conferences/pic1.webp";
+import conf2 from "../assets/Conferences/pic2.webp";
+import conf3 from "../assets/Conferences/pic3.webp";
+import conf4 from "../assets/Conferences/pic4.webp";
+import conf5 from "../assets/Conferences/pic5.webp";
+import conf6 from "../assets/Conferences/pic6.webp";
+import conf7 from "../assets/Conferences/pic7.webp";
+import conf8 from "../assets/Conferences/pic8.webp";
+import conf9 from "../assets/Conferences/pic9.webp";
+import conf10 from "../assets/Conferences/pic10.webp";
+import conf11 from "../assets/Conferences/pic11.webp";
+import conf12 from "../assets/Conferences/pic12.webp";
+import conf13 from "../assets/Conferences/pic13.webp";
+import conf14 from "../assets/Conferences/pic14.webp";
+import conf15 from "../assets/Conferences/pic15.webp";
+import conf16 from "../assets/Conferences/pic16.webp";
+import conf17 from "../assets/Conferences/pic17.webp";
+import conf18 from "../assets/Conferences/pic18.webp";
+import conf19 from "../assets/Conferences/pic19.webp";
+import conf20 from "../assets/Conferences/pic20.webp";
+
+//Community Activity Gallery List
+import com1 from "../assets/Community/pic1.webp";
+import com2 from "../assets/Community/pic2.webp";
+import com3 from "../assets/Community/pic3.webp";
+import com4 from "../assets/Community/pic4.webp";
+import com5 from "../assets/Community/pic5.webp";
+import com6 from "../assets/Community/pic6.webp";
+import com7 from "../assets/Community/pic7.webp";
+import com8 from "../assets/Community/pic8.webp";
+import com9 from "../assets/Community/pic9.webp";
+import com10 from "../assets/Community/pic10.webp";
+import com11 from "../assets/Community/pic11.webp";
+import com12 from "../assets/Community/pic12.webp";
+import com13 from "../assets/Community/pic13.webp";
+import com14 from "../assets/Community/pic14.webp";
+import com15 from "../assets/Community/pic15.webp";
+import com16 from "../assets/Community/pic16.webp";
+import com17 from "../assets/Community/pic17.webp";
+import com18 from "../assets/Community/pic18.webp";
+import com19 from "../assets/Community/pic19.webp";
+import com20 from "../assets/Community/pic20.webp";
+
 export const generalList = [
   {
     id: 1,
@@ -255,6 +299,8 @@ export const galleryProjectHub = [
     title: "This Article’s Title goes Here",
     date: "05, September 2021",
     category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
   },
   {
     id: 2,
@@ -262,6 +308,8 @@ export const galleryProjectHub = [
     title: "This Article’s Title goes Here",
     date: "05, September 2021",
     category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
   },
   {
     id: 3,
@@ -269,6 +317,8 @@ export const galleryProjectHub = [
     title: "This Article’s Title goes Here",
     date: "05, September 2021",
     category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
   },
   {
     id: 4,
@@ -276,6 +326,8 @@ export const galleryProjectHub = [
     title: "This Article’s Title goes Here",
     date: "05, September 2021",
     category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
   },
   {
     id: 5,
@@ -283,6 +335,8 @@ export const galleryProjectHub = [
     title: "This Article’s Title goes Here",
     date: "05, September 2021",
     category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
   },
 
   {
@@ -291,6 +345,8 @@ export const galleryProjectHub = [
     title: "This Article’s Title goes Here",
     date: "05, September 2021",
     category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
   },
 
   {
@@ -299,6 +355,8 @@ export const galleryProjectHub = [
     title: "This Article’s Title goes Here",
     date: "05, September 2021",
     category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
   },
 
   {
@@ -307,6 +365,8 @@ export const galleryProjectHub = [
     title: "This Article’s Title goes Here",
     date: "05, September 2021",
     category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
   },
 
   {
@@ -315,6 +375,8 @@ export const galleryProjectHub = [
     title: "This Article’s Title goes Here",
     date: "05, September 2021",
     category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
   },
 
   {
@@ -323,6 +385,8 @@ export const galleryProjectHub = [
     title: "This Article’s Title goes Here",
     date: "05, September 2021",
     category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
   },
 
   {
@@ -331,6 +395,8 @@ export const galleryProjectHub = [
     title: "This Article’s Title goes Here",
     date: "05, September 2021",
     category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
   },
   {
     id: 12,
@@ -338,6 +404,8 @@ export const galleryProjectHub = [
     title: "This Article’s Title goes Here",
     date: "05, September 2021",
     category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
   },
   {
     id: 13,
@@ -345,6 +413,8 @@ export const galleryProjectHub = [
     title: "This Article’s Title goes Here",
     date: "05, September 2021",
     category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
   },
   {
     id: 14,
@@ -352,6 +422,8 @@ export const galleryProjectHub = [
     title: "This Article’s Title goes Here",
     date: "05, September 2021",
     category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
   },
 
   {
@@ -360,6 +432,8 @@ export const galleryProjectHub = [
     title: "This Article’s Title goes Here",
     date: "05, September 2021",
     category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
   },
 
   {
@@ -368,6 +442,8 @@ export const galleryProjectHub = [
     title: "This Article’s Title goes Here",
     date: "05, September 2021",
     category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
   },
 
   {
@@ -376,6 +452,8 @@ export const galleryProjectHub = [
     title: "This Article’s Title goes Here",
     date: "05, September 2021",
     category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
   },
 
   {
@@ -384,6 +462,8 @@ export const galleryProjectHub = [
     title: "This Article’s Title goes Here",
     date: "05, September 2021",
     category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
   },
 
   {
@@ -392,6 +472,8 @@ export const galleryProjectHub = [
     title: "This Article’s Title goes Here",
     date: "05, September 2021",
     category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
   },
 
   {
@@ -400,6 +482,8 @@ export const galleryProjectHub = [
     title: "This Article’s Title goes Here",
     date: "05, September 2021",
     category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
   },
 ];
 
@@ -426,9 +510,440 @@ export const galleryProjectHubImgs = [
   pro20,
 ];
 
-export const conferencesList = [];
+export const conferencesList = [
+  {
+    id: 1,
+    img: conf1,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+  {
+    id: 2,
+    img: conf2,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
 
-export const communityActivityList = [];
+  {
+    id: 3,
+    img: conf3,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+
+  {
+    id: 4,
+    img: conf4,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+
+  {
+    id: 5,
+    img: conf5,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+
+  {
+    id: 6,
+    img: conf6,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+
+  {
+    id: 7,
+    img: conf7,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+
+  {
+    id: 8,
+    img: conf8,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+
+  {
+    id: 9,
+    img: conf9,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+  {
+    id: 10,
+    img: conf10,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+  {
+    id: 11,
+    img: conf11,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+  {
+    id: 12,
+    img: conf12,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+
+  {
+    id: 13,
+    img: conf13,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+
+  {
+    id: 14,
+    img: conf14,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+
+  {
+    id: 15,
+    img: conf15,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+  {
+    id: 16,
+    img: conf16,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+  {
+    id: 17,
+    img: conf17,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+  {
+    id: 18,
+    img: conf18,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+
+  {
+    id: 19,
+    img: conf19,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+
+  {
+    id: 20,
+    img: conf20,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+];
+
+export const conferenceGalleryImgs = [
+  conf1,
+  conf2,
+  conf3,
+  conf4,
+  conf5,
+  conf6,
+  conf7,
+  conf8,
+  conf9,
+  conf10,
+  conf11,
+  conf12,
+  conf13,
+  conf14,
+  conf15,
+  conf16,
+  conf17,
+  conf18,
+  conf19,
+  conf20,
+];
+
+export const communityActivityList = [
+  {
+    id: 1,
+    img: com1,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+  {
+    id: 2,
+    img: com2,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+
+  {
+    id: 3,
+    img: com3,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+
+  {
+    id: 4,
+    img: com4,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+
+  {
+    id: 5,
+    img: com5,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+  {
+    id: 6,
+    img: com6,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+  {
+    id: 7,
+    img: com7,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+  {
+    id: 8,
+    img: com8,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+
+  {
+    id: 9,
+    img: com9,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+  {
+    id: 10,
+    img: com10,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+  {
+    id: 11,
+    img: com11,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+
+  {
+    id: 12,
+    img: com12,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+
+  {
+    id: 13,
+    img: com13,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+  {
+    id: 14,
+    img: com14,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+
+  {
+    id: 15,
+    img: com15,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+
+  {
+    id: 16,
+    img: com16,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+
+  {
+    id: 17,
+    img: com17,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+  {
+    id: 18,
+    img: com18,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+
+  {
+    id: 19,
+    img: com19,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+
+  {
+    id: 20,
+    img: com20,
+    title: "This Article’s Title goes Here",
+    date: "05, September 2021",
+    category: "By Author",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
+  },
+];
+
+export const communityGaleryImgs = [
+  com1,
+  com2,
+  com3,
+  com4,
+  com5,
+  com6,
+  com7,
+  com8,
+  com9,
+  com10,
+  com11,
+  com12,
+  com13,
+  com14,
+  com15,
+  com16,
+  com17,
+  com18,
+  com19,
+  com20,
+];
 
 export const galleryNavList = [
   {
