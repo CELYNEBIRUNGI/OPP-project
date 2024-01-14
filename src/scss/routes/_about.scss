@@ -8,7 +8,6 @@
     max-width: 1080px;
     margin: 3rem auto;
     padding: 3rem 0;
-    height: 40vh;
     @include mx.flex($justify: space-around);
 
     div {
@@ -115,6 +114,54 @@
         @include mx.flex($dir: column, $justify: space-around);
         p {
           flex-basis: 100%;
+        }
+      }
+    }
+  }
+
+  @include mx.desktop {
+    font-size: var.$small;
+    .first-paragraph {
+      max-width: 900px;
+      div {
+        flex-basis: 50%;
+        height: 100%;
+        @include mx.flex($dir: column, $justify: space-around);
+      }
+
+      img {
+        height: 250px;
+        flex-basis: 30%;
+      }
+    }
+
+    .second-paragraph {
+      max-width: 900px;
+      gap: 1.5rem;
+    }
+
+    .third-paragraph {
+      max-width: 900px;
+      p {
+        flex-basis: 50%;
+        height: 100%;
+      }
+
+      img {
+        flex-basis: 40%;
+        height: 100%;
+      }
+    }
+
+    .fourth-paragraph {
+      max-width: 900px;
+      div {
+        @include mx.flex($justify: space-around);
+        img {
+          flex-basis: 35%;
+        }
+        p {
+          flex-basis: 55%;
         }
       }
     }

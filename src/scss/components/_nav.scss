@@ -119,4 +119,16 @@ nav {
       }
     }
   }
+
+  @include mx.desktop {
+    font-size: var.$small;
+
+    .nav-list {
+      li {
+        a {
+          font-size: var.$small;
+        }
+      }
+    }
+  }
 }

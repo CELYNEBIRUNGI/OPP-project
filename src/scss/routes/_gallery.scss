@@ -86,4 +86,27 @@
       }
     }
   }
+
+  @include mx.desktop {
+    .page-container {
+      max-width: 900px;
+      .list {
+        height: 1300px;
+        .gallery-card {
+          font-size: var.$small;
+          height: 400px;
+
+          .card-body {
+            .props,
+            p {
+              font-size: var.$small;
+            }
+          }
+          .gallery-image {
+            height: 50%;
+          }
+        }
+      }
+    }
+  }
 }

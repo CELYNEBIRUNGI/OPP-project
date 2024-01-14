@@ -19,4 +19,12 @@
     text-align: start;
     font-size: var.$fs-text;
   }
+
+  @include mx.desktop {
+    max-width: 900px;
+
+    p {
+      font-size: var.$small;
+    }
+  }
 }

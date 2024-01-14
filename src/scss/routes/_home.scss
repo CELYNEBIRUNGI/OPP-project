@@ -6,34 +6,34 @@
     margin: 3.5rem 0 1.5rem;
   }
 
-  .banner {
-    width: 100%;
-    height: 60vh;
-    overflow: hidden;
-    position: relative;
+  // .banner {
+  //   width: 100%;
+  //   height: 60vh;
+  //   overflow: hidden;
+  //   position: relative;
 
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+  //   img {
+  //     width: 100%;
+  //     height: 100%;
+  //     object-fit: cover;
+  //   }
 
-    div {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.4);
-      color: white;
-      @include mx.flex;
+  //   div {
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     width: 100%;
+  //     height: 100%;
+  //     background-color: rgba(0, 0, 0, 0.4);
+  //     color: white;
+  //     @include mx.flex;
 
-      h1 {
-        font-size: var.$fs-h2;
-        text-align: center;
-      }
-    }
-  }
+  //     h1 {
+  //       font-size: var.$fs-h2;
+  //       text-align: center;
+  //     }
+  //   }
+  // }
 
   .about {
     @include mx.flex($dir: column);
@@ -84,7 +84,6 @@
     h2 {
       max-width: 880px;
       text-align: center;
-      padding-bottom: 16px;
     }
 
     .implementation-body {
@@ -153,6 +152,36 @@
       .reports-body {
         @include mx.flex($dir: column);
         margin-top: 32px;
+      }
+    }
+  }
+
+  @include mx.desktop {
+    h2 {
+      font-size: var.$fs-h5;
+    }
+    .about {
+      .about-body {
+        margin-top: 0;
+        justify-content: space-around;
+        img {
+          width: 35%;
+          height: 70%;
+        }
+        div {
+          p {
+            font-size: var.$small;
+          }
+        }
+        a {
+          font-size: var.$small;
+        }
+      }
+    }
+
+    .implementation {
+      .implementation-body {
+        padding-top: 32px;
       }
     }
   }

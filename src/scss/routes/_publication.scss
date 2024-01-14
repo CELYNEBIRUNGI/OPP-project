@@ -58,4 +58,23 @@
       }
     }
   }
+
+  @include mx.desktop {
+    .pub {
+      max-width: 900px;
+      ul {
+        li {
+          font-size: var.$small;
+
+          img {
+            height: 50%;
+          }
+
+          button {
+            font-size: var.$small;
+          }
+        }
+      }
+    }
+  }
 }

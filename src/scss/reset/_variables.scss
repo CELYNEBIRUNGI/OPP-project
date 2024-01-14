@@ -23,14 +23,14 @@ $fw-small: 500;
 $fw-title: 700;
 
 //font-scale
-$fs-h6: 1.125rem;
-$scale: 1.25;
-$fs-text: calc($fs-h6 / $scale);
-$fs-h5: calc($fs-h6 * $scale);
-$fs-h4: calc($fs-h5 * $scale);
-$fs-h3: calc($fs-h4 * $scale);
-$fs-h2: calc($fs-h3 * $scale);
-$fs-h1: calc($fs-h2 * $scale);
+$small: 0.833rem;
+$fs-text: 1rem;
+$fs-h6: 1.2rem;
+$fs-h5: 1.44rem;
+$fs-h4: 1.728rem;
+$fs-h3: 2.074rem;
+$fs-h2: 2.488rem;
+$fs-h1: 2.986rem;
 
 //line height
 $lh-default: 1.5;

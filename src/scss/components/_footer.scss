@@ -149,4 +149,8 @@ footer {
       }
     }
   }
+
+  @include mx.desktop {
+    font-size: var.$small;
+  }
 }
