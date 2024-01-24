@@ -1,133 +1,154 @@
 @use "../reset/variables" as var;
 @use "../reset/mixins" as mx;
 
-nav {
-  display: flex;
-  flex-direction: column;
-  // height: 90px;
-  background-color: var.$primary-100;
-
-  .burger {
-    display: none;
-  }
-  .nav-header {
-    @include mx.flex($justify: space-around);
-    width: 1080px;
-    margin: 0 auto;
-    height: 60%;
-    gap: 32px;
-
-    div {
-      @include mx.flex;
-
-      img {
-        width: 3em;
-        margin-right: 12px;
-      }
-    }
-  }
-
-  .nav-list-container {
-    background-color: var.$primary-200;
+header {
+  width: 100%;
+  nav {
+    display: flex;
+    flex-direction: column;
+    height: 90px;
     width: 100%;
-    height: 40%;
-  }
-  .nav-list {
-    @include mx.flex($justify: space-around);
-    padding: 6px 0;
-    height: 100%;
-    width: 1080px;
-    margin: 0 auto;
+    background-color: var.$primary-100;
 
-    li {
-      a {
-        @include mx.flex;
-        text-decoration: none;
-        color: #000;
-        font-weight: var.$fw-text;
-        font-size: var.$fs-text;
-        text-transform: capitalize;
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-
-    .close {
-      display: none;
-    }
-  }
-
-  @include mx.mobile {
-    .headroom-wrapper {
-      height: fit-content;
-    }
     .burger {
-      display: block;
-      padding: 1rem;
-      cursor: pointer;
-
-      svg {
-        width: 2em;
-        height: 2em;
-      }
-
-      &.toggle {
-        display: none;
-      }
+      display: none;
     }
     .nav-header {
-      display: none;
+      @include mx.flex($justify: space-around);
+      width: 1080px;
+      margin: 0 auto;
+      height: 60%;
+      gap: 32px;
+
+      div {
+        @include mx.flex;
+
+        img {
+          width: 3em;
+          margin-right: 12px;
+        }
+      }
     }
 
     .nav-list-container {
-      display: none;
+      background-color: var.$primary-200;
+      width: 100%;
+      height: 40%;
+    }
+    .nav-list {
+      @include mx.flex($justify: space-around);
+      padding: 6px 0;
+      height: 100%;
+      width: 1080px;
+      margin: 0 auto;
 
-      .nav-list {
-        .close {
-          display: block;
-          cursor: pointer;
+      li {
+        a {
+          @include mx.flex;
+          text-decoration: none;
+          color: #000;
+          font-weight: var.$fw-text;
+          font-size: var.$fs-text;
+          text-transform: capitalize;
+
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
-      &.reveal {
+
+      .close {
+        display: none;
+      }
+    }
+
+    @include mx.mobile {
+      position: relative;
+      float: right;
+      width: 90%;
+      height: 90dvh;
+      margin-right: 0.2rem;
+      border-radius: 25px;
+      overflow: hidden;
+      .headroom-wrapper {
+        height: fit-content;
+      }
+
+      .nav-list-container {
+        @include mx.flex;
+        height: 100%;
+        padding: 100px 40px 50px 40px;
+
+        ul {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      .burger {
         display: block;
+        position: absolute;
+        right: 1px;
+        top: 0;
+        width: 100px;
+        height: 40px;
+        // border: 2px solid black;
+        overflow: hidden;
+        border-radius: 18px;
+        cursor: pointer;
 
-        .nav-list {
-          @include mx.flex($dir: column);
-          gap: 24px;
-          padding: 24px 0 0 0;
-          height: 70vh;
+        .burger-content {
           width: 100%;
-          position: absolute;
-          top: 0;
-          left: 0;
-          background-color: var.$primary-100;
-          z-index: 1;
-          transition: all 0.6s ease-in-out;
+          height: 100%;
+          position: relative;
 
-          li {
-            a {
-              transition: all 0.3s ease-in-out;
-
-              &:hover {
-                color: var.$primary-200;
-              }
+          button {
+            height: 40px;
+            width: 100px;
+            border: none;
+            background-color: var.$primary-200;
+            @include mx.flex;
+            &:nth-last-of-type(2) {
+              position: absolute;
+              top: 100%;
+              background-color: var.$primary-100;
             }
+          }
+        }
+        svg {
+          width: 2em;
+          height: 2em;
+        }
+      }
+      .nav-header {
+        display: none;
+      }
+    }
+
+    @include mx.desktop {
+      font-size: var.$small;
+
+      .nav-list {
+        li {
+          a {
+            font-size: var.$small;
           }
         }
       }
     }
   }
 
-  @include mx.desktop {
-    font-size: var.$small;
+  @include mx.mobile {
+    position: absolute;
+    top: 16px;
+    left: 0;
+    right: 8px;
+    z-index: 10;
 
-    .nav-list {
-      li {
-        a {
-          font-size: var.$small;
-        }
+    .headroom-wrapper {
+      .headroom {
+        top: 16px;
+        left: 0;
+        right: 8px;
       }
     }
   }

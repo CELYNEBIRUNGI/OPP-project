@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import { Link, useLocation, useParams } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
@@ -7,9 +8,35 @@ import { galleryNavList } from "../lib/galleryLists";
 import palm from "../assets/palm.png";
 import logo from "../assets/logo.png";
 import Headroom from "react-headroom";
+import { AnimatePresence } from "framer-motion";
+import NavbarList from "./NavbarList";
 
+const burgerVariants = {
+  open: {
+    width: "90%",
+    height: "90dvh",
+    transition: {
+      duration: 0.75,
+      ease: [0.76, 0, 0.24, 1],
+    },
+  },
+  closed: {
+    width: "100px",
+    height: "40px",
+    transition: {
+      duration: 0.55,
+      delay: 0.35,
+      ease: [0.76, 0, 0.24, 1],
+    },
+  },
+  normal: {
+    // with: "100%",
+    height: "fit-content",
+  },
+};
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const location = useLocation();
   const { id, section } = useParams();
 
@@ -25,19 +52,32 @@ const Navbar = () => {
   ];
 
   useEffect(() => {
-    const revealMenu = () => {
-      const navListContainer = document.querySelector(".nav-list-container");
-      const burger = document.querySelector(".burger");
-      navListContainer?.classList.toggle("reveal");
-      burger?.classList.toggle("toggle");
+    const checkMobileScreen = () => {
+      const mobileThreshold = 768;
+      const currentScreenWidth =
+        window.innerWidth ||
+        document.documentElement.clientWidth ||
+        document.body.clientWidth;
+
+      setIsMobile(currentScreenWidth < mobileThreshold);
     };
 
-    revealMenu();
-  }, [showMenu, location]);
+    checkMobileScreen();
+
+    window.addEventListener("resize", checkMobileScreen);
+
+    return () => {
+      window.removeEventListener("resize", checkMobileScreen);
+    };
+  }, []);
 
   return (
     <Headroom>
-      <nav>
+      <motion.nav
+        variants={burgerVariants}
+        animate={showMenu ? "open" : isMobile ? "closed" : "normal"}
+        initial={isMobile ? "closed" : "normal"}
+      >
         {!verifiedLocation && !galleryLocation && (
           <div className="nav-header">
             <div>
@@ -51,43 +91,36 @@ const Navbar = () => {
           </div>
         )}
         <div className="nav-list-container">
-          <ul className="nav-list">
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            {!verifiedLocation &&
-              !galleryLocation &&
-              links.map((link) => (
-                <li key={link.name}>
-                  <Link to={link.path}>{link.name}</Link>
-                </li>
-              ))}
-            {verifiedLocation &&
-              projectHubList.map((link) => (
-                <li key={link.id}>
-                  <Link to={`/project/${link.id}`}>{link.title}</Link>
-                </li>
-              ))}
-            {galleryLocation &&
-              galleryNavList.map((link) => (
-                <li key={link.title}>
-                  <Link to={`/gallery/${link.link}`}>{link.title}</Link>
-                </li>
-              ))}
-            <li>
-              <a href="#contact">Contact Us</a>
-            </li>
-            <li>
-              <button className="close" onClick={() => setShowMenu(!showMenu)}>
-                <IoClose />
-              </button>
-            </li>
-          </ul>
+          <AnimatePresence>
+            {showMenu}
+            <NavbarList
+              verifiedLocation={verifiedLocation}
+              galleryLocation={galleryLocation}
+              links={links}
+              setShowMenu={setShowMenu}
+              showMenu={showMenu}
+              galleryNavList={galleryNavList}
+              projectHubList={projectHubList}
+            />
+          </AnimatePresence>
         </div>
         <div className="burger" onClick={() => setShowMenu(!showMenu)}>
-          <GiHamburgerMenu />
+          <motion.div
+            className="burger-content"
+            animate={{
+              top: showMenu ? "-100%" : "0",
+            }}
+            transition={{ duration: "0.5", ease: [0.76, 0, 0.24, 1] }}
+          >
+            <button>
+              <IoClose />
+            </button>
+            <button>
+              <GiHamburgerMenu />
+            </button>
+          </motion.div>
         </div>
-      </nav>
+      </motion.nav>
     </Headroom>
   );
 };
