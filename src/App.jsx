@@ -4,6 +4,7 @@ import { AnimatePresence } from "framer-motion";
 import Layout from "./components/Layout";
 import Home from "./routes/home/Home";
 import NotFound from "./components/NotFound";
+import MainLoader from "./components/loaders/MainLoader";
 
 const About = lazy(() => import("./routes/about/About"));
 const ProjectHub = lazy(() => import("./routes/projectHub/ProjectHub"));
@@ -20,7 +21,7 @@ function App() {
   }, [pathname]);
   return (
     <>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<MainLoader />}>
         <AnimatePresence initial={false}>
           <Routes>
             <Route path="/" element={<Layout />}>

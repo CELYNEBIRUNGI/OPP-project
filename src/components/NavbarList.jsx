@@ -24,21 +24,14 @@ const NavbarList = ({
   galleryLocation,
   links,
   setShowMenu,
-  showMenu,
   galleryNavList,
   projectHubList,
+  isMobile,
 }) => {
   return (
     <>
       <ul className="nav-list">
-        <motion.li
-          custom={0.3}
-          variants={variant}
-          initial="initial"
-          animate="enter"
-          exit="exit"
-          onClick={() => setShowMenu(false)}
-        >
+        <motion.li onClick={() => setShowMenu(false)}>
           <Link to="/">Home</Link>
         </motion.li>
         {!verifiedLocation &&
@@ -47,7 +40,7 @@ const NavbarList = ({
             <motion.li
               key={link.name}
               custom={i}
-              variants={variant}
+              variants={isMobile ? variant : null}
               initial="initial"
               animate="enter"
               exit="exit"
@@ -61,7 +54,7 @@ const NavbarList = ({
             <motion.li
               key={link.id}
               custom={i}
-              variants={variant}
+              variants={isMobile ? variant : null}
               initial="initial"
               animate="enter"
               exit="exit"
@@ -75,7 +68,7 @@ const NavbarList = ({
             <motion.li
               key={link.title}
               custom={i}
-              variants={variant}
+              variants={isMobile ? variant : null}
               initial="initial"
               animate="enter"
               exit="exit"
@@ -84,14 +77,7 @@ const NavbarList = ({
               <Link to={`/gallery/${link.link}`}>{link.title}</Link>
             </motion.li>
           ))}
-        <motion.li
-          custom={6.5}
-          variants={variant}
-          initial="initial"
-          animate="enter"
-          exit="exit"
-          onClick={() => setShowMenu(false)}
-        >
+        <motion.li onClick={() => setShowMenu(false)}>
           <a href="#contact">Contact Us</a>
         </motion.li>
       </ul>

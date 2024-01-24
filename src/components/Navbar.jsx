@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Link, useLocation, useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
 import { projectHubList } from "../lib/lists";
@@ -36,7 +36,7 @@ const burgerVariants = {
 };
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const location = useLocation();
   const { id, section } = useParams();
 
@@ -50,26 +50,6 @@ const Navbar = () => {
     { name: "Publication", path: "/publication" },
     { name: "Gallery", path: "/gallery/general" },
   ];
-
-  useEffect(() => {
-    const checkMobileScreen = () => {
-      const mobileThreshold = 768;
-      const currentScreenWidth =
-        window.innerWidth ||
-        document.documentElement.clientWidth ||
-        document.body.clientWidth;
-
-      setIsMobile(currentScreenWidth < mobileThreshold);
-    };
-
-    checkMobileScreen();
-
-    window.addEventListener("resize", checkMobileScreen);
-
-    return () => {
-      window.removeEventListener("resize", checkMobileScreen);
-    };
-  }, []);
 
   return (
     <Headroom>
@@ -101,6 +81,7 @@ const Navbar = () => {
               showMenu={showMenu}
               galleryNavList={galleryNavList}
               projectHubList={projectHubList}
+              isMobile={isMobile}
             />
           </AnimatePresence>
         </div>
