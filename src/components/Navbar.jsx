@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { useLocation, useParams } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";

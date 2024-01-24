@@ -55,6 +55,11 @@
       ul {
         @include mx.flex($dir: column, $justify: space-around);
         gap: 2rem;
+
+        li {
+          font-size: var.$small;
+          gap: 16px;
+        }
       }
     }
   }

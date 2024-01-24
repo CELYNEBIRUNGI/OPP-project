@@ -87,6 +87,20 @@
     }
   }
 
+  @include mx.mobile {
+    .page-container {
+      .list {
+        flex-direction: column;
+        height: fit-content;
+        padding: 0 2rem;
+
+        p {
+          font-size: var.$small;
+        }
+      }
+    }
+  }
+
   @include mx.desktop {
     .page-container {
       max-width: 900px;

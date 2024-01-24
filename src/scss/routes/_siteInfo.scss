@@ -20,6 +20,11 @@
     font-size: var.$fs-text;
   }
 
+  @include mx.mobile {
+    p {
+      font-size: var.$small;
+    }
+  }
   @include mx.desktop {
     max-width: 900px;
 

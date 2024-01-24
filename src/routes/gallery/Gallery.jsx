@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useLocation } from "react-router-dom";
 
 import {
@@ -16,6 +17,7 @@ import Carrousel from "../../components/Carrousel";
 
 const Gallery = () => {
   const location = useLocation();
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   const renderedList =
     location.pathname === "/gallery/general"
@@ -41,7 +43,7 @@ const Gallery = () => {
         <Carrousel images={carrouselImages} />
       </div>
       <div className="gallery">
-        <Paginated items={renderedList} itemsPerPage={9} />
+        <Paginated items={renderedList} itemsPerPage={isMobile ? 4 : 9} />
       </div>
     </main>
   );

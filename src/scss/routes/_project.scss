@@ -48,13 +48,18 @@
   }
 
   @include mx.mobile {
+    font-size: var.$small;
     .sites {
       @include mx.flex($dir: column, $justify: space-around);
+      padding: 0 2rem;
 
       .site {
         flex-basis: 100%;
         margin-bottom: 1rem;
 
+        p {
+          font-size: var.$small;
+        }
         div {
           img {
             height: 40vh;

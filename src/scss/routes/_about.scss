@@ -70,6 +70,8 @@
       @include mx.flex($dir: column, $justify: space-around);
       height: fit-content;
       padding: 1rem;
+      font-size: var.$small;
+      gap: 32px;
 
       div {
         flex-basis: 100%;
@@ -87,6 +89,7 @@
       @include mx.flex($dir: column, $justify: space-around);
       gap: 1rem;
       padding: 1rem;
+      font-size: var.$small;
     }
 
     .third-paragraph {
@@ -97,11 +100,13 @@
       p {
         flex-basis: 100%;
         height: 100%;
+        font-size: var.$small;
       }
 
       img {
         flex-basis: 100%;
         height: 100%;
+        margin-top: 16px;
       }
     }
 
@@ -114,6 +119,8 @@
         @include mx.flex($dir: column, $justify: space-around);
         p {
           flex-basis: 100%;
+          font-size: var.$small;
+          margin-top: 32px;
         }
       }
     }
