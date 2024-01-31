@@ -141,7 +141,7 @@ header {
 
   @include mx.mobile {
     position: absolute;
-    top: 16px;
+    top: 0;
     left: 0;
     right: 8px;
     z-index: 10;
