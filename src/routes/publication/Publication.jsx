@@ -3,8 +3,12 @@ import publ from "../../assets/publ.png";
 import publication from "../../assets/publication.png";
 import { publicationsList } from "../../lib/lists";
 import PageTransition from "../../components/transitions/PageTransition";
+import { useEffect } from "react";
 
 const Publication = () => {
+  useEffect(() => {
+    document.title = "OPP | Publications";
+  }, []);
   return (
     <PageTransition myClass={"publication"}>
       <div className="banner">

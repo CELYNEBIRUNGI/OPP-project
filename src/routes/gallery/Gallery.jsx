@@ -22,19 +22,26 @@ const Gallery = () => {
   const [carrouselImages, setCarrouselImages] = useState([]);
 
   useEffect(() => {
+    let newTitle;
     if (location.pathname === "/gallery/general") {
       setCarrouselImages(generalListImgs);
       setGalleryImages(generalList);
+      newTitle = "General";
     } else if (location.pathname === "/gallery/community-activity") {
       setCarrouselImages(communityGaleryImgs);
       setGalleryImages(communityActivityList);
+      newTitle = "Community Activities";
     } else if (location.pathname === "/gallery/conferences") {
       setCarrouselImages(conferenceGalleryImgs);
       setGalleryImages(conferencesList);
+      newTitle = "Conferences";
     } else {
       setCarrouselImages(galleryProjectHubImgs);
       setGalleryImages(galleryProjectHub);
+      newTitle = "Project-Hub";
     }
+
+    document.title = `Gallery  |  ${newTitle}`;
   }, [location.pathname]);
 
   return (

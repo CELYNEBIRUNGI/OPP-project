@@ -2,8 +2,12 @@ import { projectHubList } from "../../lib/lists";
 import { Link } from "react-router-dom";
 import Carrousel from "../../components/Carrousel";
 import PageTransition from "../../components/transitions/PageTransition";
+import { useEffect } from "react";
 
 const ProjectHub = () => {
+  useEffect(() => {
+    document.title = "OPP | Project-Hub";
+  }, []);
   const images = [];
   projectHubList.map((project) => images.push(project.img));
   return (

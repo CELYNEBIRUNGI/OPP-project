@@ -9,8 +9,12 @@ import banner from "../../assets/home.png";
 import rec from "../../assets/rec.png";
 import about from "../../assets/home-about.png";
 import impl from "../../assets/imp.png";
+import { useEffect } from "react";
 
 const Home = () => {
+  useEffect(() => {
+    document.title = "National Oil Palm Project";
+  }, []);
   return (
     <PageTransition myClass={"home"}>
       <section className="banner">

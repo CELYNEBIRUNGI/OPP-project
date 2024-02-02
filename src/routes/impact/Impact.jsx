@@ -4,8 +4,12 @@ import PageTransition from "../../components/transitions/PageTransition";
 import { impactArticlesList } from "../../lib/lists";
 import { sliderList } from "../../lib/lists";
 import impact from "../../assets/impact.png";
+import { useEffect } from "react";
 
 const Impact = () => {
+  useEffect(() => {
+    document.title = "OPP | Impact";
+  }, []);
   const topArticles = [...impactArticlesList?.slice(-2)];
   return (
     <PageTransition myClass={"impact"}>

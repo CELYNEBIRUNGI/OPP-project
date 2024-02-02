@@ -1,7 +1,12 @@
+import { useEffect } from "react";
 import pic from "../../assets/rec.png";
 import photo from "../../assets/imp.png";
 import PageTransition from "../../components/transitions/PageTransition";
 const About = () => {
+  useEffect(() => {
+    document.title = "OPP | About";
+  }, []);
+
   return (
     <PageTransition myClass={"about"}>
       <div className="banner">
@@ -13,16 +18,16 @@ const About = () => {
           <p>
             Uganda has made enormous progress in reducing poverty, yet one in
             three rural people still live below the poverty line. This factsheet
-            outlines IFAD’s strategy to reduce poverty in Uganda while improving
-            their food security and reducing their vulnerability. It also
-            outlines ongoing operations in the country.
+            outlines IFAD&apos;s strategy to reduce poverty in Uganda while
+            improving their food security and reducing their vulnerability. It
+            also outlines ongoing operations in the country.
           </p>
           <p>
             Uganda has made enormous progress in reducing poverty, yet one in
             three rural people still live below the poverty line. This factsheet
-            outlines IFAD’s strategy to reduce poverty in Uganda while improving
-            their food security and reducing their vulnerability. It also
-            outlines ongoing operations in the country.
+            outlines IFAD&apos;s strategy to reduce poverty in Uganda while
+            improving their food security and reducing their vulnerability. It
+            also outlines ongoing operations in the country.
           </p>
         </div>
         <img src={photo} alt="Desc" />
@@ -32,23 +37,23 @@ const About = () => {
         <p>
           Uganda has made enormous progress in reducing poverty, yet one in
           three rural people still live below the poverty line. This factsheet
-          outlines IFAD’s strategy to reduce poverty in Uganda while improving
-          their food security and reducing their vulnerability. It also outlines
-          ongoing operations in the country.
+          outlines IFAD&apos;s strategy to reduce poverty in Uganda while
+          improving their food security and reducing their vulnerability. It
+          also outlines ongoing operations in the country.
         </p>
         <p>
           Uganda has made enormous progress in reducing poverty, yet one in
           three rural people still live below the poverty line. This factsheet
-          outlines IFAD’s strategy to reduce poverty in Uganda while improving
-          their food security and reducing their vulnerability. It also outlines
-          ongoing operations in the country.
+          outlines IFAD&apos;s strategy to reduce poverty in Uganda while
+          improving their food security and reducing their vulnerability. It
+          also outlines ongoing operations in the country.
         </p>
         <p>
           Uganda has made enormous progress in reducing poverty, yet one in
           three rural people still live below the poverty line. This factsheet
-          outlines IFAD’s strategy to reduce poverty in Uganda while improving
-          their food security and reducing their vulnerability. It also outlines
-          ongoing operations in the country.
+          outlines IFAD&apos;s strategy to reduce poverty in Uganda while
+          improving their food security and reducing their vulnerability. It
+          also outlines ongoing operations in the country.
         </p>
       </div>
 
@@ -63,10 +68,10 @@ const About = () => {
           urbanization, economic growth and a change in consumption patterns in
           developing countries. Livestock is one of the fastest growing
           agricultural subsectors in developing countries, accounting for about
-          30 per cent of agricultural GDP. About 78 per cent of the world’s poor
-          people live in rural areas and rely largely on agricultural work to
-          put food on their plates and make a living. Smallholder farmers will
-          need to become more productive, efficient and environmentally
+          30 per cent of agricultural GDP. About 78 per cent of the world&apos;s
+          poor people live in rural areas and rely largely on agricultural work
+          to put food on their plates and make a living. Smallholder farmers
+          will need to become more productive, efficient and environmentally
           sustainable to meet the requirements of growing market demand, largely
           from urban areas. These requirements relate to food quality, food
           safety and consistency of supply. A game changer for rural families
@@ -88,7 +93,7 @@ const About = () => {
             patterns in developing countries. Livestock is one of the fastest
             growing agricultural subsectors in developing countries, accounting
             for about 30 per cent of agricultural GDP. About 78 per cent of the
-            world’s poor people live in rural areas and rely largely on
+            world&apos;s poor people live in rural areas and rely largely on
             agricultural work to put food on their plates and make a living.
             Smallholder farmers will need to become more productive, efficient
             and environmentally sustainable to meet the requirements of growing
@@ -110,7 +115,7 @@ const About = () => {
             patterns in developing countries. Livestock is one of the fastest
             growing agricultural subsectors in developing countries, accounting
             for about 30 per cent of agricultural GDP. About 78 per cent of the
-            world’s poor people live in rural areas and rely largely on
+            world&apos;s poor people live in rural areas and rely largely on
             agricultural work to put food on their plates and make a living.
             Smallholder farmers will need to become more productive, efficient
             and environmentally sustainable to meet the requirements of growing
