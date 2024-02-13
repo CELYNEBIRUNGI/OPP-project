@@ -30,16 +30,16 @@ const Home = () => {
           <img src={about} alt="Home about image" />
           <div>
             <p>
-              Over 30,800 vulnerable rural households in Uganda will benefit
-              from a US$210.4 million project that aims to sustainably increase
-              rural livelihoods by supporting an efficient oil palm industry
-              that complies with modern.
-            </p>
-            <p>
-              Over 30,800 vulnerable rural households in Uganda will benefit
-              from a US$210.4 million project that aims to sustainably increase
-              rural livelihoods by supporting an efficient oil palm industry
-              that complies with modern.
+              Oil palm, a lucrative vegetable oil crop in the world, showed
+              promising adaptability to some agroecologies in Uganda from
+              studies carried out in the 1970s resulting in first commercial
+              establishment in 2005 in Bugala Island, Kalangala district.
+              Further, adapt- ability studies continue to reveal suitable areas
+              for commercial oil palm production in the country. The infant
+              industry faces an array of challenges, both biotic and abiotic
+              especially in regard to smallholder farmer field management and
+              build-up of pests and disease in the face of climate change both
+              in the nuclear estate and smallholder farmers&apos; fields.
             </p>
             <Link to="/about" preventScrollReset={false}>
               Read more
@@ -65,7 +65,12 @@ const Home = () => {
         <h2>Reports</h2>
         <div className="reports-body">
           {reportsList.map((report) => (
-            <Report key={report.id} image={report.icon} text={report.text} />
+            <Report
+              key={report.id}
+              image={report.icon}
+              text={report.text}
+              file={report.file}
+            />
           ))}
         </div>
       </section>

@@ -26,6 +26,12 @@ import gallery13 from "../assets/rec.png";
 import gallery14 from "../assets/rec.png";
 import gallery15 from "../assets/rec.png";
 
+//reports
+import report1 from "../assets/reports/Local Economy Wide Impact Evaluation Report for Oil Palm Development in Kalangala.pdf";
+import report2 from "../assets/reports/NOPP PDR final (December 2017).pdf";
+import report3 from "../assets/reports/Oil Palm Research report for the IFAD Mission - Sept 2023 (3)(1).pdf";
+import report4 from "../assets/reports/The National Oil Palm Project Annual Report FY2022-23 - v110823.pdf";
+import report5 from "../assets/reports/The National Oil Palm Project Half-Annual Report FY2023-24 - Final Draft.pdf";
 export const statusLists = [
   {
     id: 1,
@@ -53,27 +59,32 @@ export const reportsList = [
   {
     id: 1,
     icon: icon,
-    text: "Uganda-2000001484-Nopp-supervision-report- January-2023",
+    text: "Local Economy Wide Impact Evaluation Report for Oil Palm Development in Kalangala",
+    file: report1,
   },
   {
     id: 2,
     icon: icon,
-    text: "Uganda-2000001484-Nopp-supervision-report- January-2023",
+    text: "NOPP PDR final (December 2017)",
+    file: report2,
   },
   {
     id: 3,
     icon: icon,
-    text: "Uganda-2000001484-Nopp-supervision-report- January-2023",
+    text: "Oil Palm Research report for the IFAD Mission - Sept 2023 (3)",
+    file: report3,
   },
   {
     id: 4,
     icon: icon,
-    text: "Uganda-2000001484-Nopp-supervision-report- January-2023",
+    text: "The National Oil Palm Project Annual Report FY2022-23 - v110823",
+    file: report4,
   },
   {
     id: 5,
     icon: icon,
-    text: "Uganda-2000001484-Nopp-supervision-report- January-2023",
+    text: "The National Oil Palm Project Half-Annual Report FY2023-24 ",
+    file: report5,
   },
 ];
 

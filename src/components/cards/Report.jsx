@@ -1,8 +1,10 @@
-const Report = ({ image, text, alt }) => {
+const Report = ({ image, text, alt, file }) => {
   return (
     <div className="report-card">
-      <img src={image} alt={alt ? alt : "card"} />
-      <p>{text}</p>
+      <a href={file} download={text} target="_blank" rel="noopener noreferrer">
+        <img src={image} alt={alt ? alt : "card"} />
+        <p>{text}</p>
+      </a>
     </div>
   );
 };

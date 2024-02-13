@@ -71,19 +71,19 @@ const Navbar = () => {
           </div>
         )}
         <div className="nav-list-container">
-          <AnimatePresence>
-            {showMenu}
-            <NavbarList
-              verifiedLocation={verifiedLocation}
-              galleryLocation={galleryLocation}
-              links={links}
-              setShowMenu={setShowMenu}
-              showMenu={showMenu}
-              galleryNavList={galleryNavList}
-              projectHubList={projectHubList}
-              isMobile={isMobile}
-            />
-          </AnimatePresence>
+          {/* <AnimatePresence> */}
+          {showMenu}
+          <NavbarList
+            verifiedLocation={verifiedLocation}
+            galleryLocation={galleryLocation}
+            links={links}
+            setShowMenu={setShowMenu}
+            showMenu={showMenu}
+            galleryNavList={galleryNavList}
+            projectHubList={projectHubList}
+            isMobile={isMobile}
+          />
+          {/* </AnimatePresence> */}
         </div>
         <div className="burger" onClick={() => setShowMenu(!showMenu)}>
           <motion.div

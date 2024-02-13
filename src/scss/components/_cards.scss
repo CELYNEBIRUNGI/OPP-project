@@ -30,14 +30,24 @@
 }
 
 .report-card {
-  @include mx.flex($justify: space-around);
   flex-basis: 48%;
   margin-bottom: 64px;
+  a {
+    @include mx.flex($dir: column);
+    padding: 0.8rem;
+    text-decoration: none;
+    gap: 0.5rem;
+    color: #030303;
 
-  img {
-    height: 60px;
-    width: 60px;
-    object-fit: cover;
+    img {
+      height: 45px;
+      width: 45px;
+      object-fit: cover;
+    }
+
+    p {
+      height: 50px;
+    }
   }
 
   @include mx.desktop {
@@ -45,6 +55,17 @@
     img {
       height: 45px;
       width: 45px;
+    }
+  }
+
+  @include mx.mobile {
+    width: 100%;
+    a {
+      width: 100%;
+
+      p {
+        height: 60px;
+      }
     }
   }
 }

@@ -6,8 +6,10 @@ import Home from "./routes/home/Home";
 import NotFound from "./components/NotFound";
 import MainLoader from "./components/loaders/MainLoader";
 
-const About = lazy(() => import("./routes/about/About"));
-const ProjectHub = lazy(() => import("./routes/projectHub/ProjectHub"));
+import About from "./routes/about/About";
+import ProjectHub from "./routes/projectHub/ProjectHub";
+// const About = lazy(() => import("./routes/about/About"));
+// const ProjectHub = lazy(() => import("./routes/projectHub/ProjectHub"));
 const Gallery = lazy(() => import("./routes/gallery/Gallery"));
 const Publication = lazy(() => import("./routes/publication/Publication"));
 const Impact = lazy(() => import("./routes/impact/Impact"));
@@ -22,20 +24,20 @@ function App() {
   return (
     <>
       <Suspense fallback={<MainLoader />}>
-        <AnimatePresence initial={false}>
-          <Routes>
-            <Route path="/" element={<Layout />}>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/project" element={<ProjectHub />} />
-              <Route path="/project/:id" element={<Information />} />
-              <Route path="/gallery/:section" element={<Gallery />} />
-              <Route path="/publication" element={<Publication />} />
-              <Route path="/impact" element={<Impact />} />
-              <Route path="*" element={<NotFound />} />
-            </Route>
-          </Routes>
-        </AnimatePresence>
+        {/* <AnimatePresence initial={false}> */}
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/project" element={<ProjectHub />} />
+            <Route path="/project/:id" element={<Information />} />
+            <Route path="/gallery/:section" element={<Gallery />} />
+            <Route path="/publication" element={<Publication />} />
+            <Route path="/impact" element={<Impact />} />
+            <Route path="*" element={<NotFound />} />
+          </Route>
+        </Routes>
+        {/* </AnimatePresence> */}
       </Suspense>
     </>
   );
