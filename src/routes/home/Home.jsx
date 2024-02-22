@@ -51,8 +51,13 @@ const Home = () => {
       <section className="implementation">
         <h2>Implementation Status</h2>
         <div className="implementation-body">
-          {statusLists.map((status) => (
-            <CardOne key={status.id} image={impl} text={status.text} />
+          {statusLists.map((status, index) => (
+            <CardOne
+              key={status.id}
+              image={impl}
+              text={status.text}
+              index={index}
+            />
           ))}
         </div>
       </section>

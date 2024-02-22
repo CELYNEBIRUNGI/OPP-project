@@ -3,6 +3,7 @@ import { projectHubList } from "../../lib/lists";
 import pic from "../../assets/rec.png";
 import Carrousel from "../../components/Carrousel";
 import PageTransition from "../../components/transitions/PageTransition";
+import ScrollBased from "../../components/transitions/ScrollBased";
 import { useEffect } from "react";
 const Information = () => {
   const { id } = useParams();
@@ -28,10 +29,18 @@ const Information = () => {
       <div className="carrousel">
         <Carrousel images={[pic]} />
       </div>
-      <p>{project?.bigText}</p>
-      <p>{project?.bigText}</p>
-      <p>{project?.bigText}</p>
-      <p>{project?.bigText}</p>
+      <ScrollBased start={"1"} finish={"1.33"} scale={0.9} opacity={0.8}>
+        <p>{project?.bigText}</p>
+      </ScrollBased>
+      <ScrollBased start={"1"} finish={"1.33"} scale={0.9} opacity={0.8}>
+        <p>{project?.bigText}</p>
+      </ScrollBased>
+      <ScrollBased start={"1"} finish={"1.33"} scale={0.9} opacity={0.8}>
+        <p>{project?.bigText}</p>
+      </ScrollBased>
+      <ScrollBased start={"1"} finish={"1.33"} scale={0.9} opacity={0.8}>
+        <p>{project?.bigText}</p>
+      </ScrollBased>
     </PageTransition>
   );
 };

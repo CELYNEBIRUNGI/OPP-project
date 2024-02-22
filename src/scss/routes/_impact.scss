@@ -28,6 +28,11 @@
           $align: flex-start
         );
 
+        p {
+          margin: 1rem 0;
+          line-height: 1.7;
+        }
+
         button {
           border-radius: 8px;
           border: none;

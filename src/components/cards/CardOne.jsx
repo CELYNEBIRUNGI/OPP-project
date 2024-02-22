@@ -1,6 +1,8 @@
-const CardOne = ({ image, text, alt }) => {
+import Staggered from "../transitions/Staggered";
+
+const CardOne = ({ image, text, alt, index }) => {
   return (
-    <div className="card-one">
+    <div index={index} className="card-one">
       <img src={image} alt={alt ? alt : "card"} />
       <p>{text}</p>
     </div>

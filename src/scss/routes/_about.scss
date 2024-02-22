@@ -14,11 +14,15 @@
       flex-basis: 60%;
       height: 100%;
       @include mx.flex($dir: column, $justify: space-around);
+
+      p {
+        line-height: 1.7;
+      }
     }
 
     img {
-      height: 100%;
-      flex-basis: 30%;
+      height: 400px;
+      flex-basis: 35%;
     }
   }
 
@@ -28,6 +32,13 @@
     padding: 3rem 0;
     @include mx.flex($justify: space-around);
     gap: 2rem;
+
+    div {
+      p {
+        text-wrap: pretty;
+        line-height: 1.8;
+      }
+    }
   }
 
   .third-paragraph {
@@ -39,6 +50,7 @@
     p {
       flex-basis: 50%;
       height: 100%;
+      line-height: 1.8;
     }
 
     img {
@@ -61,6 +73,8 @@
       }
       p {
         flex-basis: 60%;
+        text-wrap: pretty;
+        line-height: 1.8;
       }
     }
   }
@@ -121,6 +135,7 @@
           flex-basis: 100%;
           font-size: var.$small;
           margin-top: 32px;
+          text-wrap: pretty;
         }
       }
     }

@@ -2,10 +2,13 @@ import { motion } from "framer-motion";
 
 const animation = {
   initial: {
-    opacity: 0,
+    opacity: [0, 0],
   },
   animate: {
-    opacity: 1,
+    opacity: [0, 1],
+    transition: {
+      duration: 0.5,
+    },
   },
   exit: {
     opacity: 0,
