@@ -1,10 +1,11 @@
 import Carrousel from "../../components/Carrousel";
 import Slider from "../../components/Slider";
 import PageTransition from "../../components/transitions/PageTransition";
-import { impactArticlesList } from "../../lib/lists";
+import { impactArticlesList } from "../../lib/impactLists";
 import { sliderList } from "../../lib/lists";
 import impact from "../../assets/impact.png";
 import { useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
 const Impact = () => {
   useEffect(() => {
@@ -26,7 +27,7 @@ const Impact = () => {
             <div className="detail">
               <h2>{article.title}</h2>
               <p>{article.text}</p>
-              <button>Read more</button>
+              <NavLink to={`/impact/${article.id}`}>Read more</NavLink>
             </div>
             <img src={article.img} alt="" />
           </div>
@@ -39,8 +40,10 @@ const Impact = () => {
         <ul>
           {impactArticlesList?.slice(0, 4).map((article) => (
             <li key={article.id}>
-              <img src={article.img} alt="" />
-              <h3>{article.title}</h3>
+              <NavLink to={`/impact/${article.id}`}>
+                <img src={article.img} alt="" />
+                <h3>{article.title}</h3>
+              </NavLink>
             </li>
           ))}
         </ul>

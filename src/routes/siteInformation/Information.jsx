@@ -1,5 +1,5 @@
 import { useParams, useLocation } from "react-router-dom";
-import { projectHubList } from "../../lib/lists";
+import { projectHubList } from "../../lib/projectHubLists";
 import pic from "../../assets/rec.png";
 import Carrousel from "../../components/Carrousel";
 import PageTransition from "../../components/transitions/PageTransition";
@@ -16,8 +16,10 @@ const Information = () => {
       title = "Masaka";
     } else if (id === "3") {
       title = "Bavuma";
-    } else {
+    } else if (id === "4") {
       title = "Kalangala";
+    } else {
+      title = "Mukono";
     }
     document.title = `Project | ${title}`;
   }, [location.pathname]);
@@ -29,18 +31,17 @@ const Information = () => {
       <div className="carrousel">
         <Carrousel images={[pic]} />
       </div>
-      <ScrollBased start={"1"} finish={"1.33"} scale={0.9} opacity={0.8}>
-        <p>{project?.bigText}</p>
-      </ScrollBased>
-      <ScrollBased start={"1"} finish={"1.33"} scale={0.9} opacity={0.8}>
-        <p>{project?.bigText}</p>
-      </ScrollBased>
-      <ScrollBased start={"1"} finish={"1.33"} scale={0.9} opacity={0.8}>
-        <p>{project?.bigText}</p>
-      </ScrollBased>
-      <ScrollBased start={"1"} finish={"1.33"} scale={0.9} opacity={0.8}>
-        <p>{project?.bigText}</p>
-      </ScrollBased>
+      {project.bigText.map((text, index) => (
+        <ScrollBased
+          key={index}
+          start={"1"}
+          finish={"1.33"}
+          scale={0.9}
+          opacity={0.8}
+        >
+          <p>{text}</p>
+        </ScrollBased>
+      ))}
     </PageTransition>
   );
 };

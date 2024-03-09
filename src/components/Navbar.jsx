@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useLocation, useParams } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
-import { projectHubList } from "../lib/lists";
+import { projectHubList } from "../lib/projectHubLists";
 import { galleryNavList } from "../lib/galleryLists";
 import palm from "../assets/palm.png";
 import logo from "../assets/logo.png";

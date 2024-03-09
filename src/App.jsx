@@ -7,6 +7,8 @@ import NotFound from "./components/NotFound";
 import MainLoader from "./components/loaders/MainLoader";
 
 import About from "./routes/about/About";
+import ImpactDetail from "./routes/impactDetail/ImpactDetail";
+import PublicationDetail from "./routes/publicationDetail/PublicationDetail";
 const ProjectHub = lazy(() => import("./routes/projectHub/ProjectHub"));
 const Gallery = lazy(() => import("./routes/gallery/Gallery"));
 const Publication = lazy(() => import("./routes/publication/Publication"));
@@ -76,12 +78,29 @@ function App() {
                 </Suspense>
               }
             />
+            <Route
+              path="/publication/:id"
+              element={
+                <Suspense fallback={<MainLoader />}>
+                  <PublicationDetail />
+                </Suspense>
+              }
+            />
 
             <Route
               path="/impact"
               element={
                 <Suspense fallback={<MainLoader />}>
                   <Impact />
+                </Suspense>
+              }
+            />
+
+            <Route
+              path="/impact/:id"
+              element={
+                <Suspense fallback={<MainLoader />}>
+                  <ImpactDetail />
                 </Suspense>
               }
             />

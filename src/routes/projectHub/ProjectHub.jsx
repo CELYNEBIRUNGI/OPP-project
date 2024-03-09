@@ -1,4 +1,4 @@
-import { projectHubList } from "../../lib/lists";
+import { projectHubList } from "../../lib/projectHubLists";
 import { Link } from "react-router-dom";
 import Carrousel from "../../components/Carrousel";
 import PageTransition from "../../components/transitions/PageTransition";

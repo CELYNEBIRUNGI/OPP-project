@@ -1,9 +1,10 @@
 import Carrousel from "../../components/Carrousel";
 import publ from "../../assets/publ.png";
 import publication from "../../assets/publication.png";
-import { publicationsList } from "../../lib/lists";
+import { publicationsList } from "../../lib/publicationsLists";
 import PageTransition from "../../components/transitions/PageTransition";
 import { useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
 const Publication = () => {
   useEffect(() => {
@@ -23,7 +24,7 @@ const Publication = () => {
               <img src={publication.img} alt="" />
               <h3>{publication.title}</h3>
               <p>{publication.text}</p>
-              <button>Read more</button>
+              <NavLink to={`/publication/${publication.id}`}>Read more</NavLink>
             </li>
           ))}
         </ul>
