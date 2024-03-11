@@ -5,9 +5,13 @@ import Carrousel from "../../components/Carrousel";
 import PageTransition from "../../components/transitions/PageTransition";
 import ScrollBased from "../../components/transitions/ScrollBased";
 import { useEffect } from "react";
-const Information = () => {
+import MainLoader from "../../components/loaders/MainLoader";
+import withLoadingState from "../../components/withLoadingState";
+
+const Information = ({ loader }) => {
   const { id } = useParams();
   const location = useLocation();
+
   useEffect(() => {
     let title;
     if (id === "1") {
@@ -23,7 +27,15 @@ const Information = () => {
     }
     document.title = `Project | ${title}`;
   }, [location.pathname]);
+
   const project = projectHubList.find((project) => project.id === parseInt(id));
+  if (loader) {
+    return (
+      <div className="impact">
+        <MainLoader />
+      </div>
+    );
+  }
 
   return (
     <PageTransition myClass={"site-info"}>
@@ -46,4 +58,4 @@ const Information = () => {
   );
 };
 
-export default Information;
+export default withLoadingState(Information);

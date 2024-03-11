@@ -24,7 +24,7 @@ const burgerVariants = {
     width: "100px",
     height: "40px",
     transition: {
-      duration: 0.55,
+      duration: 0.1,
       delay: 0.35,
       ease: [0.76, 0, 0.24, 1],
     },

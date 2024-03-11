@@ -17,6 +17,10 @@ const Paginated = ({ items, itemsPerPage }) => {
     goToPage(1);
   }, [location.pathname]);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, [currentPage]);
+
   return (
     <div className="page-container">
       <ul className="list">

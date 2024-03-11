@@ -3,13 +3,25 @@ import { Link } from "react-router-dom";
 import Carrousel from "../../components/Carrousel";
 import PageTransition from "../../components/transitions/PageTransition";
 import { useEffect } from "react";
+import withLoadingState from "../../components/withLoadingState";
+import MainLoader from "../../components/loaders/MainLoader";
 
-const ProjectHub = () => {
+const ProjectHub = ({ loader }) => {
   useEffect(() => {
     document.title = "OPP | Project-Hub";
   }, []);
+
   const images = [];
   projectHubList.map((project) => images.push(project.img));
+
+  if (loader) {
+    return (
+      <div className="impact">
+        <MainLoader />
+      </div>
+    );
+  }
+
   return (
     <PageTransition myClass={"project-hub"}>
       <div className="banner">
@@ -34,4 +46,4 @@ const ProjectHub = () => {
   );
 };
 
-export default ProjectHub;
+export default withLoadingState(ProjectHub);

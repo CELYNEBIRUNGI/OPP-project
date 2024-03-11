@@ -1,5 +1,6 @@
 import { useState, useEffect, Suspense, lazy } from "react";
 import { useLocation } from "react-router-dom";
+// import { IKImage, IKContext, IKUpload } from "imagekitio-react";
 
 import {
   generalList,
@@ -14,8 +15,20 @@ import {
 
 const Paginated = lazy(() => import("../../components/Paginated"));
 import Carrousel from "../../components/Carrousel";
+import MainLoader from "../../components/loaders/MainLoader";
+import withLoadingState from "../../components/withLoadingState";
 
-const Gallery = () => {
+// // required parameter to fetch images
+// const urlEndpoint = "https://ik.imagekit.io/pmkixoy2d/";
+
+// // optional parameters (needed for client-side upload)
+// const publicKey = "public_0Km0IM+/c1YNTud2vlK3QMUyOgo=";
+// const authenticator = () => {
+//   return new Promise((resolve, reject) => {
+//     resolve({ signature, token, expiry });
+//   });
+// };
+const Gallery = ({ loader }) => {
   const location = useLocation();
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [galleryImages, setGalleryImages] = useState([]);
@@ -44,6 +57,14 @@ const Gallery = () => {
     document.title = `Gallery  |  ${newTitle}`;
   }, [location.pathname]);
 
+  if (loader) {
+    return (
+      <div className="impact">
+        <MainLoader />
+      </div>
+    );
+  }
+
   return (
     <main>
       <div className="banner">
@@ -58,4 +79,4 @@ const Gallery = () => {
   );
 };
 
-export default Gallery;
+export default withLoadingState(Gallery);

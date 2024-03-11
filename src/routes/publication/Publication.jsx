@@ -5,11 +5,22 @@ import { publicationsList } from "../../lib/publicationsLists";
 import PageTransition from "../../components/transitions/PageTransition";
 import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import withLoadingState from "../../components/withLoadingState";
+import MainLoader from "../../components/loaders/MainLoader";
 
-const Publication = () => {
+const Publication = ({ loader }) => {
   useEffect(() => {
     document.title = "OPP | Publications";
   }, []);
+
+  if (loader) {
+    return (
+      <div className="impact">
+        <MainLoader />
+      </div>
+    );
+  }
+
   return (
     <PageTransition myClass={"publication"}>
       <div className="banner">
@@ -42,4 +53,4 @@ const Publication = () => {
   );
 };
 
-export default Publication;
+export default withLoadingState(Publication);

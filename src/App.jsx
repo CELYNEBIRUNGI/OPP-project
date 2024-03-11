@@ -1,6 +1,5 @@
 import { Suspense, lazy, useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
-import { AnimatePresence } from "framer-motion";
 import Layout from "./components/Layout";
 import Home from "./routes/home/Home";
 import NotFound from "./components/NotFound";
@@ -23,100 +22,82 @@ function App() {
   }, [pathname]);
   return (
     <>
-      <Suspense fallback={<MainLoader />}>
-        {/* <AnimatePresence initial={false}> */}
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route
-              path="/"
-              element={
-                <Suspense fallback={<MainLoader />}>
-                  <Home />
-                </Suspense>
-              }
-            />
-            <Route
-              path="/about"
-              element={
-                <Suspense fallback={<MainLoader />}>
-                  <About />
-                </Suspense>
-              }
-            />
-            <Route
-              path="/project"
-              element={
-                <Suspense fallback={<MainLoader />}>
-                  <ProjectHub />
-                </Suspense>
-              }
-            />
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route
+            path="/project"
+            element={
+              <Suspense fallback={<MainLoader />}>
+                <ProjectHub />
+              </Suspense>
+            }
+          />
 
-            <Route
-              path="/project/:id"
-              element={
-                <Suspense fallback={<MainLoader />}>
-                  <Information />
-                </Suspense>
-              }
-            />
+          <Route
+            path="/project/:id"
+            element={
+              <Suspense fallback={<MainLoader />}>
+                <Information />
+              </Suspense>
+            }
+          />
 
-            <Route
-              path="/gallery/:section"
-              element={
-                <Suspense fallback={<MainLoader />}>
-                  <Gallery />
-                </Suspense>
-              }
-            />
+          <Route
+            path="/gallery/:section"
+            element={
+              <Suspense fallback={<MainLoader />}>
+                <Gallery />
+              </Suspense>
+            }
+          />
 
-            <Route
-              path="/publication"
-              element={
-                <Suspense fallback={<MainLoader />}>
-                  <Publication />
-                </Suspense>
-              }
-            />
-            <Route
-              path="/publication/:id"
-              element={
-                <Suspense fallback={<MainLoader />}>
-                  <PublicationDetail />
-                </Suspense>
-              }
-            />
+          <Route
+            path="/publication"
+            element={
+              <Suspense fallback={<MainLoader />}>
+                <Publication />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/publication/:id"
+            element={
+              <Suspense fallback={<MainLoader />}>
+                <PublicationDetail />
+              </Suspense>
+            }
+          />
 
-            <Route
-              path="/impact"
-              element={
-                <Suspense fallback={<MainLoader />}>
-                  <Impact />
-                </Suspense>
-              }
-            />
+          <Route
+            path="/impact"
+            element={
+              <Suspense fallback={<MainLoader />}>
+                <Impact />
+              </Suspense>
+            }
+          />
 
-            <Route
-              path="/impact/:id"
-              element={
-                <Suspense fallback={<MainLoader />}>
-                  <ImpactDetail />
-                </Suspense>
-              }
-            />
+          <Route
+            path="/impact/:id"
+            element={
+              <Suspense fallback={<MainLoader />}>
+                <ImpactDetail />
+              </Suspense>
+            }
+          />
 
-            <Route
-              path="*"
-              element={
-                <Suspense fallback={<MainLoader />}>
-                  <NotFound />
-                </Suspense>
-              }
-            />
-          </Route>
-        </Routes>
-        {/* </AnimatePresence> */}
-      </Suspense>
+          <Route
+            path="*"
+            element={
+              <Suspense fallback={<MainLoader />}>
+                <NotFound />
+              </Suspense>
+            }
+          />
+        </Route>
+      </Routes>
     </>
   );
 }

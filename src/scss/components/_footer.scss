@@ -155,5 +155,12 @@ footer {
 
   @include mx.desktop {
     font-size: var.$small;
+    .footer {
+      .image {
+        img {
+          width: 40%;
+        }
+      }
+    }
   }
 }

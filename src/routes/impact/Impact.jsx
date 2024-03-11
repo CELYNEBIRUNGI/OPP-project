@@ -1,17 +1,26 @@
 import Carrousel from "../../components/Carrousel";
 import Slider from "../../components/Slider";
+import withLoadingState from "../../components/withLoadingState";
 import PageTransition from "../../components/transitions/PageTransition";
 import { impactArticlesList } from "../../lib/impactLists";
 import { sliderList } from "../../lib/lists";
 import impact from "../../assets/impact.png";
 import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import MainLoader from "../../components/loaders/MainLoader";
 
-const Impact = () => {
+const Impact = ({ loader }) => {
   useEffect(() => {
     document.title = "OPP | Impact";
   }, []);
   const topArticles = [...impactArticlesList?.slice(-2)];
+  if (loader) {
+    return (
+      <div className="impact">
+        <MainLoader />
+      </div>
+    );
+  }
   return (
     <PageTransition myClass={"impact"}>
       <div className="banner">
@@ -61,4 +70,4 @@ const Impact = () => {
   );
 };
 
-export default Impact;
+export default withLoadingState(Impact);
