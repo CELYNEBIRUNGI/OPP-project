@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import GalleryCard from "./cards/GalleryCard";
+import PropTypes from "prop-types";
 
 const Paginated = ({ items, itemsPerPage }) => {
   const location = useLocation();
@@ -44,6 +45,11 @@ const Paginated = ({ items, itemsPerPage }) => {
       </div>
     </div>
   );
+};
+
+Paginated.propTypes = {
+  items: PropTypes.array,
+  itemsPerPage: PropTypes.number,
 };
 
 export default Paginated;

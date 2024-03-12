@@ -1,5 +1,5 @@
-import React from "react";
 import { motion } from "framer-motion";
+import PropTypes from "prop-types";
 
 const Staggered = ({ index, className, children }) => {
   const staggerVariants = {
@@ -26,6 +26,12 @@ const Staggered = ({ index, className, children }) => {
       {children}
     </motion.div>
   );
+};
+
+Staggered.propTypes = {
+  index: PropTypes.any,
+  className: PropTypes.string,
+  children: PropTypes.any,
 };
 
 export default Staggered;

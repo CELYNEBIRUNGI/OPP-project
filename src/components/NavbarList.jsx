@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import PropTypes from "prop-types";
 
 const variant = {
   initial: {
@@ -85,4 +86,13 @@ const NavbarList = ({
   );
 };
 
+NavbarList.propTypes = {
+  verifiedLocation: PropTypes.any,
+  galleryLocation: PropTypes.any,
+  links: PropTypes.array,
+  setShowMenu: PropTypes.func,
+  galleryNavList: PropTypes.array,
+  projectHubList: PropTypes.array,
+  isMobile: PropTypes.bool,
+};
 export default NavbarList;

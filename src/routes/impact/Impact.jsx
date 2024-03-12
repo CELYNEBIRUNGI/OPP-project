@@ -8,12 +8,14 @@ import impact from "../../assets/impact.png";
 import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import MainLoader from "../../components/loaders/MainLoader";
+import PropTypes from "prop-types";
 
 const Impact = ({ loader }) => {
   useEffect(() => {
     document.title = "OPP | Impact";
   }, []);
-  const topArticles = [...impactArticlesList?.slice(-2)];
+
+  const topArticles = [...impactArticlesList.slice(-2)];
   if (loader) {
     return (
       <div className="impact">
@@ -21,6 +23,7 @@ const Impact = ({ loader }) => {
       </div>
     );
   }
+
   return (
     <PageTransition myClass={"impact"}>
       <div className="banner">
@@ -68,6 +71,10 @@ const Impact = ({ loader }) => {
       </div>
     </PageTransition>
   );
+};
+
+Impact.propTypes = {
+  loader: PropTypes.bool,
 };
 
 export default withLoadingState(Impact);

@@ -1,4 +1,4 @@
-import Staggered from "../transitions/Staggered";
+import PropTypes from "prop-types";
 
 const CardOne = ({ image, text, alt, index }) => {
   return (
@@ -7,6 +7,13 @@ const CardOne = ({ image, text, alt, index }) => {
       <p>{text}</p>
     </div>
   );
+};
+
+CardOne.propTypes = {
+  image: PropTypes.any,
+  text: PropTypes.string,
+  alt: PropTypes.string,
+  index: PropTypes.any,
 };
 
 export default CardOne;

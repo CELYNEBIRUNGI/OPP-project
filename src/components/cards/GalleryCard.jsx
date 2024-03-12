@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 const GalleryCard = ({ item }) => {
   return (
@@ -16,6 +16,10 @@ const GalleryCard = ({ item }) => {
       </div>
     </div>
   );
+};
+
+GalleryCard.propTypes = {
+  item: PropTypes.object,
 };
 
 export default GalleryCard;

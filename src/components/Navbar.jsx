@@ -8,7 +8,6 @@ import { galleryNavList } from "../lib/galleryLists";
 import palm from "../assets/palm.png";
 import logo from "../assets/logo.png";
 import Headroom from "react-headroom";
-import { AnimatePresence } from "framer-motion";
 import NavbarList from "./NavbarList";
 
 const burgerVariants = {
@@ -36,7 +35,7 @@ const burgerVariants = {
 };
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isMobile, _] = useState(window.innerWidth < 768);
   const location = useLocation();
   const { id, section } = useParams();
 

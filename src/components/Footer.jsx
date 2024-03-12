@@ -43,7 +43,7 @@ const Footer = () => {
             Nakasero P.O Box 7272, Kampala Uganda.
           </p>
         </div>
-        <form>
+        <form onSubmit={handleSubmit}>
           <label>
             <input
               type="text"

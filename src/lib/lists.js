@@ -1,5 +1,4 @@
 import icon from "../assets/icon.png";
-import icon1 from "../assets/imp.png";
 //slider
 import slider1 from "../assets/slider-1.png";
 import slider2 from "../assets/slider-2.png";

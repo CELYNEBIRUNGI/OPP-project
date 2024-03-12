@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { useScroll, motion, useTransform } from "framer-motion";
+import PropTypes from "prop-types";
 
 const ScrollBased = ({
   className,
@@ -29,6 +30,15 @@ const ScrollBased = ({
       {children}
     </motion.div>
   );
+};
+
+ScrollBased.propTypes = {
+  className: PropTypes.string,
+  start: PropTypes.string,
+  finish: PropTypes.string,
+  scale: PropTypes.number,
+  opacity: PropTypes.number,
+  children: PropTypes.any,
 };
 
 export default ScrollBased;

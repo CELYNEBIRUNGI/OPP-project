@@ -1,5 +1,6 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
+import PropTypes from "prop-types";
 
 const Carrousel = ({ images, interval, type, pagination }) => {
   return (
@@ -25,6 +26,13 @@ const Carrousel = ({ images, interval, type, pagination }) => {
       </Splide>
     </>
   );
+};
+
+Carrousel.propTypes = {
+  interval: PropTypes.number,
+  type: PropTypes.string,
+  pagination: PropTypes.bool,
+  images: PropTypes.array,
 };
 
 export default Carrousel;

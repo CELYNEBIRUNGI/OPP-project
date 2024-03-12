@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import PropTypes from "prop-types";
 
 const animation = {
   initial: {
@@ -26,6 +27,11 @@ const PageTransition = ({ children, myClass }) => {
       {children}
     </motion.main>
   );
+};
+
+PageTransition.propTypes = {
+  children: PropTypes.any,
+  myClass: PropTypes.string,
 };
 
 export default PageTransition;

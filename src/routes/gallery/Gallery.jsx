@@ -13,11 +13,12 @@ import {
   conferenceGalleryImgs,
 } from "../../lib/galleryLists";
 
-const Paginated = lazy(() => import("../../components/Paginated"));
 import Carrousel from "../../components/Carrousel";
 import MainLoader from "../../components/loaders/MainLoader";
 import withLoadingState from "../../components/withLoadingState";
+import PropTypes from "prop-types";
 
+const Paginated = lazy(() => import("../../components/Paginated"));
 // // required parameter to fetch images
 // const urlEndpoint = "https://ik.imagekit.io/pmkixoy2d/";
 
@@ -30,7 +31,7 @@ import withLoadingState from "../../components/withLoadingState";
 // };
 const Gallery = ({ loader }) => {
   const location = useLocation();
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isMobile, _] = useState(window.innerWidth < 768);
   const [galleryImages, setGalleryImages] = useState([]);
   const [carrouselImages, setCarrouselImages] = useState([]);
 
@@ -77,6 +78,10 @@ const Gallery = ({ loader }) => {
       </div>
     </main>
   );
+};
+
+Gallery.propTypes = {
+  loader: PropTypes.bool,
 };
 
 export default withLoadingState(Gallery);

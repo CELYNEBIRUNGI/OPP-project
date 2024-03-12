@@ -5,6 +5,7 @@ import PageTransition from "../../components/transitions/PageTransition";
 import { useEffect } from "react";
 import withLoadingState from "../../components/withLoadingState";
 import MainLoader from "../../components/loaders/MainLoader";
+import PropTypes from "prop-types";
 
 const ProjectHub = ({ loader }) => {
   useEffect(() => {
@@ -44,6 +45,10 @@ const ProjectHub = ({ loader }) => {
       </div>
     </PageTransition>
   );
+};
+
+ProjectHub.propTypes = {
+  loader: PropTypes.bool,
 };
 
 export default withLoadingState(ProjectHub);

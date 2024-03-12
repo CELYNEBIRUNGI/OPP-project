@@ -7,6 +7,7 @@ import ScrollBased from "../../components/transitions/ScrollBased";
 import { useEffect } from "react";
 import MainLoader from "../../components/loaders/MainLoader";
 import withLoadingState from "../../components/withLoadingState";
+import PropTypes from "prop-types";
 
 const Information = ({ loader }) => {
   const { id } = useParams();
@@ -26,7 +27,7 @@ const Information = ({ loader }) => {
       title = "Mukono";
     }
     document.title = `Project | ${title}`;
-  }, [location.pathname]);
+  }, [location.pathname, id]);
 
   const project = projectHubList.find((project) => project.id === parseInt(id));
   if (loader) {
@@ -56,6 +57,10 @@ const Information = ({ loader }) => {
       ))}
     </PageTransition>
   );
+};
+
+Information.propTypes = {
+  loader: PropTypes.bool,
 };
 
 export default withLoadingState(Information);

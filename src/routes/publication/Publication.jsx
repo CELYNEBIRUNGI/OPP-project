@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import withLoadingState from "../../components/withLoadingState";
 import MainLoader from "../../components/loaders/MainLoader";
+import PropTypes from "prop-types";
 
 const Publication = ({ loader }) => {
   useEffect(() => {
@@ -51,6 +52,10 @@ const Publication = ({ loader }) => {
       </div>
     </PageTransition>
   );
+};
+
+Publication.propTypes = {
+  loader: PropTypes.bool,
 };
 
 export default withLoadingState(Publication);
