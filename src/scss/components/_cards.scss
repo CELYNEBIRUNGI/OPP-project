@@ -30,14 +30,15 @@
 }
 
 .report-card {
-  flex-basis: 48%;
+  flex-basis: 42%;
   margin-bottom: 64px;
   a {
-    @include mx.flex($dir: column);
+    @include mx.flex();
     padding: 0.8rem;
     text-decoration: none;
     gap: 0.5rem;
     color: #030303;
+    overflow: hidden;
 
     img {
       height: 45px;
@@ -46,7 +47,13 @@
     }
 
     p {
-      height: 50px;
+      flex-basis: 80%;
+      height: 70px;
+      text-align: start;
+      display: -webkit-box;
+      -webkit-line-clamp: 2; /* Number of lines to show */
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
   }
 
@@ -65,7 +72,21 @@
 
       p {
         height: 60px;
+        font-size: 0.6rem;
       }
     }
+  }
+}
+
+.pub-card {
+  width: 100%;
+  @include mx.flex($justify: space-between);
+
+  div {
+    flex-basis: 65%;
+    padding: 0.2rem;
+  }
+  img {
+    width: 29%;
   }
 }

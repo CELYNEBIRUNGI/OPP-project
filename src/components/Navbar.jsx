@@ -61,11 +61,13 @@ const Navbar = () => {
           <div className="nav-header">
             <div>
               <img src={logo} alt="Ministry logo" />
-              <p>Ministry of Agriculture, Animal and Industry & Fisheries</p>
+              <span>
+                Ministry of Agriculture, Animal and Industry & Fisheries
+              </span>
             </div>
             <div>
               <img src={palm} alt="palm logo" />
-              <p>National Oil Palm Project</p>
+              <span>National Oil Palm Project</span>
             </div>
           </div>
         )}

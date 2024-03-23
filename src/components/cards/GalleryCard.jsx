@@ -7,12 +7,16 @@ const GalleryCard = ({ item }) => {
         <img src={item?.img} alt={item.title} />
       </div>
       <div className="card-body">
-        <h3>{item?.title}</h3>
+        <h3>This Article’s Title goes Here</h3>
         <div className="props">
-          <p>{item?.date}</p>
-          <p>{item.category}</p>
+          <p>05, September 2021</p>
+          <p>By Author</p>
         </div>
-        <p>{item?.description}</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod,
+          diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus
+          nisl nunc eget augue.
+        </p>
       </div>
     </div>
   );

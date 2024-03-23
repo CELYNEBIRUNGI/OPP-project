@@ -3,7 +3,8 @@
 
 .home {
   h2 {
-    margin: 3.5rem 0 1.5rem;
+    margin: 3.5rem 0;
+    font-size: var.$fs-h2;
   }
 
   .about {
@@ -15,7 +16,7 @@
     .about-body {
       @include mx.flex($justify: space-between);
       font-size: var.$fs-text;
-      margin-top: 64px;
+      margin-top: 24px;
       height: 400px;
 
       img {
@@ -34,6 +35,10 @@
         p {
           width: 85%;
           line-height: 1.6;
+          display: -webkit-box;
+          -webkit-line-clamp: 9; /* Number of lines to show */
+          -webkit-box-orient: vertical;
+          overflow: hidden;
         }
 
         a {
@@ -62,7 +67,7 @@
       font-size: var.$fs-text;
       @include mx.flex($justify: space-between);
       align-content: stretch;
-      padding-top: 64px;
+      padding: 64px 0 128px;
     }
   }
 
@@ -75,11 +80,12 @@
     @include mx.flex($dir: column, $align: center);
     max-width: 1080px;
     margin: 0 auto;
-    font-size: var.$fs-text;
+    padding: 0 32px;
 
     .reports-body {
+      font-size: var.$fw-small;
       @include mx.flex($justify: space-around);
-      margin-top: 16px;
+      margin: 32px 0 128px;
     }
   }
 
@@ -138,7 +144,7 @@
 
   @include mx.desktop {
     h2 {
-      font-size: var.$fs-h5;
+      font-size: var.$fs-h3;
     }
     .about {
       .about-body {
@@ -148,13 +154,9 @@
           width: 35%;
           height: 70%;
         }
-        div {
-          p {
-            font-size: var.$small;
-          }
-        }
         a {
-          font-size: var.$small;
+          font-size: var.$fs-text;
+          text-decoration: underline;
         }
       }
     }
@@ -170,6 +172,7 @@
 .leaflet-container {
   height: 60vh;
   width: 1080px;
+  border: 3px solid var.$primary-200;
 }
 
 .leaflet-pane {

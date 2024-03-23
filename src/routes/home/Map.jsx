@@ -11,7 +11,7 @@ const Map = () => {
   });
   return (
     <div>
-      <MapContainer center={kampala} zoom={9}>
+      <MapContainer center={kampala} zoom={8}>
         <TileLayer
           attribution="&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
           url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"

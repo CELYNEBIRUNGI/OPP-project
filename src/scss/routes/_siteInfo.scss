@@ -17,8 +17,10 @@
     margin: 2rem 0;
     padding: 0 2.5rem;
     text-align: start;
+    line-height: 1.9;
+    font-weight: 300;
+    letter-spacing: 0.5px;
     font-size: var.$fs-text;
-    line-height: 1.8;
   }
 
   @include mx.mobile {
@@ -28,9 +30,5 @@
   }
   @include mx.desktop {
     max-width: 900px;
-
-    p {
-      font-size: var.$small;
-    }
   }
 }

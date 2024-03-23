@@ -4,7 +4,7 @@ import pic from "../../assets/rec.png";
 import Carrousel from "../../components/Carrousel";
 import PageTransition from "../../components/transitions/PageTransition";
 import ScrollBased from "../../components/transitions/ScrollBased";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import MainLoader from "../../components/loaders/MainLoader";
 import withLoadingState from "../../components/withLoadingState";
 import PropTypes from "prop-types";
@@ -12,9 +12,15 @@ import PropTypes from "prop-types";
 const Information = ({ loader }) => {
   const { id } = useParams();
   const location = useLocation();
+  const [loadPage, setLoadPage] = useState(true);
 
   useEffect(() => {
+    setLoadPage(true);
     let title;
+    const timeoutId = setTimeout(() => {
+      setLoadPage(false);
+    }, 500);
+
     if (id === "1") {
       title = "Mayuge";
     } else if (id === "2") {
@@ -27,7 +33,16 @@ const Information = ({ loader }) => {
       title = "Mukono";
     }
     document.title = `Project | ${title}`;
+    return () => clearTimeout(timeoutId);
   }, [location.pathname, id]);
+
+  if (loadPage) {
+    return (
+      <div className="impact">
+        <MainLoader />
+      </div>
+    );
+  }
 
   const project = projectHubList.find((project) => project.id === parseInt(id));
   if (loader) {

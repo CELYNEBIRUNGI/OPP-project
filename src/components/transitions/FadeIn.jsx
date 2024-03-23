@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 import PropTypes from "prop-types";
 
-const FadeIn = ({ children }) => {
+const FadeIn = ({ className, children }) => {
   const ref = useRef(null);
   // const { scrollYProgress } = useScroll({
   //   target: ref,
@@ -10,7 +10,11 @@ const FadeIn = ({ children }) => {
   // });
   // const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
 
-  return <motion.div ref={ref}>{children}</motion.div>;
+  return (
+    <motion.div ref={ref} className={className}>
+      {children}
+    </motion.div>
+  );
 };
 
 FadeIn.propTypes = {

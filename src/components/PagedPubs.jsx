@@ -1,10 +1,8 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
-import GalleryCard from "./cards/GalleryCard";
 import PropTypes from "prop-types";
+import PubCard from "./cards/PubCard";
 
-const Paginated = ({ items, itemsPerPage }) => {
-  const location = useLocation();
+const PagedPubs = ({ items, itemsPerPage }) => {
   const totalPages = Math.ceil(items?.length / itemsPerPage);
   const [currentPage, setCurrentPage] = useState(() => 1);
   const startIndex = (currentPage - 1) * itemsPerPage;
@@ -16,17 +14,15 @@ const Paginated = ({ items, itemsPerPage }) => {
 
   useEffect(() => {
     goToPage(1);
-  }, [location.pathname]);
-
-  useEffect(() => {
-    window.scrollTo({ top: 0 });
-  }, [currentPage]);
+  }, []);
 
   return (
-    <div className="page-container">
-      <ul className="list">
-        {items?.slice(startIndex, endIndex).map((item) => (
-          <GalleryCard key={item.md5Hash} item={item} />
+    <div className="dotted-container">
+      <ul className="dotted-list">
+        {items?.slice(startIndex, endIndex).map((article) => (
+          <li key={article.id}>
+            <PubCard article={article} />
+          </li>
         ))}
       </ul>
 
@@ -39,7 +35,7 @@ const Paginated = ({ items, itemsPerPage }) => {
             }}
             className={index + 1 === currentPage ? "active" : ""}
           >
-            {index + 1}
+            <span />
           </button>
         ))}
       </div>
@@ -47,9 +43,4 @@ const Paginated = ({ items, itemsPerPage }) => {
   );
 };
 
-Paginated.propTypes = {
-  items: PropTypes.array,
-  itemsPerPage: PropTypes.number,
-};
-
-export default Paginated;
+export default PagedPubs;

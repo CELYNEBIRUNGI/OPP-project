@@ -40,3 +40,66 @@ export const publicationsList = [
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing Quisque placerat Convallis felis vitae tortor augue. Velit nascetur massa in.",
   },
 ];
+
+export const pubArtList = [
+  {
+    id: 1,
+    title: "",
+    link: "",
+  },
+  {
+    id: 2,
+    title: "",
+    link: "",
+  },
+  {
+    id: 3,
+    title: "",
+    link: "",
+  },
+  {
+    id: 4,
+    title: "",
+    link: "",
+  },
+  {
+    id: 5,
+    title: "",
+    link: "",
+  },
+  {
+    id: 6,
+    title: "",
+    link: "",
+  },
+  {
+    id: 7,
+    title: "",
+    link: "",
+  },
+  {
+    id: 8,
+    title: "",
+    link: "",
+  },
+  {
+    id: 9,
+    title: "",
+    link: "",
+  },
+  {
+    id: 10,
+    title: "",
+    link: "",
+  },
+  {
+    id: 11,
+    title: "",
+    link: "",
+  },
+  {
+    id: 12,
+    title: "",
+    link: "",
+  },
+];

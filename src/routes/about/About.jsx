@@ -17,37 +17,35 @@ const About = () => {
       </div>
 
       <div className="first-paragraph">
-        <div className="">
-          <FadeIn>
-            <p>
-              Oil palm, a lucrative vegetable oil crop in the world, showed
-              promising adaptability to some agroecologies in Uganda from
-              studies carried out in the 1970s resulting in first commercial
-              establishment in 2005 in Bugala Island, Kalangala district.
-              Further, adapt- ability studies continue to reveal suitable areas
-              for commercial oil palm production in the country. The infant
-              industry faces an array of challenges, both biotic and abiotic
-              especially in regard to smallholder farmer field management and
-              build-up of pests and disease in the face of climate change both
-              in the nuclear estate and smallholder farmers&apos; fields.
-            </p>
-          </FadeIn>
-          <FadeIn>
-            <p>
-              The rapid build-up of devastating diseases such as Fusarium wilt
-              of oil palm and Ganoderma trunk rot in Uganda is an interesting
-              scenario since they are often expected from second-phase plantings
-              in other areas in the world. However, it may be attributed to the
-              all-year-round weather suitability to pests and disease build-up
-              on native or alternative hosts in most agroecologies in Uganda.
-              This difference from other oil palm producing regions in the world
-              has resulted in recently initiated oil palm Research in Uganda to
-              focus on developing local solutions to challenges facing oil palm
-              farmers in the country.
-            </p>
-          </FadeIn>
+        <FadeIn className={"about-p1"}>
+          <p>
+            Oil palm, a lucrative vegetable oil crop in the world, showed
+            promising adaptability to some agroecologies in Uganda from studies
+            carried out in the 1970s resulting in first commercial establishment
+            in 2005 in Bugala Island, Kalangala district. Further, adapt-
+            ability studies continue to reveal suitable areas for commercial oil
+            palm production in the country. The infant industry faces an array
+            of challenges, both biotic and abiotic especially in regard to
+            smallholder farmer field management and build-up of pests and
+            disease in the face of climate change both in the nuclear estate and
+            smallholder farmers&apos; fields.
+          </p>
+          <p>
+            The rapid build-up of devastating diseases such as Fusarium wilt of
+            oil palm and Ganoderma trunk rot in Uganda is an interesting
+            scenario since they are often expected from second-phase plantings
+            in other areas in the world. However, it may be attributed to the
+            all-year-round weather suitability to pests and disease build-up on
+            native or alternative hosts in most agroecologies in Uganda. This
+            difference from other oil palm producing regions in the world has
+            resulted in recently initiated oil palm Research in Uganda to focus
+            on developing local solutions to challenges facing oil palm farmers
+            in the country.
+          </p>
+        </FadeIn>
+        <div className="about-pic">
+          <img src={photo} alt="Desc" />
         </div>
-        <img src={photo} alt="Desc" />
       </div>
 
       <div className="second-paragraph">

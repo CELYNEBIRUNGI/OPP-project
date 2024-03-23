@@ -1,13 +1,15 @@
 import Carrousel from "../../components/Carrousel";
 import publ from "../../assets/publ.png";
 import publication from "../../assets/publication.png";
-import { publicationsList } from "../../lib/publicationsLists";
+import { publicationsList, pubArtList } from "../../lib/publicationsLists";
 import PageTransition from "../../components/transitions/PageTransition";
 import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import withLoadingState from "../../components/withLoadingState";
 import MainLoader from "../../components/loaders/MainLoader";
 import PropTypes from "prop-types";
+import PubCard from "../../components/cards/PubCard";
+import PagedPubs from "../../components/PagedPubs";
 
 const Publication = ({ loader }) => {
   useEffect(() => {
@@ -49,6 +51,7 @@ const Publication = ({ loader }) => {
       <div className="news">
         <h3>Better information, better health</h3>
         <h2>News</h2>
+        <PagedPubs items={pubArtList} itemsPerPage={4} />
       </div>
     </PageTransition>
   );

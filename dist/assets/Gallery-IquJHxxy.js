@@ -1,7 +1,0 @@
-import{w as m,r as a,_ as g,u,g as d,a as y,c as f,b as h,d as j,e as x,f as p,h as I,j as e,M as L,C as b}from"./index-PnVCftib.js";const v=a.lazy(()=>g(()=>import("./Paginated-Iofq3jxV.js"),__vite__mapDeps([0,1,2]))),P=({loader:i})=>{const t=u(),[n,_]=a.useState(window.innerWidth<768),[c,l]=a.useState([]),[o,r]=a.useState([]);return a.useEffect(()=>{let s;t.pathname==="/gallery/general"?(r(d),l(y),s="General"):t.pathname==="/gallery/community-activity"?(r(f),l(h),s="Community Activities"):t.pathname==="/gallery/conferences"?(r(j),l(x),s="Conferences"):(r(p),l(I),s="Project-Hub"),document.title=`Gallery  |  ${s}`},[t.pathname]),i?e.jsx("div",{className:"impact",children:e.jsx(L,{})}):e.jsxs("main",{children:[e.jsx("div",{className:"banner",children:e.jsx(b,{images:o})}),e.jsx("div",{className:"gallery",children:e.jsx(a.Suspense,{fallback:e.jsx("h1",{children:"Loading..."}),children:e.jsx(v,{items:c,itemsPerPage:n?4:9})})})]})},w=m(P);export{w as default};
-function __vite__mapDeps(indexes) {
-  if (!__vite__mapDeps.viteFileDeps) {
-    __vite__mapDeps.viteFileDeps = ["assets/Paginated-Iofq3jxV.js","assets/index-PnVCftib.js","assets/index-bhdkZPzn.css"]
-  }
-  return indexes.map((i) => __vite__mapDeps.viteFileDeps[i])
-}
