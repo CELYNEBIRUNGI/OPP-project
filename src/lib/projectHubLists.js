@@ -1,9 +1,34 @@
+//banner
 import icon1 from "../assets/imp.png";
+import pic1 from "../assets/projects/pic1.webp";
+import pic6 from "../assets/projects/pic6.webp";
+import pic16 from "../assets/projects/pic16.webp";
+import pic17 from "../assets/projects/pic17.webp";
+import pic18 from "../assets/projects/pic18.webp";
+import pic20 from "../assets/projects/pic20.webp";
+
+//masaka
+import masPic1 from "../assets/masaka/pic1.webp";
+import masPic2 from "../assets/masaka/pic2.webp";
+
+//mayuge
+import mayPic1 from "../assets/mayuge/pic13.webp";
+import mayPic2 from "../assets/mayuge/pic14.webp";
+import mayPic3 from "../assets/mayuge/pic15.webp";
+import mayPic4 from "../assets/mayuge/pic17.webp";
+
+//buvuma
+
+//kalangala
+import pic4 from "../assets/kalangala/pic4.webp";
+import pic8 from "../assets/kalangala/pic8.webp";
+import pic9 from "../assets/kalangala/pic9.webp";
+import pic10 from "../assets/kalangala/pic10.webp";
 
 export const projectHubList = [
   {
     id: 1,
-    img: icon1,
+    images: [mayPic1, mayPic2, mayPic3, mayPic4],
     title: "Mayuge",
     text: "Mayuge hub comprises of the districts of Mayuge, Bugiri and Namayingo. Previously, the project had registered 3,435 potential farmers (F=21%) who pledged 5,280 ha for the establishment of oil palm. In Mayuge hub, 1,793.99 ha is now re-surveyed, for 4-point coordinates, for 2,225 farmers. From the 1,792.99ha smallholders’ land surveyed. The farmers in Buwaaya and Mpungwe Sub Counties have so far prepared 116 ha to for planting oil palm on-going activities include: Lining/pegging, and holing in preparation for planting.",
     bigText: [
@@ -15,7 +40,7 @@ export const projectHubList = [
   },
   {
     id: 2,
-    img: icon1,
+    images: [masPic1, masPic2, pic16],
     title: "Masaka",
     text: "Masaka hub comprises of the districts of Masaka, Kalungu and Kyotera. In the year of reporting, entry meetings were conducted in Kalungu and Kyotera, where the MoU for cooperation between MAAIF/NOPP and the DLGs was introduced and submitted for consideration by the leadership. In Masaka hub, an additional 566 ha has been identified, bringing the total up to 1,200 ha, and potential OPGs up from 404 to 600.",
     bigText: [
@@ -26,8 +51,8 @@ export const projectHubList = [
   },
   {
     id: 3,
-    img: icon1,
-    title: "Bavuma",
+    images: [pic18, pic17],
+    title: "Buvuma",
     text: "The project, in partnership with the Buvuma District Local Government leadership, has conducted sensitization and mobilization meetings across the main island. These have been all-inclusive, with stakeholders invited to both formal and informal sittings to clarify roles and responsibilities, manage expectations, present progress on the pledging of farmland for oil palm growing as well as respond to any emerging issues. To date, over 2,550 farmers have been mobilized and sensitized on their roles and responsibilities including understanding the benefits of oil palm growing.",
     bigText: [
       "The project, in partnership with the Buvuma District Local Government leadership, has conducted sensitization and mobilization meetings across the main island. These have been all-inclusive, with stakeholders invited to both formal and informal sittings to clarify roles and responsibilities, manage expectations, present progress on the pledging of farmland for oil palm growing as well as respond to any emerging issues. To date, over 2,550 farmers have been mobilized and sensitized on their roles and responsibilities including understanding the benefits of oil palm growing.",
@@ -38,7 +63,7 @@ export const projectHubList = [
   },
   {
     id: 4,
-    img: icon1,
+    images: [pic4, pic8, pic9, pic10],
     title: "Kalangala",
     text: "Kalangala district is located in southern central Uganda and is comprised of a series of islands situated on Lake Victoria. The estimated population in 2016 was 56,900 individuals, with the majority of residents located on Bugala Island, the largest island accounting for 63.2 per cent of total dry land in the district. Historically, the primary income-generating activities on the islands have consisted of fishing, tourism, and agriculture. Since the inception of the oil palm project in 2005, in the form of a private-public partnership between the government of Uganda and BIDCO Uganda Limited (operating as Oil Palm Uganda Limited, or OPUL), cultivation of oil palm has steadily become a key economic activity within the district",
     bigText: [
@@ -50,7 +75,7 @@ export const projectHubList = [
   },
   {
     id: 5,
-    img: icon1,
+    images: [icon1],
     title: "Mukono",
     text: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
     bigText: [
@@ -58,3 +83,5 @@ export const projectHubList = [
     ],
   },
 ];
+
+export const projBanner = [pic16, pic17, pic18, pic20, pic6];

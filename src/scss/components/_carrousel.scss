@@ -34,17 +34,24 @@
     h2 {
       font-size: var.$fs-h1;
       text-align: center;
+      width: 50%;
+    }
+
+    p {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
     }
   }
 
   @include mx.mobile {
-    .banner {
-      height: 40vh;
+    height: 70vh;
 
-      div {
-        h1 {
-          font-size: var.$fs-h3;
-        }
+    div {
+      h1,
+      h2 {
+        font-size: var.$fs-h2;
+        width: 70%;
       }
     }
   }

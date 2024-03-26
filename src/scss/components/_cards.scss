@@ -1,6 +1,6 @@
 @use "../reset/variables" as var;
 @use "../reset/mixins" as mx;
-.card-one,
+
 .report-card {
   background-color: #fff;
   border-radius: 12px;
@@ -11,20 +11,34 @@
     padding: 8px;
   }
 }
+
 .card-one {
   flex-basis: 22.5%;
   overflow: hidden;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  text-align: center;
+  height: 270px;
+
   img {
     width: 100%;
     height: 70%;
     object-fit: cover;
   }
 
-  @include mx.desktop {
-    font-size: var.$small;
+  p {
+    height: 25%;
+    margin-top: 0.5rem;
+  }
+
+  @include mx.mobile {
     img {
-      width: 100%;
-      height: 200px;
+      width: 330px;
+    }
+
+    p {
+      height: 64px;
     }
   }
 }

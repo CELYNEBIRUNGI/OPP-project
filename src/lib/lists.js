@@ -35,22 +35,22 @@ export const statusLists = [
   {
     id: 1,
     img: "",
-    text: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+    text: "Scaling up investments in small holder oil palm",
   },
   {
     id: 2,
     img: "",
-    text: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+    text: "Livelihoods and diversification and resilience",
   },
   {
     id: 3,
     img: "",
-    text: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+    text: "Oil palm sector and development Framework",
   },
   {
     id: 4,
     img: "",
-    text: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+    text: "Project management",
   },
 ];
 

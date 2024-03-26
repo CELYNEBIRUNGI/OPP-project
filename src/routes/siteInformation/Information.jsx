@@ -56,8 +56,8 @@ const Information = ({ loader }) => {
   return (
     <PageTransition myClass={"site-info"}>
       <h2>{project?.title}</h2>
-      <div className="carrousel">
-        <Carrousel images={[pic]} />
+      <div className="banner">
+        <Carrousel images={project.images} />
       </div>
       {project.bigText.map((text, index) => (
         <ScrollBased

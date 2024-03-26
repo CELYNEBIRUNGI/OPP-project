@@ -1,4 +1,4 @@
-import { projectHubList } from "../../lib/projectHubLists";
+import { projectHubList, projBanner } from "../../lib/projectHubLists";
 import { Link } from "react-router-dom";
 import Carrousel from "../../components/Carrousel";
 import PageTransition from "../../components/transitions/PageTransition";
@@ -12,9 +12,6 @@ const ProjectHub = ({ loader }) => {
     document.title = "OPP | Project-Hub";
   }, []);
 
-  const images = [];
-  projectHubList.map((project) => images.push(project.img));
-
   if (loader) {
     return (
       <div className="impact">
@@ -26,7 +23,7 @@ const ProjectHub = ({ loader }) => {
   return (
     <PageTransition myClass={"project-hub"}>
       <div className="banner">
-        <Carrousel images={images} />
+        <Carrousel images={projBanner} />
       </div>
       <p className="head-text">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquam
@@ -36,7 +33,7 @@ const ProjectHub = ({ loader }) => {
         {projectHubList.map((project) => (
           <div className="site" key={project.id}>
             <div className="">
-              <img src={project.img} alt="" />
+              <img src={project.images[0]} alt="" />
               <Link to={`/project/${project.id}`}>{project.title}</Link>
             </div>
             <p>{project.text}</p>

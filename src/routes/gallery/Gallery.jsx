@@ -14,52 +14,15 @@ const conferenceStorageRef = ref(storage, "con/");
 const projectStorageRef = ref(storage, "proj/");
 const communityStorageRef = ref(storage, "com/");
 
-const Gallery = ({ loader }) => {
+const Gallery = ({ loader, galleryImages }) => {
   const location = useLocation();
   const [isMobile, _] = useState(window.innerWidth < 768);
-  const [galleryImages, setGalleryImages] = useState({});
   const [loadPage, setLoadPage] = useState(true);
-  const [loadData, setLoadData] = useState(true);
   const currentData = galleryImages[location.pathname.split("/gallery/")[1]];
   const carrouselImages = [];
   currentData?.map((image) => {
     carrouselImages.push(image.img);
   });
-
-  useEffect(() => {
-    const getData = async () => {
-      const getUrls = async (imageRef) => {
-        try {
-          const list = await listAll(imageRef);
-          const urls = await Promise.all(
-            list.items.map(async (itemRef) => {
-              const img = await getDownloadURL(itemRef);
-              const meta = await getMetadata(itemRef);
-              return { ...meta, img };
-            })
-          );
-          return urls;
-        } catch (error) {
-          console.error("Error fetching images:", error);
-        }
-      };
-
-      const general = await getUrls(generalStorageRef);
-      const conferences = await getUrls(conferenceStorageRef);
-      const community = await getUrls(communityStorageRef);
-      const projects = await getUrls(projectStorageRef);
-
-      setGalleryImages({
-        general,
-        conferences,
-        community,
-        projects,
-      });
-      setLoadData(false);
-    };
-
-    getData();
-  }, []);
 
   useEffect(() => {
     setLoadPage(true);
@@ -70,7 +33,7 @@ const Gallery = ({ loader }) => {
     return () => clearTimeout(timeoutId);
   }, [location.pathname]);
 
-  if (loader || loadPage || loadData) {
+  if (loader || loadPage) {
     return (
       <div className="impact">
         <MainLoader />

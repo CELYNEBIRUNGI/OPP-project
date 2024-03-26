@@ -5,6 +5,8 @@ import PubCard from "./cards/PubCard";
 const PagedPubs = ({ items, itemsPerPage }) => {
   const totalPages = Math.ceil(items?.length / itemsPerPage);
   const [currentPage, setCurrentPage] = useState(() => 1);
+  const [pubs, setPubs] = useState([]);
+  const [loadPage, setLoadPage] = useState(false);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
 
@@ -16,10 +18,24 @@ const PagedPubs = ({ items, itemsPerPage }) => {
     goToPage(1);
   }, []);
 
+  useEffect(() => {
+    setLoadPage(true);
+    const timeoutId = setTimeout(() => {
+      setPubs(items?.slice(startIndex, endIndex));
+      setLoadPage(false);
+    }, 600);
+    return () => clearTimeout(timeoutId);
+  }, [currentPage]);
+
   return (
     <div className="dotted-container">
       <ul className="dotted-list">
-        {items?.slice(startIndex, endIndex).map((article) => (
+        {loadPage && (
+          <div className="load-page">
+            <h1>Loading...</h1>
+          </div>
+        )}
+        {pubs.map((article) => (
           <li key={article.id}>
             <PubCard article={article} />
           </li>

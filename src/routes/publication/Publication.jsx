@@ -44,8 +44,21 @@ const Publication = ({ loader }) => {
         </ul>
       </div>
 
-      <div className="slider">
-        <Carrousel images={[publication, publication]} pagination={true} />
+      <div className="banner">
+        <Carrousel images={[publication]} />
+        <div>
+          <p>
+            The National Oil Palm Project (NOPP) was declared effective on
+            November 29th, 2018. The Ministry of Agriculture, Animal Industry
+            and Fisheries (MAAIF) is the Executing Agency and established a
+            Project Management Unit (PMU) in September 2019. NOPP received its
+            first disbursement on the 13th of September 2019. The overall goal
+            is inclusive rural transformation through oil palm investment. The
+            project targets to reach an estimated 30,800 households with an
+            outreach of 154,000 beneficiaries of which 30% are women and 40% are
+            youth.
+          </p>
+        </div>
       </div>
 
       <div className="news">

@@ -7,6 +7,9 @@ const PubCard = ({ article }) => {
       <div className="pub-card-detail">
         <span>Monday 05, September 20 | By author</span>
         <p>{article.title}</p>
+        <a href={article.link} target="_blank">
+          art link {article.id}
+        </a>
       </div>
     </div>
   );

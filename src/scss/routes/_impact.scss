@@ -38,9 +38,9 @@
         }
 
         a {
-          border-radius: 8px;
+          border-radius: 4px;
           border: none;
-          padding: 8px;
+          padding: 8px 24px;
           background-color: var.$primary-200;
           color: #fff;
           font-weight: bold;
@@ -67,23 +67,25 @@
         flex-basis: 23%;
         height: 300px;
         margin-top: 2rem;
-        @include mx.flex($dir: column, $justify: space-around);
-        cursor: pointer;
+        @include mx.flex($dir: column, $justify: flex-start);
 
+        h3 {
+          text-align: center;
+          flex-basis: 20%;
+          margin-top: 1rem;
+        }
         a {
-          color: var.$text-100;
-
-          h3 {
-            margin-top: 0.3rem;
-          }
-
-          &:hover {
-            text-decoration: underline;
-          }
+          border-radius: 4px;
+          border: none;
+          padding: 8px 24px;
+          background-color: var.$primary-200;
+          color: #fff;
+          font-weight: bold;
+          margin-top: auto;
         }
         img {
           width: 100%;
-          height: 80%;
+          height: 70%;
         }
       }
     }
@@ -119,6 +121,7 @@
   @include mx.mobile {
     .articles {
       padding: 32px;
+      max-width: 400px;
 
       .article {
         @include mx.flex($dir: column);
@@ -149,26 +152,29 @@
     }
 
     .more {
+      max-width: 400px;
       h2 {
         margin-top: 32px;
         font-size: var.$fs-h3;
+        padding: 0 1rem;
       }
 
       ul {
-        @include mx.flex($dir: column);
-        max-width: 1080px;
+        @include mx.flex($dir: column, $justify: flex-start);
+        max-width: 400px;
         margin: 0 auto;
 
         li {
-          flex-basis: 100%;
-          height: 300px;
+          width: 400px;
           margin-top: 2rem;
           @include mx.flex($dir: column, $justify: space-around);
           cursor: pointer;
 
+          h3 {
+            width: 75%;
+          }
           img {
-            width: 100%;
-            height: 80%;
+            width: 75%;
           }
         }
       }
@@ -177,6 +183,7 @@
     .status {
       margin: 0 2rem;
       font-size: var.$small;
+      max-width: 400px;
       h2 {
         margin: 3rem 0;
         font-size: var.$fs-h3;
@@ -214,10 +221,13 @@
         max-width: 900px;
         li {
           img {
-            height: 70%;
+            height: 60%;
           }
           h3 {
             font-size: var.$fs-text;
+          }
+          a {
+            font-size: var.$small;
           }
         }
       }
@@ -232,6 +242,17 @@
       p {
         font-size: var.$fs-text;
       }
+    }
+  }
+}
+
+.impact-detail {
+  p {
+    max-width: 1080px;
+    margin: 5rem auto;
+
+    @include mx.mobile {
+      padding: 2rem;
     }
   }
 }

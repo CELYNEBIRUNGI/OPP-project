@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import withLoadingState from "../../components/withLoadingState";
 import MainLoader from "../../components/loaders/MainLoader";
 import PropTypes from "prop-types";
+import Carrousel from "../../components/Carrousel";
 
 const ImpactDetail = ({ loader }) => {
   const { id } = useParams();
@@ -19,8 +20,13 @@ const ImpactDetail = ({ loader }) => {
   }
 
   return (
-    <div>
-      <h2>{impact?.title}</h2>
+    <div className="impact-detail">
+      <div className="banner">
+        <Carrousel images={[impact.img]} />
+        <div>
+          <h2>{impact?.title}</h2>
+        </div>
+      </div>
       <p>{impact.bigText}</p>
     </div>
   );

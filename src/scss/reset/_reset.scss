@@ -42,12 +42,11 @@ body {
   font-family: var.$ff-primary;
   text-rendering: optimizeSpeed;
   line-height: var.$lh-default;
-  background-color: #fff;
+  background-color: var.$bg-300;
   color: #1f1f1f;
 
   p {
     line-height: 1.9;
-    font-weight: 300;
     letter-spacing: 0.5px;
     font-size: var.$fs-text;
   }

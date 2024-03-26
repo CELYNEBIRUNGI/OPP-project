@@ -47,22 +47,21 @@ const Impact = ({ loader }) => {
       </div>
 
       <div className="more">
-        <h2>More articles</h2>
+        <h2>More Impact articles</h2>
         <p></p>
         <ul>
           {impactArticlesList?.slice(0, 4).map((article) => (
             <li key={article.id}>
-              <NavLink to={`/impact/${article.id}`}>
-                <img src={article.img} alt="" />
-                <h3>{article.title}</h3>
-              </NavLink>
+              <img src={article.img} alt="" />
+              <h3>{article.title}</h3>
+              <NavLink to={`/impact/${article.id}`}>Read more</NavLink>
             </li>
           ))}
         </ul>
       </div>
 
       <div className="status">
-        <h2>Status of Implementation</h2>
+        <h2>Success Stories</h2>
         <p>
           We operate in rapidly evolving sectors, shaping natural and built
           environments
