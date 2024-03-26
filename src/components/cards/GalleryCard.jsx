@@ -12,11 +12,11 @@ const GalleryCard = ({ item }) => {
           <p>05, September 2021</p>
           <p>By Author</p>
         </div>
-        <p>
+        {/* <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod,
           diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus
           nisl nunc eget augue.
-        </p>
+        </p> */}
       </div>
     </div>
   );
