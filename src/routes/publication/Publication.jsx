@@ -10,6 +10,7 @@ import MainLoader from "../../components/loaders/MainLoader";
 import PropTypes from "prop-types";
 import PubCard from "../../components/cards/PubCard";
 import PagedPubs from "../../components/PagedPubs";
+import BlurHashImg from "../../components/BlurHashImage";
 
 const Publication = ({ loader }) => {
   useEffect(() => {
@@ -35,7 +36,13 @@ const Publication = ({ loader }) => {
         <ul>
           {publicationsList.map((publication) => (
             <li className="publication" key={publication.id}>
-              <img src={publication.img} alt="" />
+              <BlurHashImg
+                image={publication.img}
+                hash={"LJKKf=TJBq?H~CWBJ7xuAH$P00JR"}
+                width={400}
+                height={400}
+              />
+              {/* <img src={publication.img} alt="" /> */}
               <h3>{publication.title}</h3>
               <p>{publication.text}</p>
               <NavLink to={`/publication/${publication.id}`}>Read more</NavLink>

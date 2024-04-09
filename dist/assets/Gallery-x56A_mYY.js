@@ -1,0 +1,7 @@
+import{w as x,r as s,_ as h,c as t,u as j,j as e,M as _,C as y,b as P,s as o}from"./index-uf1sr4lJ.js";const f=s.lazy(()=>h(()=>import("./Paginated-KyqSxbNq.js"),__vite__mapDeps([0,1,2])));t(o,"gen/");t(o,"con/");t(o,"proj/");t(o,"com/");const c=({loader:d,galleryImages:m,loadImages:u})=>{const i=j(),[p,L]=s.useState(window.innerWidth<768),[g,n]=s.useState(!0),a=m[i.pathname.split("/gallery/")[1]],l=[];return a==null||a.map(r=>{l.push(r.img)}),s.useEffect(()=>{n(!0);const r=setTimeout(()=>{n(!1)},2e3);return()=>clearTimeout(r)},[i.pathname]),d||g?e.jsx("div",{className:"impact",children:e.jsx(_,{})}):e.jsxs("main",{children:[e.jsx("div",{className:"banner",children:e.jsx(y,{images:l})}),e.jsx("div",{className:"gallery",children:e.jsxs(s.Suspense,{children:[u&&e.jsx("h1",{style:{textAlign:"center"},children:"Loading images..."}),e.jsx(f,{items:a,itemsPerPage:p?4:9})]})})]})};c.propTypes={loader:P.bool};const E=x(c);export{E as default};
+function __vite__mapDeps(indexes) {
+  if (!__vite__mapDeps.viteFileDeps) {
+    __vite__mapDeps.viteFileDeps = ["assets/Paginated-KyqSxbNq.js","assets/index-uf1sr4lJ.js","assets/index-DLlp7LMk.css"]
+  }
+  return indexes.map((i) => __vite__mapDeps.viteFileDeps[i])
+}

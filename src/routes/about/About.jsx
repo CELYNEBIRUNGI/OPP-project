@@ -7,6 +7,7 @@ import FadeIn from "../../components/transitions/FadeIn";
 import ScrollBased from "../../components/transitions/ScrollBased";
 import SecondeParagraph from "./SecondeParagraph";
 import FourthParagraph from "./FourthParagraph";
+import BlurHashImg from "../../components/BlurHashImage";
 
 const About = () => {
   useEffect(() => {
@@ -16,7 +17,13 @@ const About = () => {
   return (
     <PageTransition myClass={"about"}>
       <div className="banner">
-        <img src={top} alt="About banner" />
+        <BlurHashImg
+          image={top}
+          hash={"LJKKf=TJBq?H~CWBJ7xuAH$P00JR"}
+          width={2400}
+          height={600}
+          alt={"About banner"}
+        />
       </div>
 
       <div className="first-paragraph">
@@ -35,7 +42,13 @@ const About = () => {
           </p>
         </FadeIn>
         <div className="about-pic">
-          <img src={one} alt="Desc" />
+          <BlurHashImg
+            image={one}
+            hash={"LJKKf=TJBq?H~CWBJ7xuAH$P00JR"}
+            width={350}
+            height={300}
+            alt={"about first paragraph image"}
+          />
         </div>
       </div>
 
@@ -63,7 +76,15 @@ const About = () => {
           covering the bunch surface which later penetrate the pericarp of the
           fruits causing wet rot of fruits
         </p>
-        <img src={two} alt="Desc" />
+        <div className="about-third-pic">
+          <BlurHashImg
+            image={two}
+            hash={"LJKKf=TJBq?H~CWBJ7xuAH$P00JR"}
+            width={370}
+            height={370}
+            alt={"about third paragraph description"}
+          />
+        </div>
       </ScrollBased>
 
       <FourthParagraph />

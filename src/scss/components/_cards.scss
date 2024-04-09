@@ -20,11 +20,17 @@
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   text-align: center;
   height: 270px;
+  @include mx.flex($dir: column);
 
-  img {
-    width: 100%;
-    height: 70%;
-    object-fit: cover;
+  .card-one-img {
+    height: 200px;
+    width: 240px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   p {
@@ -35,6 +41,10 @@
   @include mx.mobile {
     width: 300px;
 
+    .card-one-img {
+      width: 300px;
+      height: 280px;
+    }
     p {
       height: 64px;
     }
@@ -93,12 +103,104 @@
 .pub-card {
   width: 100%;
   @include mx.flex($justify: space-between);
+  padding: 0.2rem;
+  height: 120px;
 
-  div {
-    flex-basis: 65%;
-    padding: 0.2rem;
+  .pub-card-detail {
+    flex-basis: 75%;
+    height: 78%;
+    padding: 0.2rem 0.4rem 0.2rem;
+    @include mx.flex($dir: column, $align: flex-start, $justify: space-between);
+
+    p {
+      display: -webkit-box;
+      -webkit-line-clamp: 2; /* Number of lines to show */
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    a {
+      margin-top: auto;
+      color: var.$primary-200;
+      text-decoration: underline;
+    }
   }
-  img {
-    width: 29%;
+
+  .pub-card-img {
+    width: 65px;
+    height: 65px;
+    margin-left: 1rem;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @include mx.mobile {
+    .pub-card-img {
+      width: 45px;
+      height: 45px;
+    }
+  }
+}
+
+.story-card {
+  @include mx.flex($justify: space-between);
+  margin-top: 1.5rem;
+
+  .story-img {
+    width: 320px;
+    height: 265px;
+    overflow: hidden;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+      rgba(17, 17, 26, 0.1) 0px 0px 8px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .story-body {
+    flex-basis: 60%;
+    height: 265px;
+    @include mx.flex($dir: column, $align: flex-start, $justify: flex-start);
+    padding: 0.5rem 0;
+
+    h3 {
+      font-size: var.$fs-h5;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      line-height: 1.4;
+    }
+
+    a {
+      color: var.$primary-200;
+      text-decoration: underline;
+      margin-top: auto;
+    }
+  }
+
+  @include mx.mobile {
+    height: 650px;
+    overflow: hidden;
+    .story-img {
+      width: 350px;
+    }
+    .story-body {
+      flex-basis: 100%;
+      height: 360px;
+      margin-top: 1rem;
+
+      h3 {
+        font-size: var.$fs-h4;
+      }
+
+      a {
+        margin-top: 1rem;
+      }
+    }
   }
 }

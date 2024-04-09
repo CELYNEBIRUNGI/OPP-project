@@ -1,10 +1,16 @@
 import PropTypes from "prop-types";
+import BlurHashImg from "../BlurHashImage";
 
 const GalleryCard = ({ item }) => {
   return (
     <div className="gallery-card">
       <div className="gallery-image">
-        <img src={item?.img} alt={item.title} />
+        <BlurHashImg
+          image={item?.img}
+          hash={"LJKKf=TJBq?H~CWBJ7xuAH$P00JR"}
+          width={400}
+          height={400}
+        />
       </div>
       <div className="card-body">
         <h3>This Article’s Title goes Here</h3>

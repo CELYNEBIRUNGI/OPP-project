@@ -10,6 +10,7 @@ import ImpactDetail from "./routes/impactDetail/ImpactDetail";
 import PublicationDetail from "./routes/publicationDetail/PublicationDetail";
 import { storage } from "./firebase/config";
 import { getDownloadURL, getMetadata, listAll, ref } from "firebase/storage";
+import Story from "./routes/story/Story";
 const ProjectHub = lazy(() => import("./routes/projectHub/ProjectHub"));
 const Gallery = lazy(() => import("./routes/gallery/Gallery"));
 const Publication = lazy(() => import("./routes/publication/Publication"));
@@ -23,6 +24,7 @@ function App() {
   const projectStorageRef = ref(storage, "proj/");
   const communityStorageRef = ref(storage, "com/");
   const [galleryImages, setGalleryImages] = useState([]);
+  const [loadGalleryImages, setLoadGalleryImages] = useState(true);
 
   useEffect(() => {
     const getData = async () => {
@@ -53,6 +55,7 @@ function App() {
         community,
         projects,
       });
+      setLoadGalleryImages(false);
     };
 
     getData();
@@ -89,7 +92,10 @@ function App() {
             path="/gallery/:section"
             element={
               <Suspense fallback={<MainLoader />}>
-                <Gallery galleryImages={galleryImages} />
+                <Gallery
+                  galleryImages={galleryImages}
+                  loadImages={loadGalleryImages}
+                />
               </Suspense>
             }
           />
@@ -125,6 +131,15 @@ function App() {
             element={
               <Suspense fallback={<MainLoader />}>
                 <ImpactDetail />
+              </Suspense>
+            }
+          />
+
+          <Route
+            path="/story/:id"
+            element={
+              <Suspense fallback={<MainLoader />}>
+                <Story />
               </Suspense>
             }
           />

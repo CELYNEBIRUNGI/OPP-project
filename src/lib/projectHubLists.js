@@ -1,6 +1,5 @@
 //banner
-import icon1 from "../assets/imp.png";
-import pic1 from "../assets/projects/pic1.webp";
+import icon1 from "../assets/muk1.webp";
 import pic6 from "../assets/projects/pic6.webp";
 import pic16 from "../assets/projects/pic16.webp";
 import pic17 from "../assets/projects/pic17.webp";
@@ -77,9 +76,13 @@ export const projectHubList = [
     id: 5,
     images: [icon1],
     title: "Mukono",
-    text: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+    text: `Kampala — MUKONO district has entered an agreement with BIDCO (U) Ltd to promote the growing of palm trees for the production of cooking oil. Under the agreement, residents will grow palm trees and BIDCO will buy them. Livingstone Zziwa, the vice chairperson of Mukono, says: "Some farmers with as big as 200 acres of land have expressed interest in growing palm trees."`,
     bigText: [
-      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered/n alteration in some form, by injected humour, or randomised words which don't look even slightly/n believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything/n embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat/n predefined chunks as necessary, making this the first true generator on the Internet. It uses a/n dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate/n Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition,/n injected humour, or non-characteristic words etc.",
+      `Kampala — MUKONO district has entered an agreement with BIDCO (U) Ltd to promote the growing of palm trees for the production of cooking oil. Under the agreement, residents will grow palm trees and BIDCO will buy them. Livingstone Zziwa, the vice chairperson of Mukono, says: "Some farmers with as big as 200 acres of land have expressed interest in growing palm trees."`,
+      `The Mukono leadership has signed an agreement with BIDCO Refineries to allow farmers to become outgrowers. They (BIDCO) accepted our position. They will only harvest and buy palm trees from our farmers,â€ Francis Lukooya, the district chairman, said. BIDCO had initially wanted only land to grow its palm trees. Soil samples taken in Buvuma Islands where BIDCO wanted to start a plantation, have shown positive results.`,
+      `BIDCO, a multimillion-dollar project, is a partnership between Archer Daniels Midlands ADM of Wilmar Group of Malaysia and Josovina of Singapore, the world's leading companies in palm oil production. President Yoweri Museveni inaugurated the $25m edible oil complex in Jinja in 2006.BIDCO's first phase, valued at $140m, was launched in 2005. The firm manufactures soap, plastics and cooking oil. Uganda spends over $60m on importing crude palm oil. BIDCO has plantations covering over 3,000 hectares planted with high-yielding palm trees from Malaysia.`,
+      `A total of 6,500 hectares will have been planted in the first phase. Palm trees grow well when cultivated in an area receiving well-distributed rainfall of 2000mm annually. Because of unreliable rainfall in the countryside, BIDCO had restricted its cultivation to Kalangala and Bundibugyo.`,
+      `Lukooya argued that while BIDCO’s request would boost investment in the district, residents would not be sacrificed. The district chief, however, did not state the quantity of arable land He said 100 people, with as big as 200 acres of land, have expressed interest in growing palm trees. Lukooya said BIDCO would only send its experts to ensure quality trees are planted and harvested.`,
     ],
   },
 ];

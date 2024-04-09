@@ -14,7 +14,7 @@ const conferenceStorageRef = ref(storage, "con/");
 const projectStorageRef = ref(storage, "proj/");
 const communityStorageRef = ref(storage, "com/");
 
-const Gallery = ({ loader, galleryImages }) => {
+const Gallery = ({ loader, galleryImages, loadImages }) => {
   const location = useLocation();
   const [isMobile, _] = useState(window.innerWidth < 768);
   const [loadPage, setLoadPage] = useState(true);
@@ -47,7 +47,8 @@ const Gallery = ({ loader, galleryImages }) => {
         <Carrousel images={carrouselImages} />
       </div>
       <div className="gallery">
-        <Suspense fallback={<h1>Loading...</h1>}>
+        <Suspense>
+          {loadImages && <h1 style={{textAlign: 'center'}}>Loading images...</h1>}
           <Paginated items={currentData} itemsPerPage={isMobile ? 4 : 9} />
         </Suspense>
       </div>

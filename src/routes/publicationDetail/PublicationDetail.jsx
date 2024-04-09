@@ -1,14 +1,18 @@
-import { publicationsList } from "../../lib/publicationsLists";
+import { publicationsList, pubPdfList } from "../../lib/publicationsLists";
 import { useParams } from "react-router-dom";
 import withLoadingState from "../../components/withLoadingState";
 import MainLoader from "../../components/loaders/MainLoader";
 import PropTypes from "prop-types";
+import { useState } from "react";
 
 const PublicationDetail = ({ loader }) => {
   const { id } = useParams();
-  const publication = publicationsList.find(
-    (article) => article.id === parseInt(id)
-  );
+  const publication = pubPdfList.find((article) => article.id === parseInt(id));
+  const [loaded, setLoaded] = useState(false);
+
+  const handleLoad = () => {
+    setLoaded(true);
+  };
 
   if (loader) {
     return (
@@ -18,7 +22,22 @@ const PublicationDetail = ({ loader }) => {
     );
   }
 
-  return <div>{publication?.title}</div>;
+  return (
+    <div className="pub-detail">
+      {!loaded && (
+        <div style={{ textAlign: "center", height: "10vh" }}>
+          Loading PDF... Please wait!
+        </div>
+      )}
+      <embed
+        src={publication?.pdf}
+        type="application/pdf"
+        onLoad={handleLoad}
+        className="pdf-embed"
+        // style={{ display: loaded ? "block" : "none" }}
+      />
+    </div>
+  );
 };
 
 PublicationDetail.propTypes = {

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import PubCard from "./cards/PubCard";
+import PubLoader from "./loaders/PubLoader";
 
 const PagedPubs = ({ items, itemsPerPage }) => {
   const totalPages = Math.ceil(items?.length / itemsPerPage);
@@ -32,7 +33,7 @@ const PagedPubs = ({ items, itemsPerPage }) => {
       <ul className="dotted-list">
         {loadPage && (
           <div className="load-page">
-            <h1>Loading...</h1>
+            <PubLoader />
           </div>
         )}
         {pubs.map((article) => (

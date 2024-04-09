@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import withLoadingState from "../../components/withLoadingState";
 import MainLoader from "../../components/loaders/MainLoader";
 import PropTypes from "prop-types";
+import BlurHashImg from "../../components/BlurHashImage";
 
 const ProjectHub = ({ loader }) => {
   useEffect(() => {
@@ -26,14 +27,20 @@ const ProjectHub = ({ loader }) => {
         <Carrousel images={projBanner} />
       </div>
       <p className="head-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquam
-        justo et nibh venenatis aliquet.Donec quis felis{" "}
+        NOPP is establishing sustainable commercial partnerships between
+        smallholder oil palm growers and a private processor
       </p>
       <div className="sites">
         {projectHubList.map((project) => (
           <div className="site" key={project.id}>
             <div className="">
-              <img src={project.images[0]} alt="" />
+              <BlurHashImg
+                image={project.images[0]}
+                hash={"LJKKf=TJBq?H~CWBJ7xuAH$P00JR"}
+                width={400}
+                height={400}
+                alt={"project hub description"}
+              />
               <Link to={`/project/${project.id}`}>{project.title}</Link>
             </div>
             <p>{project.text}</p>

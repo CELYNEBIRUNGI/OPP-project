@@ -7,9 +7,7 @@ import Carrousel from "../../components/Carrousel";
 
 const ImpactDetail = ({ loader }) => {
   const { id } = useParams();
-  const impact = impactArticlesList.find(
-    (article) => article.id === parseInt(id)
-  );
+  const impact = impactArticlesList.find((article) => article.id === id);
 
   if (loader) {
     return (

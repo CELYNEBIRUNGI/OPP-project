@@ -5,11 +5,12 @@ import Carrousel from "../../components/Carrousel";
 import Report from "../../components/cards/Report";
 import Map from "./Map";
 import { statusLists, reportsList } from "../../lib/lists";
-import banner from "../../assets/home.png";
+import banner from "../../assets/pic7.webp";
 import rec from "../../assets/rec.png";
 import about from "../../assets/home-about.png";
 import impl from "../../assets/imp.png";
 import { useEffect } from "react";
+import BlurHashImg from "../../components/BlurHashImage";
 
 const Home = () => {
   useEffect(() => {
@@ -18,7 +19,7 @@ const Home = () => {
   return (
     <PageTransition myClass={"home"}>
       <section className="banner">
-        <Carrousel images={[banner, rec, impl]} />
+        <Carrousel images={[banner, rec]} />
         <div>
           <h1>National Oil Palm Project</h1>
         </div>
@@ -27,8 +28,16 @@ const Home = () => {
       <section className="about">
         <h2>Project Background</h2>
         <div className="about-body">
-          <img src={about} alt="Home about image" />
-          <div>
+          <div className="about-desc-img">
+            <BlurHashImg
+              image={about}
+              hash={"LJKKf=TJBq?H~CWBJ7xuAH$P00JR"}
+              width={300}
+              height={300}
+              alt={"about desc at home"}
+            />
+          </div>
+          <div className="about-desc-body">
             <p>
               Oil palm, a lucrative vegetable oil crop in the world, showed
               promising adaptability to some agroecologies in Uganda from
@@ -54,7 +63,7 @@ const Home = () => {
           {statusLists.map((status, index) => (
             <CardOne
               key={status.id}
-              image={impl}
+              image={status.img}
               text={status.text}
               index={index}
             />

@@ -1,6 +1,7 @@
 import ScrollBased from "../../components/transitions/ScrollBased";
 import three from "../../assets/about/3.png";
 import four from "../../assets/about/4.png";
+import BlurHashImg from "../../components/BlurHashImage";
 
 const FourthParagraph = () => {
   return (
@@ -13,7 +14,16 @@ const FourthParagraph = () => {
         opacity={0.8}
       >
         <div className="">
-          <img src={three} alt="Desc" />
+          <div className="about-fourth-pic">
+            <BlurHashImg
+              image={three}
+              hash={"LJKKf=TJBq?H~CWBJ7xuAH$P00JR"}
+              width={400}
+              height={400}
+              alt={"about fourth paragraph description"}
+            />
+          </div>
+          {/* <img src={three} alt="Desc" /> */}
           <p>
             Affected fruits become soft then turn brown and black in color
             before rotting and drying off. Yield loss is both direct through the
@@ -32,7 +42,14 @@ const FourthParagraph = () => {
           </p>
         </div>
         <div className="">
-          <img src={four} alt="" />
+          <div className="about-fifth-pic">
+            <BlurHashImg
+              image={four}
+              hash={"LJKKf=TJBq?H~CWBJ7xuAH$P00JR"}
+              width={400}
+              height={400}
+            />
+          </div>
           <p>
             This results in the harvesting of half-ripe bunches which leads to
             poor fresh fruit bunch quality and high free fatty acid levels

@@ -109,6 +109,7 @@
         .gallery-card {
           font-size: var.$small;
           height: 400px;
+          overflow: hidden;
 
           .card-body {
             .props,
@@ -118,7 +119,9 @@
             }
           }
           .gallery-image {
-            height: 50%;
+            height: 200px;
+            width: 255px;
+            overflow: hidden;
           }
         }
       }

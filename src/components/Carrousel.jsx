@@ -1,6 +1,7 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import PropTypes from "prop-types";
+import BlurHashImg from "./BlurHashImage";
 
 const Carrousel = ({ images, interval, type, pagination }) => {
   return (
@@ -20,7 +21,14 @@ const Carrousel = ({ images, interval, type, pagination }) => {
       >
         {images?.map((image, index) => (
           <SplideSlide key={index}>
-            <img src={image} alt="home banner image" />
+            <BlurHashImg
+              image={image}
+              hash={"LJKKf=TJBq?H~CWBJ7xuAH$P00JR"}
+              width={2400}
+              height={600}
+              alt={"carrousel description"}
+            />
+            {/* <img src={image} alt="home banner image" /> */}
           </SplideSlide>
         ))}
       </Splide>
