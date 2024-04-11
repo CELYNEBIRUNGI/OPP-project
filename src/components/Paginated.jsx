@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import GalleryCard from "./cards/GalleryCard";
 import PropTypes from "prop-types";
 
-const Paginated = ({ items, itemsPerPage }) => {
+const Paginated = ({ items, itemsPerPage, titles }) => {
   const location = useLocation();
   const totalPages = Math.ceil(items?.length / itemsPerPage);
   const [currentPage, setCurrentPage] = useState(() => 1);
@@ -26,7 +26,11 @@ const Paginated = ({ items, itemsPerPage }) => {
     <div className="page-container">
       <ul className="list">
         {items?.slice(startIndex, endIndex).map((item) => (
-          <GalleryCard key={item.md5Hash} item={item} />
+          <GalleryCard
+            key={item?.md5Hash}
+            item={item}
+            title={titles[item?.name]}
+          />
         ))}
       </ul>
 

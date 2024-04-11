@@ -5,19 +5,21 @@ import Carrousel from "../../components/Carrousel";
 import MainLoader from "../../components/loaders/MainLoader";
 import withLoadingState from "../../components/withLoadingState";
 import PropTypes from "prop-types";
-import { storage } from "../../firebase/config";
-import { ref, listAll, getDownloadURL, getMetadata } from "firebase/storage";
+import {
+  generalTitles,
+  projectHubTitles,
+  conferencesTitles,
+  communityTitles,
+} from "../../lib/galleryLists";
 
 const Paginated = lazy(() => import("../../components/Paginated"));
-const generalStorageRef = ref(storage, "gen/");
-const conferenceStorageRef = ref(storage, "con/");
-const projectStorageRef = ref(storage, "proj/");
-const communityStorageRef = ref(storage, "com/");
 
 const Gallery = ({ loader, galleryImages, loadImages }) => {
   const location = useLocation();
   const [isMobile, _] = useState(window.innerWidth < 768);
   const [loadPage, setLoadPage] = useState(true);
+  const [titleData, setTitleData] = useState(null);
+
   const currentData = galleryImages[location.pathname.split("/gallery/")[1]];
   const carrouselImages = [];
   currentData?.map((image) => {
@@ -28,6 +30,20 @@ const Gallery = ({ loader, galleryImages, loadImages }) => {
     setLoadPage(true);
     const timeoutId = setTimeout(() => {
       setLoadPage(false);
+      switch (location.pathname) {
+        case "/gallery/projects":
+          setTitleData(projectHubTitles);
+          break;
+        case "/gallery/community":
+          setTitleData(communityTitles);
+          break;
+        case "/gallery/conferences":
+          setTitleData(conferencesTitles);
+          break;
+        default:
+          setTitleData(generalTitles);
+          break;
+      }
     }, 2000);
 
     return () => clearTimeout(timeoutId);
@@ -48,8 +64,14 @@ const Gallery = ({ loader, galleryImages, loadImages }) => {
       </div>
       <div className="gallery">
         <Suspense>
-          {loadImages && <h1 style={{textAlign: 'center'}}>Loading images...</h1>}
-          <Paginated items={currentData} itemsPerPage={isMobile ? 4 : 9} />
+          {loadImages && (
+            <h1 style={{ textAlign: "center" }}>Loading images...</h1>
+          )}
+          <Paginated
+            items={currentData}
+            itemsPerPage={isMobile ? 4 : 9}
+            titles={titleData}
+          />
         </Suspense>
       </div>
     </main>

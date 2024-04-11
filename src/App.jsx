@@ -59,7 +59,7 @@ function App() {
     };
 
     getData();
-  });
+  }, [loadGalleryImages]);
 
   useEffect(() => {
     window.scrollTo({ top: 0 });

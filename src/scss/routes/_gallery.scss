@@ -5,8 +5,7 @@
   .page-container {
     max-width: 1080px;
     height: fit-content;
-    margin: 3rem auto;
-    padding: 3rem 0;
+    margin: 5rem auto;
     @include mx.flex($justify: space-around, $dir: column);
     gap: 2rem;
 
@@ -17,49 +16,39 @@
       margin-bottom: 1rem;
 
       .gallery-card {
-        flex-basis: 28%;
+        width: 330px;
         height: 350px;
         margin-bottom: 1rem;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
         .gallery-image {
           width: 100%;
-          height: 60%;
+          height: 260px;
+          overflow: hidden;
 
           img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            scale: 1.1;
+            transition: scale 0.4s ease-in-out;
           }
         }
 
         .card-body {
-          padding: 1rem;
+          padding: 0.5rem;
           font-size: var.$fs-text;
           h3 {
             font-size: var.$fs-text;
             text-align: center;
           }
+        }
 
-          .props {
-            @include mx.flex();
-            gap: 0.5rem;
-            padding: 0.5rem;
-
-            p:first-child {
-              padding-right: 0.6rem;
-              border-right: 2px solid #fff;
+        &:hover {
+          .gallery-image {
+            img {
+              scale: 1;
             }
-          }
-
-          p {
-            overflow: hidden;
-            text-align: center;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            max-height: 3em;
           }
         }
       }
@@ -103,27 +92,26 @@
 
   @include mx.desktop {
     .page-container {
-      max-width: 900px;
       .list {
         height: 1300px;
-        .gallery-card {
-          font-size: var.$small;
-          height: 400px;
-          overflow: hidden;
+        // .gallery-card {
+        //   font-size: var.$small;
+        //   height: 400px;
+        //   overflow: hidden;
 
-          .card-body {
-            .props,
-            p {
-              font-size: var.$small;
-              line-height: 1.7;
-            }
-          }
-          .gallery-image {
-            height: 200px;
-            width: 255px;
-            overflow: hidden;
-          }
-        }
+        //   .card-body {
+        //     .props,
+        //     p {
+        //       font-size: var.$small;
+        //       line-height: 1.7;
+        //     }
+        //   }
+        //   .gallery-image {
+        //     height: 200px;
+        //     width: 255px;
+        //     overflow: hidden;
+        //   }
+        // }
       }
     }
   }
