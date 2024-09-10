@@ -41,7 +41,6 @@ const Publication = ({ loader }) => {
                 width={400}
                 height={400}
               />
-              {/* <img src={publication.img} alt="" /> */}
               <h3>{publication.title}</h3>
               <p>{publication.text}</p>
               <NavLink to={`/publication/${publication.id}`}>Read more</NavLink>

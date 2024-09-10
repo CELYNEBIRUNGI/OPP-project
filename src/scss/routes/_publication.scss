@@ -12,7 +12,8 @@
       font-size: var.$fs-h3;
     }
     ul {
-      @include mx.flex($justify: space-between);
+      @include mx.flex($justify: flex-start);
+      gap: 4rem;
       margin: 3rem 0;
 
       li {
@@ -160,6 +161,7 @@
     .pub {
       max-width: 900px;
       ul {
+        gap: 3rem;
         li {
           font-size: var.$small;
 

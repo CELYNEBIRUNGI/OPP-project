@@ -7,7 +7,9 @@ import { useState } from "react";
 
 const PublicationDetail = ({ loader }) => {
   const { id } = useParams();
-  const publication = publicationsList.find((article) => article.id === parseInt(id));
+  const publication = publicationsList.find(
+    (article) => article.id === parseInt(id)
+  );
   const [loaded, setLoaded] = useState(false);
 
   const handleLoad = () => {
@@ -29,11 +31,12 @@ const PublicationDetail = ({ loader }) => {
           Loading PDF... Please wait!
         </div>
       )}
-      <embed
+      <iframe
         src={publication?.pdf}
         type="application/pdf"
         onLoad={handleLoad}
         className="pdf-embed"
+        frameBorder="0"
         // style={{ display: loaded ? "block" : "none" }}
       />
     </div>
