@@ -94,7 +94,16 @@
     .reports-body {
       font-size: var.$fw-small;
       @include mx.flex($justify: space-around);
-      margin: 32px 0 128px;
+      margin: 32px 0;
+    }
+
+    .reports-page_link {
+      margin: 0 0 96px;
+      color: var.$primary-200;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
@@ -105,6 +114,10 @@
         @include mx.flex($dir: column);
         height: fit-content;
         margin-top: 32px;
+
+        .about-desc-img {
+          width: 100%;
+        }
 
         img {
           width: 100%;

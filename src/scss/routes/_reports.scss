@@ -1,0 +1,15 @@
+.reports_container {
+  max-width: min(1080px, 100% - 3rem);
+  margin-inline: auto;
+  margin-block: 4rem 12rem;
+
+  .report-card {
+    margin-bottom: 32px;
+    a {
+      p {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}

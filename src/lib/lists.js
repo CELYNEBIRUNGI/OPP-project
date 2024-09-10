@@ -30,12 +30,6 @@ import gallery13 from "../assets/rec.png";
 import gallery14 from "../assets/rec.png";
 import gallery15 from "../assets/rec.png";
 
-//reports
-import report1 from "../assets/reports/Local Economy Wide Impact Evaluation Report for Oil Palm Development in Kalangala.pdf";
-import report2 from "../assets/reports/NOPP PDR final (December 2017).pdf";
-import report3 from "../assets/reports/Oil Palm Research report for the IFAD Mission - Sept 2023 (3)(1).pdf";
-import report4 from "../assets/reports/The National Oil Palm Project Annual Report FY2022-23 - v110823.pdf";
-import report5 from "../assets/reports/The National Oil Palm Project Half-Annual Report FY2023-24 - Final Draft.pdf";
 export const statusLists = [
   {
     id: 1,
@@ -64,31 +58,55 @@ export const reportsList = [
     id: 1,
     icon: icon,
     text: "Local Economy Wide Impact Evaluation Report for Oil Palm Development in Kalangala",
-    file: report1,
+    file: `https://drive.google.com/file/d/1XMmqY4vznNfQT2qdBHhMTTznAb3UoqNU/view?usp=drive_link`,
   },
   {
     id: 2,
     icon: icon,
     text: "NOPP PDR final (December 2017)",
-    file: report2,
+    file: `https://drive.google.com/file/d/1XMmqY4vznNfQT2qdBHhMTTznAb3UoqNU/view?usp=drive_link`,
   },
   {
     id: 3,
     icon: icon,
     text: "Oil Palm Research report for the IFAD Mission - Sept 2023 (3)",
-    file: report3,
+    file: `https://drive.google.com/file/d/1mH-sbcQ7-7OGkdnAevKNaINUviPHdfhe/view?usp=drive_link`,
   },
   {
     id: 4,
     icon: icon,
     text: "The National Oil Palm Project Annual Report FY2022-23 - v110823",
-    file: report4,
+    file: `https://drive.google.com/file/d/1ZT9ODAIG8yNArfd1U_yaxZJ2jHb5Gukt/view?usp=drive_link`,
   },
   {
     id: 5,
     icon: icon,
     text: "The National Oil Palm Project Half-Annual Report FY2023-24 ",
-    file: report5,
+    file: `https://drive.google.com/file/d/19RM4HbeU-7BwJSPpgpGW1ElBbIEyDYI3/view?usp=drive_link`,
+  },
+  {
+    id: 6,
+    icon: icon,
+    text: "MAYUGE DISTRICT CULTURAL HERITAGE SITES MANAGEMENT",
+    file: `https://drive.google.com/file/d/1G7seQ4BcVkjWXEQtf0kMeMHczR8yP-Hs/view?usp=drive_link`,
+  },
+  {
+    id: 7,
+    icon: icon,
+    text: "CULTURAL HERITAGE MANAGEMENT PLAN, MASAKA DISTRICT FINAL",
+    file: `https://drive.google.com/file/d/1LzAnPgm4PnXhXkUCl2ouqWCFhRozbolg/view?usp=drive_link`,
+  },
+  {
+    id: 8,
+    icon: icon,
+    text: "CULTURAL HERITAGE MANAGEMENT PLAN, KYOTERA DISTRICT FINAL",
+    file: `https://drive.google.com/file/d/1bO8-l9f9h1jSGhmrivl7pRsfEju2Ztwr/view?usp=drive_link`,
+  },
+  {
+    id: 8,
+    icon: icon,
+    text: "BUVUMA DISTRICT CULTURAL AND HERITAGE SITES MANAGE",
+    file: `https://drive.google.com/file/d/1ZmNaCO5pJYoyZBXgFV5YT7xpoEd-gIQb/view?usp=drive_link`,
   },
 ];
 

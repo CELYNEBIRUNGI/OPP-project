@@ -52,6 +52,9 @@ header {
           font-size: var.$fs-text;
           text-transform: capitalize;
 
+          &.active {
+            color: #fff;
+          }
           &:hover {
             text-decoration: underline;
           }

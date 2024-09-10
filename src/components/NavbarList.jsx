@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import PropTypes from "prop-types";
+import { NavLink } from "react-router-dom/dist";
 
 const variant = {
   initial: {
@@ -33,7 +33,7 @@ const NavbarList = ({
     <>
       <ul className="nav-list">
         <motion.li onClick={() => setShowMenu(false)}>
-          <Link to="/">Home</Link>
+          <NavLink to="/">Home</NavLink>
         </motion.li>
         {!verifiedLocation &&
           !galleryLocation &&
@@ -47,7 +47,7 @@ const NavbarList = ({
               exit="exit"
               onClick={() => setShowMenu(false)}
             >
-              <Link to={link.path}>{link.name}</Link>
+              <NavLink to={link.path}>{link.name}</NavLink>
             </motion.li>
           ))}
         {verifiedLocation &&
@@ -61,7 +61,7 @@ const NavbarList = ({
               exit="exit"
               onClick={() => setShowMenu(false)}
             >
-              <Link to={`/project/${link.id}`}>{link.title}</Link>
+              <NavLink to={`/project/${link.id}`}>{link.title}</NavLink>
             </motion.li>
           ))}
         {galleryLocation &&
@@ -75,7 +75,7 @@ const NavbarList = ({
               exit="exit"
               onClick={() => setShowMenu(false)}
             >
-              <Link to={`/gallery/${link.link}`}>{link.title}</Link>
+              <NavLink to={`/gallery/${link.link}`}>{link.title}</NavLink>
             </motion.li>
           ))}
         <motion.li onClick={() => setShowMenu(false)}>

@@ -1,4 +1,4 @@
-import { publicationsList, pubPdfList } from "../../lib/publicationsLists";
+import { publicationsList } from "../../lib/publicationsLists";
 import { useParams } from "react-router-dom";
 import withLoadingState from "../../components/withLoadingState";
 import MainLoader from "../../components/loaders/MainLoader";
@@ -7,7 +7,7 @@ import { useState } from "react";
 
 const PublicationDetail = ({ loader }) => {
   const { id } = useParams();
-  const publication = pubPdfList.find((article) => article.id === parseInt(id));
+  const publication = publicationsList.find((article) => article.id === parseInt(id));
   const [loaded, setLoaded] = useState(false);
 
   const handleLoad = () => {

@@ -18,30 +18,35 @@ export const publicationsList = [
     img: n004,
     title: "OIL PALM NEWS Vol. 001 No.004",
     text: "Previously notorious for its lack of basic infrastructure, Buvuma Island, the largest among the    Buvuma District islands on Lake Victoria in Uganda",
+    pdf: pdf1,
   },
   {
     id: 2,
     img: n001,
     title: "OIL PALM NEWS Vol. 001 No.001",
     text: "Farmers in Buvuma have started planting their oil palm as small holder farmers under the National Oil Palm Project",
+    pdf: pdf2,
   },
   {
     id: 3,
     img: n00,
     title: "OIL PALM NEWS",
     text: "Infrastructural improvement was one of the things promised to the people of Buvuma district as they were being asked",
+    pdf: pdf3,
   },
   {
     id: 4,
     img: n005,
     title: "PROJECT EXPERIENCE",
     text: "While the experiences have been documented by the stakeholders from Buvuma Island in regard to their interaction with the project, this work has been made with Financial Assistance from IFAD and the Government of Uganda.",
+    pdf: pdf4,
   },
   {
     id: 5,
     img: n006,
     title: "PROGRESS REPORT DECEMBER 2023",
     text: `The National Oil Palm Project (NOPP) was declared effective on 1st March 2019. The Ministry of Agriculture, Animal Industry and Fisheries (MAAIF) is the Executing Agency and established a Project Management Unit (PMU) in September 2019.`,
+    pdf: pdf5,
   },
   {
     id: 6,
@@ -51,6 +56,7 @@ export const publicationsList = [
     eradication through its Vision 2040 and National Development Plan III as a key national
     development agenda. The aim is to “transform Ugandan society from a peasant dominated
     to a modern and prosperous middle-income country within 30 years”.`,
+    pdf: pdf6,
   },
 ];
 
@@ -133,32 +139,5 @@ export const pubArtList = [
     id: 15,
     title: "Bugoma forest conversion defeats climate change mitigation efforts",
     link: "https://www.newvision.co.ug/news/1524644/bugoma-forest-conversion-defeats-climate-change-mitigation-efforts",
-  },
-];
-
-export const pubPdfList = [
-  {
-    id: 1,
-    pdf: pdf1,
-  },
-  {
-    id: 2,
-    pdf: pdf2,
-  },
-  {
-    id: 3,
-    pdf: pdf3,
-  },
-  {
-    id: 4,
-    pdf: pdf4,
-  },
-  {
-    id: 5,
-    pdf: pdf5,
-  },
-  {
-    id: 6,
-    pdf: pdf6,
   },
 ];

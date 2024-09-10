@@ -11,6 +11,7 @@ import PublicationDetail from "./routes/publicationDetail/PublicationDetail";
 import { storage } from "./firebase/config";
 import { getDownloadURL, getMetadata, listAll, ref } from "firebase/storage";
 import Story from "./routes/story/Story";
+import Reports from "./routes/reports/Reports";
 const ProjectHub = lazy(() => import("./routes/projectHub/ProjectHub"));
 const Gallery = lazy(() => import("./routes/gallery/Gallery"));
 const Publication = lazy(() => import("./routes/publication/Publication"));
@@ -140,6 +141,15 @@ function App() {
             element={
               <Suspense fallback={<MainLoader />}>
                 <Story />
+              </Suspense>
+            }
+          />
+
+          <Route
+            path="/reports"
+            element={
+              <Suspense fallback={<MainLoader />}>
+                <Reports />
               </Suspense>
             }
           />

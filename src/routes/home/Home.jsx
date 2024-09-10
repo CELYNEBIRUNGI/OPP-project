@@ -78,7 +78,7 @@ const Home = () => {
       <section className="reports">
         <h2>Reports</h2>
         <div className="reports-body">
-          {reportsList.map((report) => (
+          {reportsList.slice(0, 5).map((report) => (
             <Report
               key={report.id}
               image={report.icon}
@@ -87,6 +87,9 @@ const Home = () => {
             />
           ))}
         </div>
+        <Link to={"/reports"} className="reports-page_link">
+          View all reports
+        </Link>
       </section>
     </PageTransition>
   );

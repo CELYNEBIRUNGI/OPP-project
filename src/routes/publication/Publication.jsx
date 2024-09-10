@@ -8,7 +8,6 @@ import { NavLink } from "react-router-dom";
 import withLoadingState from "../../components/withLoadingState";
 import MainLoader from "../../components/loaders/MainLoader";
 import PropTypes from "prop-types";
-import PubCard from "../../components/cards/PubCard";
 import PagedPubs from "../../components/PagedPubs";
 import BlurHashImg from "../../components/BlurHashImage";
 

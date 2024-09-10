@@ -14,10 +14,11 @@ footer {
       flex-basis: 100%;
       @include mx.flex;
       margin-bottom: 16px;
-      height: 40px;
+      height: 60px;
 
       img {
-        height: 40px;
+        height: 100%;
+        width: 50%;
       }
     }
 
