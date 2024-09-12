@@ -30,6 +30,7 @@
           margin-top: 0.4rem;
           display: -webkit-box;
           -webkit-line-clamp: 1; /* Number of lines to show */
+          line-clamp: 1;
           -webkit-box-orient: vertical;
           overflow: hidden;
         }
@@ -39,6 +40,7 @@
           font-size: 0.8rem;
           display: -webkit-box;
           -webkit-line-clamp: 3; /* Number of lines to show */
+          line-clamp: 3;
           -webkit-box-orient: vertical;
           overflow: hidden;
         }
