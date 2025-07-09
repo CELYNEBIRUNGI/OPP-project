@@ -2,7 +2,7 @@ import icon from "../assets/icon.png";
 //home pics
 import homePic1 from "../assets/home/pic1.webp";
 import homePic2 from "../assets/home/pic2.webp";
-import homePic3 from "../assets/home/pic3.webp";
+import homePic3 from "../assets/home/pic-6.webp";
 import homePic4 from "../assets/home/pic4.jpeg";
 //slider
 import slider1 from "../assets/slider-1.png";
