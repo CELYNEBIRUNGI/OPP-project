@@ -5,10 +5,10 @@ import Carrousel from "../../components/Carrousel";
 import Report from "../../components/cards/Report";
 import Map from "./Map";
 import { statusLists, reportsList } from "../../lib/lists";
-import banner from "../../assets/pic7.webp";
-import rec from "../../assets/rec.png";
+import banner from "../../assets/home/home1.jpg";
+import rec from "../../assets/home/home3.jpg";
+import last from "../../assets/home/home4.webp";
 import about from "../../assets/home-about.png";
-import impl from "../../assets/imp.png";
 import { useEffect } from "react";
 import BlurHashImg from "../../components/BlurHashImage";
 
@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <PageTransition myClass={"home"}>
       <section className="banner">
-        <Carrousel images={[banner, rec]} />
+        <Carrousel images={[banner, rec, last]} />
         <div>
           <h1>National Oil Palm Project</h1>
         </div>

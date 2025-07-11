@@ -2,6 +2,17 @@
 @use "../reset/mixins" as mx;
 
 .home {
+  .banner {
+    .splide__track {
+      .splide__list {
+        li:nth-child(2) {
+          img {
+            object-position: 50% 20%;
+          }
+        }
+      }
+    }
+  }
   h2 {
     margin: 3.5rem 0;
     font-size: var.$fs-h2;

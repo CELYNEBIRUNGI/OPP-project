@@ -1,13 +1,16 @@
 import { useEffect } from "react";
 import one from "../../assets/about/1.jpg";
 import two from "../../assets/about/2.png";
-import top from "../../assets/about/top.webp";
 import PageTransition from "../../components/transitions/PageTransition";
 import FadeIn from "../../components/transitions/FadeIn";
 import ScrollBased from "../../components/transitions/ScrollBased";
 import SecondeParagraph from "./SecondeParagraph";
 import FourthParagraph from "./FourthParagraph";
 import BlurHashImg from "../../components/BlurHashImage";
+import Carrousel from "../../components/Carrousel";
+import im1 from "../../assets/about/about1.webp";
+import im2 from "../../assets/about/about2.webp";
+import im3 from "../../assets/about/about3.webp";
 
 const About = () => {
   useEffect(() => {
@@ -17,13 +20,7 @@ const About = () => {
   return (
     <PageTransition myClass={"about"}>
       <div className="banner">
-        <BlurHashImg
-          image={top}
-          hash={"LJKKf=TJBq?H~CWBJ7xuAH$P00JR"}
-          width={2400}
-          height={600}
-          alt={"About banner"}
-        />
+        <Carrousel images={[im1, im2]} interval={5000} />
       </div>
 
       <div className="first-paragraph">
@@ -43,7 +40,7 @@ const About = () => {
         </FadeIn>
         <div className="about-pic">
           <BlurHashImg
-            image={one}
+            image={im3}
             hash={"LJKKf=TJBq?H~CWBJ7xuAH$P00JR"}
             width={350}
             height={300}
