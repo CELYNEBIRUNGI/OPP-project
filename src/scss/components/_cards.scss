@@ -10,6 +10,10 @@
   p {
     padding: 8px;
   }
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 12px;
+  }
 }
 
 .card-one {

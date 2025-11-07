@@ -280,3 +280,9 @@ export const galleryList = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis accumsan placerat, enim ipsum ultricies sapien, ut rhoncus nisl nunc eget augue.",
   },
 ];
+
+export const jobAdvert = {
+  icon: "/job.png",
+  text: "Click to view the job advert",
+  file: "https://drive.google.com/file/d/1ItIOEbKM61iLxv1k2hXYt9OfEtoGK8GG/view?usp=drive_link",
+};

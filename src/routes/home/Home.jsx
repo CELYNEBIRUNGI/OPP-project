@@ -4,7 +4,7 @@ import CardOne from "../../components/cards/CardOne";
 import Carrousel from "../../components/Carrousel";
 import Report from "../../components/cards/Report";
 import Map from "./Map";
-import { statusLists, reportsList } from "../../lib/lists";
+import { statusLists, reportsList, jobAdvert } from "../../lib/lists";
 import banner from "../../assets/home/home1.jpg";
 import rec from "../../assets/home/home3.jpg";
 import last from "../../assets/home/home4.webp";
@@ -90,6 +90,14 @@ const Home = () => {
         <Link to={"/reports"} className="reports-page_link">
           View all reports
         </Link>
+      </section>
+      <section className="job-advert">
+        <h2>We are Hiring</h2>
+        <Report
+          image={jobAdvert.icon}
+          text={jobAdvert.text}
+          file={jobAdvert.file}
+        />
       </section>
     </PageTransition>
   );

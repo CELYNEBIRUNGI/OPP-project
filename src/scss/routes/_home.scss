@@ -118,6 +118,31 @@
     }
   }
 
+  .job-advert {
+    @include mx.flex($dir: column);
+    max-width: 1080px;
+    margin: 0 auto;
+    padding-bottom: 10rem;
+
+    .report-card {
+      width: 50%;
+      display: flex;
+      align-items: center;
+
+      a {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p {
+          height: fit-content;
+          flex-basis: content;
+        }
+      }
+    }
+  }
+
   @include mx.mobile {
     .about {
       padding: 32px;
